@@ -1,0 +1,173 @@
+universe = vanilla
+executable = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/scripts/chain_job.sh
+arguments = --m $(m) --seed $(seed) --samples $(samples) --burn 4000 --stride 20 --stage $(stage) --out /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round4/M$(m)/$(stage)_$(seed)
+initialdir = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_output_files = ""
+getenv = False
+requirements = (TARGET.IsOttenComputer =?= true) && ((TARGET.Machine == "qis1.hep.wisc.edu") || (TARGET.Machine == "qis3.hep.wisc.edu"))
++ProjectName = "UWMadison_Physics_Otten"
++ChtcProjects = "UWMadison_Physics_Otten"
+HEP_VO = "otten"
+request_cpus = 1
+request_memory = 1GB
+request_disk = 16MB
+output = work/scheduler/$(Cluster).$(Process).out
+error = work/scheduler/$(Cluster).$(Process).err
+log = work/scheduler/$(Cluster).log
++JobBatchName = "D01Ritz-FERMI-round4-precision"
+queue m,stage,seed,samples from (
+100 train 620201 4096
+100 train 620202 4096
+100 train 620203 4096
+100 train 620204 4096
+100 train 620205 4096
+100 train 620206 4096
+100 train 620207 4096
+100 train 620208 4096
+100 train 620209 4096
+100 train 620210 4096
+100 train 620211 4096
+100 train 620212 4096
+100 train 620213 4096
+100 train 620214 4096
+100 train 620215 4096
+100 train 620216 4096
+100 train 620217 4096
+100 train 620218 4096
+100 train 620219 4096
+100 train 620220 4096
+100 train 620221 4096
+100 train 620222 4096
+100 train 620223 4096
+100 train 620224 4096
+100 holdout 720201 4096
+100 holdout 720202 4096
+100 holdout 720203 4096
+100 holdout 720204 4096
+100 holdout 720205 4096
+100 holdout 720206 4096
+100 holdout 720207 4096
+100 holdout 720208 4096
+100 holdout 720209 4096
+100 holdout 720210 4096
+100 holdout 720211 4096
+100 holdout 720212 4096
+100 holdout 720213 4096
+100 holdout 720214 4096
+100 holdout 720215 4096
+100 holdout 720216 4096
+100 holdout 720217 4096
+100 holdout 720218 4096
+100 holdout 720219 4096
+100 holdout 720220 4096
+100 holdout 720221 4096
+100 holdout 720222 4096
+100 holdout 720223 4096
+100 holdout 720224 4096
+100 holdout 720225 4096
+100 holdout 720226 4096
+100 holdout 720227 4096
+100 holdout 720228 4096
+100 holdout 720229 4096
+100 holdout 720230 4096
+100 holdout 720231 4096
+100 holdout 720232 4096
+1000 train 620301 2048
+1000 train 620302 2048
+1000 train 620303 2048
+1000 train 620304 2048
+1000 train 620305 2048
+1000 train 620306 2048
+1000 train 620307 2048
+1000 train 620308 2048
+1000 train 620309 2048
+1000 train 620310 2048
+1000 train 620311 2048
+1000 train 620312 2048
+1000 train 620313 2048
+1000 train 620314 2048
+1000 train 620315 2048
+1000 train 620316 2048
+1000 train 620317 2048
+1000 train 620318 2048
+1000 train 620319 2048
+1000 train 620320 2048
+1000 train 620321 2048
+1000 train 620322 2048
+1000 train 620323 2048
+1000 train 620324 2048
+1000 train 620325 2048
+1000 train 620326 2048
+1000 train 620327 2048
+1000 train 620328 2048
+1000 train 620329 2048
+1000 train 620330 2048
+1000 train 620331 2048
+1000 train 620332 2048
+1000 train 620333 2048
+1000 train 620334 2048
+1000 train 620335 2048
+1000 train 620336 2048
+1000 train 620337 2048
+1000 train 620338 2048
+1000 train 620339 2048
+1000 train 620340 2048
+1000 train 620341 2048
+1000 train 620342 2048
+1000 train 620343 2048
+1000 train 620344 2048
+1000 train 620345 2048
+1000 train 620346 2048
+1000 train 620347 2048
+1000 train 620348 2048
+1000 holdout 720301 2048
+1000 holdout 720302 2048
+1000 holdout 720303 2048
+1000 holdout 720304 2048
+1000 holdout 720305 2048
+1000 holdout 720306 2048
+1000 holdout 720307 2048
+1000 holdout 720308 2048
+1000 holdout 720309 2048
+1000 holdout 720310 2048
+1000 holdout 720311 2048
+1000 holdout 720312 2048
+1000 holdout 720313 2048
+1000 holdout 720314 2048
+1000 holdout 720315 2048
+1000 holdout 720316 2048
+1000 holdout 720317 2048
+1000 holdout 720318 2048
+1000 holdout 720319 2048
+1000 holdout 720320 2048
+1000 holdout 720321 2048
+1000 holdout 720322 2048
+1000 holdout 720323 2048
+1000 holdout 720324 2048
+1000 holdout 720325 2048
+1000 holdout 720326 2048
+1000 holdout 720327 2048
+1000 holdout 720328 2048
+1000 holdout 720329 2048
+1000 holdout 720330 2048
+1000 holdout 720331 2048
+1000 holdout 720332 2048
+1000 holdout 720333 2048
+1000 holdout 720334 2048
+1000 holdout 720335 2048
+1000 holdout 720336 2048
+1000 holdout 720337 2048
+1000 holdout 720338 2048
+1000 holdout 720339 2048
+1000 holdout 720340 2048
+1000 holdout 720341 2048
+1000 holdout 720342 2048
+1000 holdout 720343 2048
+1000 holdout 720344 2048
+1000 holdout 720345 2048
+1000 holdout 720346 2048
+1000 holdout 720347 2048
+1000 holdout 720348 2048
+)
