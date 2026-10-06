@@ -53,3 +53,15 @@ holdout chains x4096 (seeds 530201-530232). Round3 training directories are
 read-only-use symlinks to the corrected round2 training banks, never to the
 invalid old checkout. The prior failed result remains intact. Only the
 fresh holdout is used for this confirmation, with the same gates.
+
+- 939926: all 32 fresh M100 holdout chains completed, 131072 samples.
+- 939927: frozen-coefficient M100 analysis, normalization and residual audit
+  completed with exit code 0 (98 s scheduler execution wall time).
+The round3 and round2 coefficient SHA256 are identical:
+1481a7bb2c9991e683196444892e54c9fb4fad8814009e674c9a23ee4226c513.
+Fresh holdout energy -27.8125543159 +/- 0.0781493743 still fails the
+unchanged train/holdout agreement gate against -28.1215829059. M100 is
+therefore unresolved, not promoted to convergence by another error rule.
+Only M10 passes every declared finite-sample precision gate. All larger
+levels retain diagnostic fits, explicit failures and exact restart banks.
+Final input verification, support verification and all ten unit tests pass.
