@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 manifest=json.loads((ROOT/'supports/MANIFEST.json').read_text())
 rows=[];artifacts=[]
 for m in [10,100,1000,10000,100000]:
-    candidates=[ROOT/f'reports/round3/M{m}',ROOT/f'reports/round2/M{m}',ROOT/f'reports/round1/M{m}']
+    candidates=[ROOT/f'reports/{round_name}/M{m}' for round_name in ['round4','round3','round2','round1']]
     folder=next((p for p in candidates if (p/'result.json').exists()),None)
     state=manifest['states'][str(m)]
     row={'M':m,'support_sha256':state['sha256'],'support_full_H_energy':state.get('full_H_energy'),'status':'pending'}
@@ -50,7 +50,7 @@ with (ROOT/'reports/SUMMARY.csv').open('w',newline='') as f:
     w=csv.DictWriter(f,allkeys);w.writeheader();w.writerows(rows)
 # Bank files, checkpoints and scheduler logs stay on Ceph. Hash every artifact.
 cluster_files=[]
-for name in ['round1','round2','round3','growth','sw400_reproduction','sw400_attempt_939909','node_smoke','validation','scheduler','runtime']:
+for name in ['round1','round2','round3','round4','growth','sw400_reproduction','sw400_attempt_939909','node_smoke','validation','scheduler','runtime']:
     base=ROOT/'work'/name
     for p in sorted(base.rglob('*')):
         if p.is_file() and '__pycache__' not in p.parts:
