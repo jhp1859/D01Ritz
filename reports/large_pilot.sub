@@ -1,0 +1,18 @@
+universe = vanilla
+executable = /mnt/ceph/home/park687/D01Ritz/scripts/chain_job.sh
+arguments = --m $(m) --seed $(seed) --samples 16 --burn 200 --stride 20 --stage benchmark --out /mnt/ceph/home/park687/D01Ritz/work/pilot/M$(m)
+initialdir = /mnt/ceph/home/park687/D01Ritz
+should_transfer_files = NO
+getenv = True
+request_cpus = 1
+request_memory = 3GB
+request_disk = 1GB
+output = work/scheduler/$(Cluster).$(Process).out
+error = work/scheduler/$(Cluster).$(Process).err
+log = work/scheduler/$(Cluster).log
++JobBatchName = "D01Ritz-large-pilot-20261006"
+queue m,seed from (
+1000 106003
+10000 106004
+100000 106005
+)
