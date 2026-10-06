@@ -4,7 +4,12 @@ arguments = --m $(m) --seed $(seed) --samples 16 --burn 200 --stride 20 --stage 
 initialdir = /mnt/ceph/home/park687/D01Ritz
 should_transfer_files = YES
 transfer_output_files = ""
-getenv = True
+getenv = False
+when_to_transfer_output = ON_EXIT
+requirements = (TARGET.IsOttenComputer =?= true)
++ProjectName = "UWMadison_Physics_Otten"
++ChtcProjects = "UWMadison_Physics_Otten"
++HEP_VO = "otten"
 request_cpus = 1
 request_memory = 3GB
 request_disk = 1GB

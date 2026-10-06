@@ -111,7 +111,7 @@ def main():
     if chosen_r['empirical_nullity']>0:failures.append('rank_deficient_empirical_metric')
     rec={'status':'unresolved' if failures else 'candidate_pass_requires_longer_chain_confirmation',
         'M':int(F.shape[1]),'train_samples':len(F),'holdout_samples':len(HF),'failures':sorted(set(failures)),
-        'chosen':chosen_r,'cutoff_study':results,'sample_count_study':stability,'seed_study':seed_results,
+        'chosen':chosen_r,'training_fixed_vector_block_diagnostics':holdout(F,G,chosen),'cutoff_study':results,'sample_count_study':stability,'seed_study':seed_results,
         'block_length_study':[holdout(HF,HG,chosen,b) for b in [16,32,64,128]],
         'raw_training_hermiticity_relative_error':herm,'independent_train_matrix_relative_difference':matrix_difference,
         'normalization':'training c^T(S/Z)c=1, unknown Z; physical c^TSc is not estimated',
