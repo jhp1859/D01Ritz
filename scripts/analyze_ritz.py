@@ -21,6 +21,9 @@ def actions(F,G,c):
 
 def solve(F,G,cutoff):
     n,m=F.shape
+    if m>1000 and (n>=m or n>4096):
+        from iterative_ritz import solve_iterative
+        return solve_iterative(F,G,cutoff)
     if m<=n and m<=1000:
         S=F.T@F/n;values,V=eigh(S)
         keep=values>max(cutoff*values[-1],np.finfo(float).eps*m*values[-1])
@@ -86,8 +89,17 @@ def main():
         dirs=sorted(args.root.glob(stage+'_*'))
         assert len(dirs)>=2
         for d in dirs:
-            rec=json.loads((d/'manifest.json').read_text());assert rec['finished'];manifests.append(rec)
+            rec=json.loads((d/'manifest.json').read_text());assert rec['finished']
+            project=Path(__file__).resolve().parents[1]
+            assert rec['options']['origin_seed_sha256']==sha(project/'inputs/state_M1_fermi.npz')
+            assert rec['options']['stage']==stage
+            assert rec['options']['input_sha256']==sha(project/f"supports/state_M{rec['options']['m']}.npz")
+            for name in ['F.npy','G.npy','states.npy']:
+                assert sha(d/name)==rec['files'][name]['sha256']
+            manifests.append(rec)
         banks[stage]=tuple(np.concatenate([np.load(d/(name+'.npy'),mmap_mode='r') for d in dirs]) for name in ['F','G'])
+    assert len({r['options']['seed'] for r in manifests})==len(manifests), 'Chain seeds must be distinct'
+    assert len({r['options']['m'] for r in manifests})==1
     F,G=banks['train'];HF,HG=banks['holdout'];results=[]
     for cutoff in [1e-8,1e-6,1e-4]:
         c,r=solve(F,G,cutoff);r['holdout']=holdout(HF,HG,c,training_energy=r['energy']);results.append(r)
@@ -111,6 +123,24 @@ def main():
     failures=[];h=chosen_r['holdout']
     h['conservative_energy_SE']=max(v['energy_SE'] for v in block_study)
     h['conservative_residual_95pct_upper']=max(v['residual_bootstrap_95pct'][1] for v in block_study)
+    # A separate chain-cluster jackknife catches variation hidden by short blocks.
+    chain_num=[];chain_den=[];selected_chain_diagnostics=[];early_n=[];early_d=[];late_n=[];late_d=[]
+    for d in sorted(args.root.glob('holdout_*')):
+        cf=np.load(d/'F.npy',mmap_mode='r')@chosen;cg=np.load(d/'G.npy',mmap_mode='r')@chosen
+        chain_num.append(float(np.sum(cf*cg)));chain_den.append(float(np.sum(cf*cf)))
+        half=len(cf)//2
+        early_n.append(float(np.sum(cf[:half]*cg[:half])));early_d.append(float(np.sum(cf[:half]**2)))
+        late_n.append(float(np.sum(cf[half:]*cg[half:])));late_d.append(float(np.sum(cf[half:]**2)))
+        selected_chain_diagnostics.append({'path':str(d),'tau_numerator':tau(cf*cg),'tau_denominator':tau(cf*cf),'energy':chain_num[-1]/chain_den[-1]})
+    cn=np.asarray(chain_num);cd=np.asarray(chain_den);cj=(cn.sum()-cn)/(cd.sum()-cd)
+    h['between_chain_energy_SE']=float(np.sqrt((len(cj)-1)/len(cj)*np.sum((cj-cj.mean())**2)))
+    h['conservative_energy_SE']=max(h['conservative_energy_SE'],h['between_chain_energy_SE'])
+    en,ed,ln,ld=map(np.asarray,[early_n,early_d,late_n,late_d])
+    drift=float(ln.sum()/ld.sum()-en.sum()/ed.sum())
+    dj=(ln.sum()-ln)/(ld.sum()-ld)-(en.sum()-en)/(ed.sum()-ed)
+    drift_se=float(np.sqrt((len(dj)-1)/len(dj)*np.sum((dj-dj.mean())**2)))
+    h['chain_length_energy_drift']=drift;h['chain_length_drift_SE']=drift_se
+    if abs(drift)>max(.2,3*drift_se):failures.append('chain_length_drift')
     if h['conservative_energy_SE']>0.1:failures.append('holdout_energy_precision')
     if h['conservative_residual_95pct_upper']>0.05:failures.append('holdout_residual')
     if chosen_r['projected_residual']>1e-7:failures.append('training_projected_residual')
@@ -123,7 +153,7 @@ def main():
         if not taus or rec['done']/(2*max(taus))<100:failures.append('insufficient_effective_samples')
         if rec['cross']<20:failures.append('insufficient_sector_crossings')
     if chosen_r['empirical_nullity']>0:failures.append('rank_deficient_empirical_metric')
-    rec={'status':'unresolved' if failures else 'candidate_pass_requires_longer_chain_confirmation',
+    rec={'status':'unresolved' if failures else 'converged_at_declared_sampling_precision',
         'M':int(F.shape[1]),'train_samples':len(F),'holdout_samples':len(HF),'failures':sorted(set(failures)),
         'chosen':chosen_r,'training_fixed_vector_block_diagnostics':holdout(F,G,chosen),'cutoff_study':results,'sample_count_study':stability,'seed_study':seed_results,
         'block_length_study':block_study,
@@ -131,6 +161,7 @@ def main():
         'raw_training_hermiticity_relative_error':herm,'independent_train_matrix_relative_difference':matrix_difference,
         'normalization':'training c^T(S/Z)c=1, unknown Z; physical c^TSc is not estimated',
         'coefficients':{'path':str((args.out/'coefficients.npz').resolve()),'sha256':sha(args.out/'coefficients.npz')},
+        'selected_coefficient_holdout_chains':selected_chain_diagnostics,
         'chains':manifests,'sampling_CPU_hours':sum(r['cpu_seconds'] for r in manifests)/3600,
         'sampling_wall_seconds_sum':sum(r['wall_seconds'] for r in manifests),
         'sampling_peak_rss_MiB':max(r['peak_rss_MiB'] for r in manifests),

@@ -6,12 +6,15 @@ Precision may be poor, which must be retained in the coefficient metadata.
 """
 import argparse
 import math
+import resource
+import time
 from pathlib import Path
 import numpy as np
 from d01_sampling import Amplitudes,dump,sha
 
 
 def main():
+    started=time.monotonic();cpu_started=time.process_time()
     p=argparse.ArgumentParser();p.add_argument('--m',type=int,required=True)
     p.add_argument('--result',type=Path,required=True);p.add_argument('--samples',type=int,default=4096)
     p.add_argument('--seed',type=int,default=306100);args=p.parse_args()
@@ -32,5 +35,8 @@ def main():
         'norm_before_normalization':norm,'norm_SE':se,'relative_norm_SE':se/norm,
         'normalized_norm_estimate':1.,'normalized_norm_SE':se/norm,
         'warning':'Monte Carlo normalization, not exact; independent uniform sample precision is reported.',
+        'wall_seconds':time.monotonic()-started,'CPU_seconds':time.process_time()-cpu_started,
+        'peak_rss_MiB':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,
+        'support_sha256':sha(root/f'supports/state_M{args.m}.npz'),
         'coefficients_sha256':sha(args.result/'coefficients_physical_norm_estimate.npz')})
 if __name__=='__main__':main()

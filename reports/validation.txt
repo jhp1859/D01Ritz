@@ -2,12 +2,13 @@ test_interrupted_restart_equals_uninterrupted (test_checkpoint.CheckpointTests) 
 test_no_q (test_d01_operator.TestD01Operator) ... ok
 test_with_d2 (test_d01_operator.TestD01Operator) ... ok
 test_archived_sw400_energy_and_residual (test_full_h_oracle.FullHOracleTests) ... ok
+test_matches_dense_generalized_oracle (test_iterative_ritz.IterativeRitzTests) ... ok
 test_dual_matches_dense_canonical (test_ritz_solver.RitzSolverTests) ... ok
 test_independent_signed_6x6 (test_sampling.SamplingTests) ... ok
 test_small_amplitudes_and_proposals (test_sampling.SamplingTests) ... ok
 test_updates_all_6x6_neighbors (test_sampling.SamplingTests) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 12.344s
+Ran 9 tests in 15.470s
 
 OK

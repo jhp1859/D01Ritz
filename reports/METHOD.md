@@ -58,3 +58,26 @@ compression would exceed 4096 rows or reach N>=M. It does not fall back to
 a dense M x M matrix at 100k. Such banks require a further iterative solver;
 this is a documented scalability limit, and the diagnostic low-rank result
 must not be called a statistically converged 100k solution.
+
+Analysis verifies every bank file SHA256, the corrected seed SHA256, the
+frozen support SHA256, the train/holdout role and uniqueness of all chain
+seeds before fitting. An old matched-random bank cannot pass these checks.
+Final analyses also use a leave-one-chain-out energy jackknife and report
+selected-coefficient autocorrelation by holdout chain. The reported
+conservative energy error is the maximum of block and chain-cluster errors.
+
+For the enlarged 10k banks, an additional matrix-free block LOBPCG solver
+uses only F/G actions and diagonal preconditioning. It studies explicit
+ridge strengths 1e-8/1e-6/1e-4 times a power estimate of lambda_max(S);
+this is labeled ridge sensitivity, NOT hard overlap truncation. Energies,
+norms and residuals are evaluated in the original unregularized A,S pencil.
+Iteration warnings are retained; a converged regularized solve alone cannot
+pass the original-pencil residual gate. A dense generalized-eigenproblem
+oracle independently verifies the iterative algorithm at zero ridge.
+This supersedes the earlier refusal-only guard for large sample banks;
+there is still no dense M x M allocation for large M.
+Within-chain length stability compares the first and second halves of every
+holdout chain at the fitted coefficients, with a leave-one-chain-out error
+for their energy difference. A drift larger than max(0.2,3 SE) fails. Only
+when this and every predeclared gate pass is a final result labeled
+converged_at_declared_sampling_precision; this is not an exact-matrix claim.
