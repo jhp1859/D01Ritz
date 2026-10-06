@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "system": {
+    "lattice": "6x6 OBC",
+    "t": 1.0,
+    "U": 8.0,
+    "n_up": 16,
+    "n_down": 16,
+    "site_order": "site index i=6*x+y, with nearest neighbors (x+1,y) and (x,y+1), as verified by C.T K C = h1",
+    "spin_condition": "fixed N_up=N_down; no new singlet projection"
+  },
+  "operator": "Hermitian canonical SW2 D<=1: PHP-P1 K P2 K P1/U",
+  "support_policy": {
+    "M10": "largest |coefficient| ten of archived M100, original index order, coefficients renormalized; not independently grown",
+    "M100": "archived matched standing-wave TrimCI 100",
+    "M1000_to_100000": "sequential standing-wave TrimCI continuation from archived M100, fixed C; each support frozen for D01 Ritz"
+  },
+  "source_run_ids": [
+    "hubbard_6x6_momentum_sw_matched_20260912",
+    "hubbard_6x6_sw_det_ladder_20260916"
+  ],
+  "files": {
+    "integrals_sw.npz": "64a8be718e1811a0eb109d63c2b0316f9743324174d71e9f7b8a88816c6099fe",
+    "state_M10.npz": "ed6004c0ea0f7572556fd331e354325ad4f7faa7d640efc72d0de022e90a2822",
+    "state_M100.npz": "40afdbc8f16c87216d9acee7041029a548ef48eb0ebe4819428adabb9530e6ae",
+    "state_M1000.npz": "cd3797340781b63ffa05ad891d7d0f6f72f9d2b8ba8bff1c1c0a18bcbb7204d3",
+    "state_M10000.npz": "b432bc58860515a01dde23b6f7a50bc928b80d4d797cc8a356246d6a383b8d97",
+    "state_M100000.npz": "78b146b04a81465cb9e830fbf35dd316f44cd099422c667cb68e272892641702"
+  }
+}
