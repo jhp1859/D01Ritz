@@ -72,7 +72,8 @@ lines=['# Corrected bare-Fermi-origin D01 Ritz results','',
 for r in rows:
     if 'holdout_energy' not in r:lines.append(f"| {r['M']} | — | — | — | pending |");continue
     lines.append(f"| {r['M']:,} | {r['training_energy']:.6f} | {r['holdout_energy']:.6f} ± {r['holdout_energy_SE']:.6f} | {r['holdout_relative_residual']:.5f} ± {r['holdout_residual_SD']:.5f} | {r['status']} |")
-lines+=['','## Resources and diagnostics','',
+lines+=['','M1000 remains limited by energy precision and sample/seed stability despite full empirical overlap rank. M10000 also fails the unregularized training residual and holdout residual gates; its ridge LOBPCG output is a failed diagnostic fit. M100000 has only 128 training rows and retained rank 120, so its diagnostic sample bank cannot identify a 100000-dimensional Ritz solution. More sampling and solver work are required; these levels are not declared solved.','',
+'## Resources and diagnostics','',
 'CPU hours below are sampling process CPU; full analysis and normalization CPU, active wall times, per-chain seeds, all support/coefficient hashes and failures are in SUMMARY.csv and RESULT_MANIFEST.json. Peak RSS is per process, not the sum of concurrent jobs. Queue waiting time is excluded.','',
 '| M | Train / holdout samples | Sampling CPU h | Peak RSS MiB | Overlap rank | Failure gates |',
 '|---:|---:|---:|---:|---:|---|']
