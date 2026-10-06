@@ -1,0 +1,28 @@
+{
+  "max_n_dets": 10000,
+  "growth_factor": 2.0,
+  "max_expansion_rounds": 100,
+  "screening_mode": "hb",
+  "threshold": 0.01,
+  "threshold_decay": 0.5,
+  "strict_target_size": true,
+  "orbital_optimization": false,
+  "pt2_correction": false,
+  "dressed_energy": false,
+  "expansion_energy_tol": -1,
+  "dets_conv_ratio": -1,
+  "use_connection_cache": true,
+  "use_sparse_update": false,
+  "symmetric_sigma": true,
+  "davidson_block_size": 1,
+  "backend": "cpu",
+  "verbose": 2,
+  "davidson": {
+    "max_iter": 500,
+    "max_subspace": 60,
+    "n_states": 1,
+    "residual_tol": 1e-09,
+    "energy_tol": -1.0,
+    "verbose": 0
+  }
+}

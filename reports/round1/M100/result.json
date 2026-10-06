@@ -1,0 +1,572 @@
+{
+  "status": "unresolved",
+  "M": 100,
+  "train_samples": 1024,
+  "holdout_samples": 1024,
+  "failures": [
+    "holdout_energy_precision",
+    "holdout_residual",
+    "insufficient_effective_samples",
+    "sample_count_stability",
+    "seed_stability",
+    "train_holdout_disagreement"
+  ],
+  "chosen": {
+    "energy": -29.159082957460722,
+    "retained_rank": 100,
+    "empirical_nullity": 0,
+    "overlap_retained_condition": 15.160429570516587,
+    "overlap_full_condition": 15.160429570516587,
+    "cutoff": 1e-06,
+    "norm_S_over_Z": 1.000000000000002,
+    "relative_generalized_residual": 6.5680865923664135e-15,
+    "projected_residual": 5.418666905114908e-13,
+    "solver": "primal canonical",
+    "holdout": {
+      "energy": -26.401195664144616,
+      "energy_SE": 0.7931884614642707,
+      "relative_residual": 0.05363472413596876,
+      "residual_bootstrap_SD": 0.0057857780079155485,
+      "residual_bootstrap_95pct": [
+        0.04997323792687683,
+        0.07218505361961454
+      ],
+      "block_size": 32,
+      "requested_block_size": 32,
+      "blocks": 32,
+      "norm_S_over_Z": 1.359496063962117,
+      "tau_numerator": 1.668823716761522,
+      "tau_denominator": 1.5875977209005887,
+      "conservative_energy_SE": 1.1403927082202872,
+      "conservative_residual_95pct_upper": 0.07534351213245781
+    }
+  },
+  "training_fixed_vector_block_diagnostics": {
+    "energy": -29.159082957460647,
+    "energy_SE": 1.0802034318964737,
+    "relative_residual": 0.0158664944699827,
+    "residual_bootstrap_SD": 0.005971829109040045,
+    "residual_bootstrap_95pct": [
+      0.029527434134761665,
+      0.0524902485579869
+    ],
+    "block_size": 32,
+    "requested_block_size": 32,
+    "blocks": 32,
+    "norm_S_over_Z": 1.0000000000000022,
+    "tau_numerator": 0.9325790141350492,
+    "tau_denominator": 0.9653368931645704
+  },
+  "cutoff_study": [
+    {
+      "energy": -29.159082957460722,
+      "retained_rank": 100,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 15.160429570516587,
+      "overlap_full_condition": 15.160429570516587,
+      "cutoff": 1e-08,
+      "norm_S_over_Z": 1.000000000000002,
+      "relative_generalized_residual": 6.5680865923664135e-15,
+      "projected_residual": 5.418666905114908e-13,
+      "solver": "primal canonical",
+      "holdout": {
+        "energy": -26.401195664144616,
+        "energy_SE": 0.7931884614642707,
+        "relative_residual": 0.05363472413596876,
+        "residual_bootstrap_SD": 0.0057857780079155485,
+        "residual_bootstrap_95pct": [
+          0.04997323792687683,
+          0.07218505361961454
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 1.359496063962117,
+        "tau_numerator": 1.668823716761522,
+        "tau_denominator": 1.5875977209005887
+      }
+    },
+    {
+      "energy": -29.159082957460722,
+      "retained_rank": 100,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 15.160429570516587,
+      "overlap_full_condition": 15.160429570516587,
+      "cutoff": 1e-06,
+      "norm_S_over_Z": 1.000000000000002,
+      "relative_generalized_residual": 6.5680865923664135e-15,
+      "projected_residual": 5.418666905114908e-13,
+      "solver": "primal canonical",
+      "holdout": {
+        "energy": -26.401195664144616,
+        "energy_SE": 0.7931884614642707,
+        "relative_residual": 0.05363472413596876,
+        "residual_bootstrap_SD": 0.0057857780079155485,
+        "residual_bootstrap_95pct": [
+          0.04997323792687683,
+          0.07218505361961454
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 1.359496063962117,
+        "tau_numerator": 1.668823716761522,
+        "tau_denominator": 1.5875977209005887,
+        "conservative_energy_SE": 1.1403927082202872,
+        "conservative_residual_95pct_upper": 0.07534351213245781
+      }
+    },
+    {
+      "energy": -29.159082957460722,
+      "retained_rank": 100,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 15.160429570516587,
+      "overlap_full_condition": 15.160429570516587,
+      "cutoff": 0.0001,
+      "norm_S_over_Z": 1.000000000000002,
+      "relative_generalized_residual": 6.5680865923664135e-15,
+      "projected_residual": 5.418666905114908e-13,
+      "solver": "primal canonical",
+      "holdout": {
+        "energy": -26.401195664144616,
+        "energy_SE": 0.7931884614642707,
+        "relative_residual": 0.05363472413596876,
+        "residual_bootstrap_SD": 0.0057857780079155485,
+        "residual_bootstrap_95pct": [
+          0.04997323792687683,
+          0.07218505361961454
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 1.359496063962117,
+        "tau_numerator": 1.668823716761522,
+        "tau_denominator": 1.5875977209005887
+      }
+    }
+  ],
+  "sample_count_study": [
+    {
+      "energy": -31.546516343060233,
+      "retained_rank": 100,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 22.69853195670448,
+      "overlap_full_condition": 22.69853195670448,
+      "cutoff": 1e-06,
+      "norm_S_over_Z": 1.0000000000000004,
+      "relative_generalized_residual": 8.368554071639518e-15,
+      "projected_residual": 6.266520392741395e-13,
+      "solver": "primal canonical",
+      "samples": 512,
+      "holdout": {
+        "energy": -24.945361553380106,
+        "energy_SE": 0.8049988832819871,
+        "relative_residual": 0.07585004211633037,
+        "residual_bootstrap_SD": 0.00806281528607515,
+        "residual_bootstrap_95pct": [
+          0.0674668225796447,
+          0.09611835621643912
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 1.3419758811759714,
+        "tau_numerator": 1.4961320346184859,
+        "tau_denominator": 1.3345325926290372
+      }
+    },
+    {
+      "energy": -29.159082957460722,
+      "retained_rank": 100,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 15.160429570516587,
+      "overlap_full_condition": 15.160429570516587,
+      "cutoff": 1e-06,
+      "norm_S_over_Z": 1.000000000000002,
+      "relative_generalized_residual": 6.5680865923664135e-15,
+      "projected_residual": 5.418666905114908e-13,
+      "solver": "primal canonical",
+      "samples": 1024,
+      "holdout": {
+        "energy": -26.401195664144616,
+        "energy_SE": 0.7931884614642707,
+        "relative_residual": 0.05363472413596876,
+        "residual_bootstrap_SD": 0.0057857780079155485,
+        "residual_bootstrap_95pct": [
+          0.04997323792687683,
+          0.07218505361961454
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 1.359496063962117,
+        "tau_numerator": 1.668823716761522,
+        "tau_denominator": 1.5875977209005887
+      }
+    }
+  ],
+  "seed_study": [
+    {
+      "energy": -31.546516343060233,
+      "retained_rank": 100,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 22.69853195670448,
+      "overlap_full_condition": 22.69853195670448,
+      "cutoff": 1e-06,
+      "norm_S_over_Z": 1.0000000000000004,
+      "relative_generalized_residual": 8.368554071639518e-15,
+      "projected_residual": 6.266520392741395e-13,
+      "solver": "primal canonical",
+      "holdout": {
+        "energy": -24.945361553380106,
+        "energy_SE": 0.8049988832819871,
+        "relative_residual": 0.07585004211633037,
+        "residual_bootstrap_SD": 0.00806281528607515,
+        "residual_bootstrap_95pct": [
+          0.0674668225796447,
+          0.09611835621643912
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 1.3419758811759714,
+        "tau_numerator": 1.4961320346184859,
+        "tau_denominator": 1.3345325926290372
+      }
+    },
+    {
+      "energy": -30.976673649157412,
+      "retained_rank": 100,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 24.696128385649725,
+      "overlap_full_condition": 24.696128385649725,
+      "cutoff": 1e-06,
+      "norm_S_over_Z": 0.9999999999999963,
+      "relative_generalized_residual": 7.770140404992956e-15,
+      "projected_residual": 5.064046215782852e-13,
+      "solver": "primal canonical",
+      "holdout": {
+        "energy": -23.20548607678224,
+        "energy_SE": 0.4773730647600013,
+        "relative_residual": 0.07083385403030117,
+        "residual_bootstrap_SD": 0.0064254105787955726,
+        "residual_bootstrap_95pct": [
+          0.06906897211281773,
+          0.09260408279620656
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 1.2552282347311388,
+        "tau_numerator": 1.0765228023778493,
+        "tau_denominator": 1.0421115752454275
+      }
+    }
+  ],
+  "block_length_study": [
+    {
+      "energy": -26.40119566414462,
+      "energy_SE": 0.812175376954369,
+      "relative_residual": 0.05363472413596873,
+      "residual_bootstrap_SD": 0.00557078508830852,
+      "residual_bootstrap_95pct": [
+        0.05201335971331676,
+        0.07283224382382215
+      ],
+      "block_size": 16,
+      "requested_block_size": 16,
+      "blocks": 64,
+      "norm_S_over_Z": 1.359496063962117,
+      "tau_numerator": 1.668823716761522,
+      "tau_denominator": 1.5875977209005887
+    },
+    {
+      "energy": -26.401195664144616,
+      "energy_SE": 0.7931884614642707,
+      "relative_residual": 0.05363472413596876,
+      "residual_bootstrap_SD": 0.0057857780079155485,
+      "residual_bootstrap_95pct": [
+        0.04997323792687683,
+        0.07218505361961454
+      ],
+      "block_size": 32,
+      "requested_block_size": 32,
+      "blocks": 32,
+      "norm_S_over_Z": 1.359496063962117,
+      "tau_numerator": 1.668823716761522,
+      "tau_denominator": 1.5875977209005887
+    },
+    {
+      "energy": -26.40119566414461,
+      "energy_SE": 0.8953222447308458,
+      "relative_residual": 0.05363472413596884,
+      "residual_bootstrap_SD": 0.0056655173890852095,
+      "residual_bootstrap_95pct": [
+        0.04987644955573787,
+        0.07325645697944451
+      ],
+      "block_size": 64,
+      "requested_block_size": 64,
+      "blocks": 16,
+      "norm_S_over_Z": 1.3594960639621172,
+      "tau_numerator": 1.668823716761522,
+      "tau_denominator": 1.5875977209005887
+    },
+    {
+      "energy": -26.40119566414461,
+      "energy_SE": 1.1403927082202872,
+      "relative_residual": 0.053634724135968835,
+      "residual_bootstrap_SD": 0.006957001956598017,
+      "residual_bootstrap_95pct": [
+        0.04876963846927416,
+        0.07534351213245781
+      ],
+      "block_size": 128,
+      "requested_block_size": 128,
+      "blocks": 8,
+      "norm_S_over_Z": 1.3594960639621172,
+      "tau_numerator": 1.668823716761522,
+      "tau_denominator": 1.5875977209005887
+    }
+  ],
+  "hermiticity_estimator": "full Frobenius",
+  "raw_training_hermiticity_relative_error": 0.08096141210192147,
+  "independent_train_matrix_relative_difference": 0.6712834271680139,
+  "normalization": "training c^T(S/Z)c=1, unknown Z; physical c^TSc is not estimated",
+  "coefficients": {
+    "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/reports/round1/M100/coefficients.npz",
+    "sha256": "c6a9ab6aea8798b60513c37b414861b123b3c7d3b1a74cff5e8d1b404dd6c1ce"
+  },
+  "chains": [
+    {
+      "options": {
+        "m": 100,
+        "seed": 410201,
+        "samples": 512,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "8c54e985bfb54809dcc9d0c5dd0f17cb013e2bc8ec1a89621a72eb3b324d2d8b",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        17386939598,
+        64745917233
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 156742233916190390103745255039640806061,
+          "inc": 331446713676699300086293464118691258291
+        },
+        "has_uint32": 0,
+        "uinteger": 3083059091
+      },
+      "done": 512,
+      "accepted": 1559,
+      "cross": 79,
+      "proposed": 14240,
+      "wall_seconds": 64.54568055295385,
+      "cpu_seconds": 44.635399316000004,
+      "peak_rss_MiB": 39.296875,
+      "commit": "e648ee2ca7a7c3993148c10a031e761c454a16ed",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_439061/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M100/train_410201/F.npy",
+          "sha256": "2e3d0dfe9ac773d6e3d630350620e69cf415394ba5424865402d2d6b720697ea"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M100/train_410201/G.npy",
+          "sha256": "8718285581795b1ccd3aa7f18fa35af221a42d05b72246cfdf6360c1766e9175"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M100/train_410201/states.npy",
+          "sha256": "bb3ecff5deb84cc9ae27180bdb7b67df878e74c3695ae669e389ca7c92b49696"
+        }
+      },
+      "D1_fraction": 0.9765625,
+      "tau_D": 0.731953125,
+      "tau_starting_numerator": 1.021252118422689,
+      "tau_starting_denominator": 1.004798850981266
+    },
+    {
+      "options": {
+        "m": 100,
+        "seed": 410202,
+        "samples": 512,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "8c54e985bfb54809dcc9d0c5dd0f17cb013e2bc8ec1a89621a72eb3b324d2d8b",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        44355851533,
+        24361512466
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 74420282022105009143900746765429093932,
+          "inc": 165487933312481668366289010523759872807
+        },
+        "has_uint32": 1,
+        "uinteger": 3869739873
+      },
+      "done": 512,
+      "accepted": 1463,
+      "cross": 63,
+      "proposed": 14240,
+      "wall_seconds": 83.09924761101138,
+      "cpu_seconds": 50.673721431000004,
+      "peak_rss_MiB": 38.91796875,
+      "commit": "e648ee2ca7a7c3993148c10a031e761c454a16ed",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_439064/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M100/train_410202/F.npy",
+          "sha256": "28e21c0384117bb544fc1a209f4f6358223cfe54010eacd620a8c52ac995b436"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M100/train_410202/G.npy",
+          "sha256": "2ad5c744922b5f8d16074920d29f841ed7f42c7c3a1dbd167f0ff89abfab00a2"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M100/train_410202/states.npy",
+          "sha256": "f3b53578835ec1b66e82c1ab929f991d284dc3687d43d5d482942ff7210bd1eb"
+        }
+      },
+      "D1_fraction": 0.984375,
+      "tau_D": 0.6110801091269841,
+      "tau_starting_numerator": 0.9665341458068101,
+      "tau_starting_denominator": 0.9422523367306491
+    },
+    {
+      "options": {
+        "m": 100,
+        "seed": 510201,
+        "samples": 512,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "holdout",
+        "input_sha256": "8c54e985bfb54809dcc9d0c5dd0f17cb013e2bc8ec1a89621a72eb3b324d2d8b",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        41272939305,
+        26600336598
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 48636726373192010879521400521042552800,
+          "inc": 290125721850039375797402781607307759373
+        },
+        "has_uint32": 1,
+        "uinteger": 2833749611
+      },
+      "done": 512,
+      "accepted": 1530,
+      "cross": 83,
+      "proposed": 14240,
+      "wall_seconds": 61.07471004896797,
+      "cpu_seconds": 44.8200911,
+      "peak_rss_MiB": 39.26953125,
+      "commit": "e648ee2ca7a7c3993148c10a031e761c454a16ed",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_439067/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M100/holdout_510201/F.npy",
+          "sha256": "45045e3cc7e6e2cfb7786c0a769858dc75901631d44d98f8867cce0322a65da8"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M100/holdout_510201/G.npy",
+          "sha256": "2bb0d64229161e013852ae7f75d2e9df39dd0ba41eceb9e0ee4d093b7039b0db"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M100/holdout_510201/states.npy",
+          "sha256": "ca2cae604750f83574a19e3623de7bc53463cfca038f9774b13b0ec93a80f6c7"
+        }
+      },
+      "D1_fraction": 0.9765625,
+      "tau_D": 0.731953125,
+      "tau_starting_numerator": 2.4668694255676433,
+      "tau_starting_denominator": 2.5753415191141578
+    },
+    {
+      "options": {
+        "m": 100,
+        "seed": 510202,
+        "samples": 512,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "holdout",
+        "input_sha256": "8c54e985bfb54809dcc9d0c5dd0f17cb013e2bc8ec1a89621a72eb3b324d2d8b",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        39836853578,
+        45248764597
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 13787650373004983077217903949048093961,
+          "inc": 158967048831514885482332868864579701541
+        },
+        "has_uint32": 1,
+        "uinteger": 3722118511
+      },
+      "done": 512,
+      "accepted": 1553,
+      "cross": 57,
+      "proposed": 14240,
+      "wall_seconds": 80.82668106490746,
+      "cpu_seconds": 51.491672761000004,
+      "peak_rss_MiB": 36.49609375,
+      "commit": "e648ee2ca7a7c3993148c10a031e761c454a16ed",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_439069/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M100/holdout_510202/F.npy",
+          "sha256": "60cd3276275277ff736baacc4c694705495e1e95742d1596a001c44a4f6a05f1"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M100/holdout_510202/G.npy",
+          "sha256": "dc8abb85c001d5c5dc3ca212e3acd317e094736c577c814a20113f8f5f331eed"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M100/holdout_510202/states.npy",
+          "sha256": "86ac321b573df7b851542d806fb2b50f4b237ce4af36dfd4014b4f9f046af5ac"
+        }
+      },
+      "D1_fraction": 0.986328125,
+      "tau_D": 0.5,
+      "tau_starting_numerator": 1.339622044753838,
+      "tau_starting_denominator": 1.3181118379115662
+    }
+  ],
+  "sampling_CPU_hours": 0.053228023502222235,
+  "sampling_wall_seconds_sum": 289.54631927784067,
+  "sampling_peak_rss_MiB": 39.296875,
+  "analysis_seconds": 0.5726702279644087,
+  "analysis_CPU_seconds": 0.11566932899999999,
+  "analysis_peak_rss_MiB": 52.7890625
+}

@@ -1,0 +1,41 @@
+{
+  "n_final": 1000,
+  "e_var_electronic": -0.7535994936724228,
+  "e_var_total": -0.7535994936724228,
+  "e_nuc": 0.0,
+  "total_time_s": 2.275672435760498,
+  "ndets_history": [
+    200,
+    400,
+    800,
+    1000
+  ],
+  "energy_history": [
+    2.1646516521459858,
+    0.956211131739526,
+    -0.39345611142374537,
+    -0.7535994936724228
+  ],
+  "pt2_history": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "variance_ext_history": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "screening_error_history": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "dressed_energy_history": [],
+  "dressed_pt2_energy_history": [],
+  "s_squared": null,
+  "spin": null
+}

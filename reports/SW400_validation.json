@@ -11,15 +11,13 @@
   "site_MC_selection": false,
   "orbital_optimization": false,
   "spin_projection": false,
-  "status": "PASS",
-  "available_supports": [
-    "100",
-    "10",
-    "1000",
-    "10000",
-    "100000"
-  ],
-  "wall_seconds": 22.579375768080354,
-  "CPU_hours": 0.011180710840277778,
-  "peak_rss_MiB": 397.5546875
+  "status": "PASS_INDEPENDENT_FULL_H_METHOD_CHECK",
+  "archived_exact_reproduction": false,
+  "native_build_differs": true,
+  "reference_energy": 0.9481987916643421,
+  "energy": 0.9547868395596679,
+  "energy_error": 0.006588047895325855,
+  "support_exact_match": false,
+  "common_support": 385,
+  "wall_seconds": 6.062721464084461
 }

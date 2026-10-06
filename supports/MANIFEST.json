@@ -66,7 +66,122 @@
         4,
         39,
         63
-      ]
+      ],
+      "determinant_list_sha256": "4fc5102d126c4fd0b3c385da2a0f8edba492639e7a9fd81efdc08fb9fb7d0d62"
+    },
+    "1000": {
+      "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/supports/state_M1000.npz",
+      "sha256": "c99cc4e5eacfe1858f42f98cb6bff0893d4fa1a4fd5a091812061c5b6b39e743",
+      "determinant_list_sha256": "4d6e9a3dcd7fadf21c00988067434202e8bcce19b824a0e2f8acefe0f68638af",
+      "parent_path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/supports/state_M100.npz",
+      "parent_sha256": "8c54e985bfb54809dcc9d0c5dd0f17cb013e2bc8ec1a89621a72eb3b324d2d8b",
+      "initial_determinants": 100,
+      "full_H_energy": -0.7535994936724228,
+      "phase": {
+        "max_n_dets": 1000,
+        "growth_factor": 2.0,
+        "max_expansion_rounds": 100,
+        "screening_mode": "hb",
+        "threshold": 0.01,
+        "threshold_decay": 0.5,
+        "strict_target_size": true,
+        "orbital_optimization": false,
+        "pt2_correction": false,
+        "dressed_energy": false,
+        "expansion_energy_tol": -1,
+        "dets_conv_ratio": -1,
+        "use_connection_cache": true,
+        "use_sparse_update": false,
+        "symmetric_sigma": true,
+        "davidson_block_size": 1,
+        "backend": "cpu",
+        "verbose": 2,
+        "davidson": {
+          "max_iter": 500,
+          "max_subspace": 60,
+          "n_states": 1,
+          "residual_tol": 1e-09,
+          "energy_tol": -1.0,
+          "verbose": 0
+        }
+      },
+      "stage_wall_seconds": 2.3316858710022643
+    },
+    "10000": {
+      "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/supports/state_M10000.npz",
+      "sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+      "determinant_list_sha256": "1a74696ec78e5b3ea5a606417515480a6e7b9bf45848e877365446a0f17abf50",
+      "parent_path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/supports/state_M1000.npz",
+      "parent_sha256": "c99cc4e5eacfe1858f42f98cb6bff0893d4fa1a4fd5a091812061c5b6b39e743",
+      "initial_determinants": 1000,
+      "full_H_energy": -5.3668334490366565,
+      "phase": {
+        "max_n_dets": 10000,
+        "growth_factor": 2.0,
+        "max_expansion_rounds": 100,
+        "screening_mode": "hb",
+        "threshold": 0.01,
+        "threshold_decay": 0.5,
+        "strict_target_size": true,
+        "orbital_optimization": false,
+        "pt2_correction": false,
+        "dressed_energy": false,
+        "expansion_energy_tol": -1,
+        "dets_conv_ratio": -1,
+        "use_connection_cache": true,
+        "use_sparse_update": false,
+        "symmetric_sigma": true,
+        "davidson_block_size": 1,
+        "backend": "cpu",
+        "verbose": 2,
+        "davidson": {
+          "max_iter": 500,
+          "max_subspace": 60,
+          "n_states": 1,
+          "residual_tol": 1e-09,
+          "energy_tol": -1.0,
+          "verbose": 0
+        }
+      },
+      "stage_wall_seconds": 3.3554649179568514
+    },
+    "100000": {
+      "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/supports/state_M100000.npz",
+      "sha256": "f7c8b3b52e1eac9e25d6c437088d005ddf98b3e7a3f6497e2692726d757d20a1",
+      "determinant_list_sha256": "51d3822e768af18b92ed94f0b4b1bd619a404332c6e60c2824cc43e55ce08ef7",
+      "parent_path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/supports/state_M10000.npz",
+      "parent_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+      "initial_determinants": 10000,
+      "full_H_energy": -6.902450480132773,
+      "phase": {
+        "max_n_dets": 100000,
+        "growth_factor": 2.0,
+        "max_expansion_rounds": 100,
+        "screening_mode": "hb",
+        "threshold": 0.01,
+        "threshold_decay": 0.5,
+        "strict_target_size": true,
+        "orbital_optimization": false,
+        "pt2_correction": false,
+        "dressed_energy": false,
+        "expansion_energy_tol": -1,
+        "dets_conv_ratio": -1,
+        "use_connection_cache": true,
+        "use_sparse_update": false,
+        "symmetric_sigma": true,
+        "davidson_block_size": 1,
+        "backend": "cpu",
+        "verbose": 2,
+        "davidson": {
+          "max_iter": 500,
+          "max_subspace": 60,
+          "n_states": 1,
+          "residual_tol": 1e-09,
+          "energy_tol": -1.0,
+          "verbose": 0
+        }
+      },
+      "stage_wall_seconds": 14.249754308024421
     }
   }
 }

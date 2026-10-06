@@ -1,0 +1,23 @@
+universe = vanilla
+executable = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/scripts/analysis_job.sh
+arguments = $(m) round1
+initialdir = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_output_files = ""
+getenv = False
+requirements = (TARGET.IsOttenComputer =?= true) && (TARGET.Machine == "qis1.hep.wisc.edu")
++ProjectName = "UWMadison_Physics_Otten"
++ChtcProjects = "UWMadison_Physics_Otten"
++HEP_VO = "otten"
+request_cpus = 1
+request_memory = 4GB
+request_disk = 1GB
+output = work/scheduler/$(Cluster).$(Process).out
+error = work/scheduler/$(Cluster).$(Process).err
+log = work/scheduler/$(Cluster).log
++JobBatchName = "D01Ritz-FERMI-small-analysis"
+queue m from (
+10
+100
+)

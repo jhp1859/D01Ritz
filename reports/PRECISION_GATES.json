@@ -1,0 +1,16 @@
+{
+  "applies_to": "corrected 41bd5b5 single-bare-Fermi supports only",
+  "declared_before_corrected_Ritz_analysis": true,
+  "holdout_energy_SE_max": 0.1,
+  "holdout_relative_residual_95pct_upper_max": 0.05,
+  "training_projected_residual_max": 1e-7,
+  "cutoffs": [1e-8, 1e-6, 0.0001],
+  "cutoff_holdout_energy_range_max": 0.2,
+  "train_holdout_agreement": "difference <= max(0.2, 3*holdout_SE)",
+  "minimum_effective_samples_per_chain": 100,
+  "minimum_sector_crossings_per_chain": 20,
+  "sample_doubling_and_independent_seed_stability_required": true,
+  "energy_units": "total energy, t=1",
+  "failure_status": "unresolved",
+  "normalization": "S/Z-normalized coefficients plus separate uniform-sector physical norm estimate and uncertainty"
+}
