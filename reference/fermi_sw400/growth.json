@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "job": "7122926",
+  "scratch": "/tmp/h6_fermi_sw400_95q_j589",
+  "target_determinants": 400,
+  "basis": "fixed standing-wave",
+  "initial_determinants": 1,
+  "initial_state": "exact bare Fermi determinant",
+  "hamiltonian": "full Hubbard H",
+  "doublon_filter": false,
+  "symmetry_filter": false,
+  "orbital_optimization": false,
+  "random_multistart": false,
+  "actual_determinants": 400,
+  "E_var": 0.9481987916643421,
+  "fermi_reference_index": 45,
+  "fermi_reference_coefficient": 0.8357105330501122,
+  "coefficient_norm": 1.0000000000000016,
+  "state_sha256": "fdece64a8d316094e680bb9aa1639f05c509c9c27447315347e6810bf9e3b758",
+  "native_core_sha256": "5c2e54e52ba3a6f216a68f11374e2405a6b453902a2e72d4f416a541d7960c60",
+  "elapsed_seconds": 5.835371470000041
+}

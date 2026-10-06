@@ -1,39 +1,12 @@
-# Task for a second cluster: 6×6 D01RITZ coefficient optimization
+# Corrected task: bare-Fermi-start 6×6 D01RITZ
 
-1. Clone this repository, run `scripts/verify_inputs.py` and the unit tests,
-   and record the Git commit and input checksums in every result.  Use a new
-   output directory.  Do not modify the frozen input states.
-2. Use the exact bundled standing-wave support for each M=10,100,1000,
-   10000,100000.  M means generator count **before** site projection.  M10
-   is the explicitly labeled top-ten subset of M100.  Keep fixed Nup=Ndown=16
-   and do not add a singlet or other symmetry projection.
-3. Implement the D≤1 site sampler using `q(x)∝sum_I |phi_I(x)|²`, with both
-   within-sector and D0↔D1 moves.  Use `scripts/d01_operator.py` for the
-   Hermitian SW2 local action `PHP-P1 K P2 K P1/U`, including all signed
-   two-hop paths.  Do not silently substitute PHP-only or old D0 SW2.
-4. Validate the site amplitude updates and all local SW2 paths against
-   independent direct evaluations on small lattices and representative
-   6×6 configurations, including D0↔D1 and D1→D2→D1 paths.  Compare sampled
-   matrix estimates at M10/100 with independently generated estimates;
-   record Hermiticity error and autocorrelation.  Keep independent training
-   and holdout chains with fixed, recorded seeds.
-5. Benchmark M10/100 before scaling.  For large M, avoid dense M×M matrices
-   and M×M outer products.  A matrix-free action must define its stochastic
-   sample bank and normalization consistently.  Measure peak memory,
-   CPU-hours and wall time.  Do not describe 100k as feasible until measured.
-6. For each M, report the lowest Ritz energy, `c` and its SHA256, `c†Sc`,
-   relative generalized residual, sample error and independent holdout
-   objective energy/error.  Study stability versus sample count, chain
-   length, overlap-spectrum cutoff and random seed.  A low training energy
-   alone is not a pass.  Flag unresolved/failed cases without replacing the
-   fixed support or relaxing a gate silently.
-7. Keep trial coefficients and diagnostic files in the result directory,
-   then report the exact command, software versions, scheduler resources,
-   input hashes and failure modes back to the main project.  Do not run AFQMC
-   as part of this task unless separately requested.
+**Do not use commit `e961531` or its M10–100k supports.** Those came from a matched random-bank SW100 state. Clone the latest `main`; run `scripts/verify_inputs.py` and unit tests; record the current commit and input hashes.
 
-The 4×4 precedent used relative generalized residual ≤1e-7 for its exact
-Ritz solve.  For a sampled 6×6 solve, report residual uncertainty on an
-independent holdout set and establish a precision gate *before* declaring
-the result converged.  The archived 6×6 P0 sampler was unresolved at 100
-generators, so more sampling or an improved numerical method may be needed.
+1. System: 6×6 OBC Hubbard, t=1, U=8, Nup=Ndown=16. Use the fixed archived standing-wave orbitals. Start from **exactly one** bare Fermi determinant in `inputs/state_M1_fermi.npz`. Do not add orbital optimization, random multistarts, doublon selection or a new singlet/parity projection.
+2. First grow the **full-H** standing-wave TrimCI support ladder from that Fermi state. Grow M100; define M10 as its explicitly labeled top-ten coefficient subset, matching the 4×4 M10 convention; continue M100 to M1000, M10000 and M100000. Freeze and checksum every determinant list. The archived Fermi-grown M400 under `reference/fermi_sw400/` checks provenance and growth method; it is not a target support. Do not substitute the old matched SW100 ladder or use site Monte Carlo to select standing-wave determinants.
+3. On each fixed support, reoptimize only its coefficients: `S_IJ=<D_I|P|D_J>`, `A_IJ=<D_I|P H_eff^(01) P|D_J>`, `A c=E S c`, with `P=P0+P1` and `H_eff^(01)=PHP-P1 K P2 K P1/U`. PHP includes D=1 energy and direct D0↔D1 hopping. Include every signed D1→D2→D1 path. Do not reuse the D0-only correction or silently switch to PHP-only.
+4. Sample **site configurations for the projected Ritz matrix evaluation** using `q(x)∝sum_I |phi_I(x)|²`; include D0↔D1 moves. Evaluate `phi_I(x)=<x|D_I>` and `b_I(x)=<x|H_eff^(01)|D_I>` for the fixed generators. Use independent training and holdout chains, validate local updates and path signs, and report autocorrelation and sampling uncertainty. This is not AFQMC walker sampling.
+5. Validate M10 and M100 first, measuring wall time and peak memory. Then scale to M1k, M10k and M100k without dense M×M matrices. Save normalized coefficients, effective Ritz energy and holdout error, generalized residual and uncertainty, overlap conditioning, support/coefficient hashes, CPU-hours, memory and checkpoint locations. A low training energy alone is not convergence. Report unresolved or failed levels explicitly and preserve restart files.
+6. Commit code and small verified results to a separate Git branch. Keep large sample and checkpoint files on the compute cluster with a checksum manifest. Do not run AFQMC in this task. Give a measured schedule after the M10/M100 pilot, then continue the ladder.
+
+This repository currently supplies the true Fermi seed, orbitals, full-H integrals, a Fermi-grown SW400 example, and tested D≤1 local paths. It does **not** yet supply the target Fermi-origin support ladder or a production 6×6 D≤1 sampled matrix-free solver. Implement and verify both before claiming final results.
