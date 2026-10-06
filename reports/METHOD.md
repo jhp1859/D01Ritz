@@ -53,11 +53,11 @@ at the committed count; uncommitted tails are overwritten. Tests interrupt
 and restart actual chains and compare their banks with uninterrupted runs.
 Large files remain on Ceph under work/, excluded from Git. No AFQMC is run.
 
-The implementation explicitly refuses a large-M bank for which dual Gram
-compression would exceed 4096 rows or reach N>=M. It does not fall back to
-a dense M x M matrix at 100k. Such banks require a further iterative solver;
-this is a documented scalability limit, and the diagnostic low-rank result
-must not be called a statistically converged 100k solution.
+For small supports through M=1000, canonical dense solves provide a
+reference. For large supports, dual Gram compression is limited to at most
+4096 rows and N<M; larger banks use the iterative solver described below.
+Neither large-support route constructs a dense M x M matrix. The small-bank
+100k result remains statistically rank deficient and unresolved.
 
 Analysis verifies every bank file SHA256, the corrected seed SHA256, the
 frozen support SHA256, the train/holdout role and uniqueness of all chain
@@ -74,8 +74,7 @@ norms and residuals are evaluated in the original unregularized A,S pencil.
 Iteration warnings are retained; a converged regularized solve alone cannot
 pass the original-pencil residual gate. A dense generalized-eigenproblem
 oracle independently verifies the iterative algorithm at zero ridge.
-This supersedes the earlier refusal-only guard for large sample banks;
-there is still no dense M x M allocation for large M.
+There is no dense M x M allocation for large M.
 Within-chain length stability compares the first and second halves of every
 holdout chain at the fitted coefficients, with a leave-one-chain-out error
 for their energy difference. A drift larger than max(0.2,3 SE) fails. Only

@@ -50,7 +50,7 @@ with (ROOT/'reports/SUMMARY.csv').open('w',newline='') as f:
     w=csv.DictWriter(f,allkeys);w.writeheader();w.writerows(rows)
 # Bank files, checkpoints and scheduler logs stay on Ceph. Hash every artifact.
 cluster_files=[]
-for name in ['round1','round2','growth','sw400_reproduction','sw400_attempt_939909','node_smoke','scheduler','runtime']:
+for name in ['round1','round2','round3','growth','sw400_reproduction','sw400_attempt_939909','node_smoke','validation','scheduler','runtime']:
     base=ROOT/'work'/name
     for p in sorted(base.rglob('*')):
         if p.is_file() and '__pycache__' not in p.parts:
@@ -64,6 +64,7 @@ dump(ROOT/'reports/RESULT_MANIFEST.json',{'input_commit':'41bd5b5','origin':'sin
 lines=['# Corrected bare-Fermi-origin D01 Ritz results','',
 'Input commit `41bd5b5`; single M1 -> full-H M100 -> 1k -> 10k -> 100k. M10 is the top-ten subset of M100. The e961531 matched-random experiment is invalid and isolated. No old matrices, coefficients or checkpoints are reused.','',
 'All support files are frozen in `supports/`; checksums and parentage are in its MANIFEST.json. SW400 is only a method check; the different native build and stricter production stopping criterion are documented in SW400_VALIDATION_POLICY.md.','',
+'M100 round3 is a fresh independent holdout confirmation of the byte-identical round2 coefficient file. Round2 narrowly failed train/holdout agreement; that failure is preserved and its threshold was not relaxed.','',
 '## Ritz estimates','',
 'Unresolved rows are diagnostic coefficient fits, **not converged lowest Ritz energies**. Errors are conditional finite-chain estimates; see full block, seed, cutoff/ridge and sample-count diagnostics.','',
 '| M | Training E | Independent holdout E ± SE | Holdout relative residual ± bootstrap SD | Status |',

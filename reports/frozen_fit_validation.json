@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "coefficient_files_identical": true,
+  "sha256": "93fd2482ab90efc2f6743209952d2dc56a20a934049d6728757c0ed84b0437bc",
+  "paths": [
+    "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/reports/round1/M10/coefficients.npz",
+    "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/validation/frozen_fit_M10/coefficients.npz"
+  ]
+}
