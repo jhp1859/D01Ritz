@@ -1,0 +1,560 @@
+{
+  "status": "unresolved",
+  "M": 10,
+  "train_samples": 1024,
+  "holdout_samples": 1024,
+  "failures": [
+    "holdout_energy_precision",
+    "sample_count_stability",
+    "seed_stability"
+  ],
+  "chosen": {
+    "energy": -27.809452832816724,
+    "retained_rank": 10,
+    "empirical_nullity": 0,
+    "overlap_retained_condition": 2.8826387480990934,
+    "overlap_full_condition": 2.8826387480990934,
+    "cutoff": 1e-06,
+    "norm_S_over_Z": 1.0000000000000007,
+    "relative_generalized_residual": 5.143570166731301e-16,
+    "projected_residual": 3.879285072118016e-14,
+    "solver": "primal canonical",
+    "holdout": {
+      "energy": -27.260404681570343,
+      "energy_SE": 0.4164445937434369,
+      "relative_residual": 0.015483588154637573,
+      "residual_bootstrap_SD": 0.002871749317415328,
+      "residual_bootstrap_95pct": [
+        0.014795178110576877,
+        0.02581465407009482
+      ],
+      "block_size": 32,
+      "requested_block_size": 32,
+      "blocks": 32,
+      "norm_S_over_Z": 0.9325715008979345,
+      "tau_numerator": 1.434193273225925,
+      "tau_denominator": 1.213658811471642
+    }
+  },
+  "training_fixed_vector_block_diagnostics": {
+    "energy": -27.809452832816735,
+    "energy_SE": 0.5049366857971767,
+    "relative_residual": 0.003322791032150712,
+    "residual_bootstrap_SD": 0.0027978965850199676,
+    "residual_bootstrap_95pct": [
+      0.005257128996102337,
+      0.01594707684777589
+    ],
+    "block_size": 32,
+    "requested_block_size": 32,
+    "blocks": 32,
+    "norm_S_over_Z": 0.9999999999999999,
+    "tau_numerator": 1.380876826437403,
+    "tau_denominator": 1.3414200267672094
+  },
+  "cutoff_study": [
+    {
+      "energy": -27.809452832816724,
+      "retained_rank": 10,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 2.8826387480990934,
+      "overlap_full_condition": 2.8826387480990934,
+      "cutoff": 1e-08,
+      "norm_S_over_Z": 1.0000000000000007,
+      "relative_generalized_residual": 5.143570166731301e-16,
+      "projected_residual": 3.879285072118016e-14,
+      "solver": "primal canonical",
+      "holdout": {
+        "energy": -27.260404681570343,
+        "energy_SE": 0.4164445937434369,
+        "relative_residual": 0.015483588154637573,
+        "residual_bootstrap_SD": 0.002871749317415328,
+        "residual_bootstrap_95pct": [
+          0.014795178110576877,
+          0.02581465407009482
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 0.9325715008979345,
+        "tau_numerator": 1.434193273225925,
+        "tau_denominator": 1.213658811471642
+      }
+    },
+    {
+      "energy": -27.809452832816724,
+      "retained_rank": 10,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 2.8826387480990934,
+      "overlap_full_condition": 2.8826387480990934,
+      "cutoff": 1e-06,
+      "norm_S_over_Z": 1.0000000000000007,
+      "relative_generalized_residual": 5.143570166731301e-16,
+      "projected_residual": 3.879285072118016e-14,
+      "solver": "primal canonical",
+      "holdout": {
+        "energy": -27.260404681570343,
+        "energy_SE": 0.4164445937434369,
+        "relative_residual": 0.015483588154637573,
+        "residual_bootstrap_SD": 0.002871749317415328,
+        "residual_bootstrap_95pct": [
+          0.014795178110576877,
+          0.02581465407009482
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 0.9325715008979345,
+        "tau_numerator": 1.434193273225925,
+        "tau_denominator": 1.213658811471642
+      }
+    },
+    {
+      "energy": -27.809452832816724,
+      "retained_rank": 10,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 2.8826387480990934,
+      "overlap_full_condition": 2.8826387480990934,
+      "cutoff": 0.0001,
+      "norm_S_over_Z": 1.0000000000000007,
+      "relative_generalized_residual": 5.143570166731301e-16,
+      "projected_residual": 3.879285072118016e-14,
+      "solver": "primal canonical",
+      "holdout": {
+        "energy": -27.260404681570343,
+        "energy_SE": 0.4164445937434369,
+        "relative_residual": 0.015483588154637573,
+        "residual_bootstrap_SD": 0.002871749317415328,
+        "residual_bootstrap_95pct": [
+          0.014795178110576877,
+          0.02581465407009482
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 0.9325715008979345,
+        "tau_numerator": 1.434193273225925,
+        "tau_denominator": 1.213658811471642
+      }
+    }
+  ],
+  "sample_count_study": [
+    {
+      "energy": -28.012891815412335,
+      "retained_rank": 10,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 3.0998860534905175,
+      "overlap_full_condition": 3.0998860534905175,
+      "cutoff": 1e-06,
+      "norm_S_over_Z": 1.0000000000000007,
+      "relative_generalized_residual": 1.3739960972689213e-15,
+      "projected_residual": 9.415407885674615e-14,
+      "solver": "primal canonical",
+      "samples": 512,
+      "holdout": {
+        "energy": -25.50387999535894,
+        "energy_SE": 0.6931477956119239,
+        "relative_residual": 0.03445985395832355,
+        "residual_bootstrap_SD": 0.006877249016759655,
+        "residual_bootstrap_95pct": [
+          0.023736392382014786,
+          0.048874770737558096
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 1.059402545975428,
+        "tau_numerator": 1.524764843063697,
+        "tau_denominator": 1.795537166234464
+      }
+    },
+    {
+      "energy": -27.809452832816724,
+      "retained_rank": 10,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 2.8826387480990934,
+      "overlap_full_condition": 2.8826387480990934,
+      "cutoff": 1e-06,
+      "norm_S_over_Z": 1.0000000000000007,
+      "relative_generalized_residual": 5.143570166731301e-16,
+      "projected_residual": 3.879285072118016e-14,
+      "solver": "primal canonical",
+      "samples": 1024,
+      "holdout": {
+        "energy": -27.260404681570343,
+        "energy_SE": 0.4164445937434369,
+        "relative_residual": 0.015483588154637573,
+        "residual_bootstrap_SD": 0.002871749317415328,
+        "residual_bootstrap_95pct": [
+          0.014795178110576877,
+          0.02581465407009482
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 0.9325715008979345,
+        "tau_numerator": 1.434193273225925,
+        "tau_denominator": 1.213658811471642
+      }
+    }
+  ],
+  "seed_study": [
+    {
+      "energy": -28.012891815412335,
+      "retained_rank": 10,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 3.0998860534905175,
+      "overlap_full_condition": 3.0998860534905175,
+      "cutoff": 1e-06,
+      "norm_S_over_Z": 1.0000000000000007,
+      "relative_generalized_residual": 1.3739960972689213e-15,
+      "projected_residual": 9.415407885674615e-14,
+      "solver": "primal canonical",
+      "holdout": {
+        "energy": -25.50387999535894,
+        "energy_SE": 0.6931477956119239,
+        "relative_residual": 0.03445985395832355,
+        "residual_bootstrap_SD": 0.006877249016759655,
+        "residual_bootstrap_95pct": [
+          0.023736392382014786,
+          0.048874770737558096
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 1.059402545975428,
+        "tau_numerator": 1.524764843063697,
+        "tau_denominator": 1.795537166234464
+      }
+    },
+    {
+      "energy": -28.142762804460414,
+      "retained_rank": 10,
+      "empirical_nullity": 0,
+      "overlap_retained_condition": 3.456730634513465,
+      "overlap_full_condition": 3.456730634513465,
+      "cutoff": 1e-06,
+      "norm_S_over_Z": 1.000000000000002,
+      "relative_generalized_residual": 1.0818489107556528e-15,
+      "projected_residual": 6.895827109581619e-14,
+      "solver": "primal canonical",
+      "holdout": {
+        "energy": -27.151734748600752,
+        "energy_SE": 0.4543300187908553,
+        "relative_residual": 0.018283253643789948,
+        "residual_bootstrap_SD": 0.003327705158808777,
+        "residual_bootstrap_95pct": [
+          0.014388033701802146,
+          0.027660384737399422
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 32,
+        "norm_S_over_Z": 0.9906638522285327,
+        "tau_numerator": 1.6069423678393022,
+        "tau_denominator": 1.534537200411501
+      }
+    }
+  ],
+  "block_length_study": [
+    {
+      "energy": -27.26040468157034,
+      "energy_SE": 0.4645464074554915,
+      "relative_residual": 0.015483588154637564,
+      "residual_bootstrap_SD": 0.0027069280999638327,
+      "residual_bootstrap_95pct": [
+        0.0136256743872358,
+        0.024307494603694108
+      ],
+      "block_size": 16,
+      "requested_block_size": 16,
+      "blocks": 64,
+      "norm_S_over_Z": 0.9325715008979345,
+      "tau_numerator": 1.434193273225925,
+      "tau_denominator": 1.213658811471642
+    },
+    {
+      "energy": -27.260404681570343,
+      "energy_SE": 0.4164445937434369,
+      "relative_residual": 0.015483588154637573,
+      "residual_bootstrap_SD": 0.002871749317415328,
+      "residual_bootstrap_95pct": [
+        0.014795178110576877,
+        0.02581465407009482
+      ],
+      "block_size": 32,
+      "requested_block_size": 32,
+      "blocks": 32,
+      "norm_S_over_Z": 0.9325715008979345,
+      "tau_numerator": 1.434193273225925,
+      "tau_denominator": 1.213658811471642
+    },
+    {
+      "energy": -27.260404681570346,
+      "energy_SE": 0.45354390657005084,
+      "relative_residual": 0.015483588154637594,
+      "residual_bootstrap_SD": 0.0024011216539658706,
+      "residual_bootstrap_95pct": [
+        0.01533077562550649,
+        0.02442046196319493
+      ],
+      "block_size": 64,
+      "requested_block_size": 64,
+      "blocks": 16,
+      "norm_S_over_Z": 0.9325715008979344,
+      "tau_numerator": 1.434193273225925,
+      "tau_denominator": 1.213658811471642
+    },
+    {
+      "energy": -27.260404681570343,
+      "energy_SE": 0.530967682546789,
+      "relative_residual": 0.01548358815463763,
+      "residual_bootstrap_SD": 0.002782349128334005,
+      "residual_bootstrap_95pct": [
+        0.01530628693593139,
+        0.025480474136289226
+      ],
+      "block_size": 128,
+      "requested_block_size": 128,
+      "blocks": 8,
+      "norm_S_over_Z": 0.9325715008979344,
+      "tau_numerator": 1.434193273225925,
+      "tau_denominator": 1.213658811471642
+    }
+  ],
+  "raw_training_hermiticity_relative_error": 0.017271912392778564,
+  "independent_train_matrix_relative_difference": 0.23710491445476647,
+  "normalization": "training c^T(S/Z)c=1, unknown Z; physical c^TSc is not estimated",
+  "coefficients": {
+    "path": "/mnt/ceph/home/park687/D01Ritz/reports/round1/M10/coefficients.npz",
+    "sha256": "b8259a14f1af8bf161e4ac737f20f192b46cf791da20a92ca1a4ea1fca9bcd29"
+  },
+  "chains": [
+    {
+      "options": {
+        "m": 10,
+        "seed": 106101,
+        "samples": 512,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "ed6004c0ea0f7572556fd331e354325ad4f7faa7d640efc72d0de022e90a2822"
+      },
+      "state": [
+        21669148812,
+        38458233651
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 13282855257009717830709275625968152102,
+          "inc": 157292990171201234005244552782307817385
+        },
+        "has_uint32": 0,
+        "uinteger": 2646270681
+      },
+      "done": 512,
+      "accepted": 1139,
+      "cross": 69,
+      "proposed": 14240,
+      "wall_seconds": 69.34665829699952,
+      "cpu_seconds": 33.578795362,
+      "peak_rss_MiB": 35.35546875,
+      "commit": "7ec80bbfce360ac2a3fb680b1956634ac7f3fee2",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_432707/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106101/F.npy",
+          "sha256": "4d7edd9642e0f6a3ab0e2f4845fcf62045254e5682a2ebf07f8864b061fe0e4e"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106101/G.npy",
+          "sha256": "166322b58b36f005ff054e0d4be7230a07cef30debfffd49ff4658ab31dca7e5"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106101/states.npy",
+          "sha256": "1f06aa36ce9b825caf91da6818fafb928a5149fe916c3fe6c3f35ae64121196e"
+        }
+      },
+      "D1_fraction": 0.970703125,
+      "tau_D": 0.7828546801643192,
+      "tau_starting_numerator": 1.4096496747973637,
+      "tau_starting_denominator": 1.340723320028177
+    },
+    {
+      "options": {
+        "m": 10,
+        "seed": 106102,
+        "samples": 512,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "ed6004c0ea0f7572556fd331e354325ad4f7faa7d640efc72d0de022e90a2822"
+      },
+      "state": [
+        5212278660,
+        62433833003
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 289463399793478822116058025213928849466,
+          "inc": 168993196056443533078234790025877800157
+        },
+        "has_uint32": 0,
+        "uinteger": 1466981274
+      },
+      "done": 512,
+      "accepted": 1174,
+      "cross": 49,
+      "proposed": 14240,
+      "wall_seconds": 70.87694955396,
+      "cpu_seconds": 37.388666973,
+      "peak_rss_MiB": 31.38671875,
+      "commit": "7ec80bbfce360ac2a3fb680b1956634ac7f3fee2",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_430310/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106102/F.npy",
+          "sha256": "7e3c3645d862f4a1a751fd2914e10f4dbbac203c6a272a76803b7cc213f776a0"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106102/G.npy",
+          "sha256": "bf0d5572e444d24ac702534adb9d767584c7ce854fe94bbfa9785daad48a4f39"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106102/states.npy",
+          "sha256": "42c3fccc918832dd8b8f482abba0b55f1c454fe9221e5006654d1ae811f35d9e"
+        }
+      },
+      "D1_fraction": 0.978515625,
+      "tau_D": 0.5709061280847396,
+      "tau_starting_numerator": 1.586351051669128,
+      "tau_starting_denominator": 1.5101518533622862
+    },
+    {
+      "options": {
+        "m": 10,
+        "seed": 206101,
+        "samples": 512,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "holdout",
+        "input_sha256": "ed6004c0ea0f7572556fd331e354325ad4f7faa7d640efc72d0de022e90a2822"
+      },
+      "state": [
+        21118592426,
+        47608123988
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 202495168559846386421252090686474481745,
+          "inc": 24087580857461207354122206280628061161
+        },
+        "has_uint32": 1,
+        "uinteger": 1783747081
+      },
+      "done": 512,
+      "accepted": 1227,
+      "cross": 65,
+      "proposed": 14240,
+      "wall_seconds": 69.44900069897994,
+      "cpu_seconds": 31.234736106,
+      "peak_rss_MiB": 33.35546875,
+      "commit": "7ec80bbfce360ac2a3fb680b1956634ac7f3fee2",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_430312/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206101/F.npy",
+          "sha256": "7e06fb2bffdc5010d5d89f653d9a323ec1d96ee5fd1d88d0e7b227f0e0bb326c"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206101/G.npy",
+          "sha256": "a4ab455542e680d457a8e4fef1bde5a5c3feaf61cfaf573498e93f85f9d495ed"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206101/states.npy",
+          "sha256": "fa2073e614c24819d25f4ee900e98120e71b51f059e2a91c8351823d29da8157"
+        }
+      },
+      "D1_fraction": 0.9765625,
+      "tau_D": 0.5,
+      "tau_starting_numerator": 1.495260097126961,
+      "tau_starting_denominator": 1.37185240585814
+    },
+    {
+      "options": {
+        "m": 10,
+        "seed": 206102,
+        "samples": 512,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "holdout",
+        "input_sha256": "ed6004c0ea0f7572556fd331e354325ad4f7faa7d640efc72d0de022e90a2822"
+      },
+      "state": [
+        2840177877,
+        57180820266
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 300477869780435219936068725701939324947,
+          "inc": 2774801811044923863126351979926855133
+        },
+        "has_uint32": 1,
+        "uinteger": 2558948927
+      },
+      "done": 512,
+      "accepted": 1203,
+      "cross": 67,
+      "proposed": 14240,
+      "wall_seconds": 68.27062430395745,
+      "cpu_seconds": 34.180541994,
+      "peak_rss_MiB": 33.49609375,
+      "commit": "7ec80bbfce360ac2a3fb680b1956634ac7f3fee2",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_430315/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206102/F.npy",
+          "sha256": "ac1820338860dd23965afb4bcc32a8e257f17b67e148d56368aca991a9c25687"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206102/G.npy",
+          "sha256": "20bb7e52d6d139f8e5455eb3f039cb447ad2399b78fffbd5a25d888cdffc1d9b"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206102/states.npy",
+          "sha256": "e943240bb90a8c9b99907b9de3761e7f59b732603ce7cb4ed52721c2fe5fc064"
+        }
+      },
+      "D1_fraction": 0.96875,
+      "tau_D": 0.6612273185483871,
+      "tau_starting_numerator": 1.5659236727057797,
+      "tau_starting_denominator": 1.4312481358404276
+    }
+  ],
+  "sampling_CPU_hours": 0.037884094565277776,
+  "sampling_wall_seconds_sum": 277.9432328538969,
+  "sampling_peak_rss_MiB": 35.35546875,
+  "analysis_seconds": 0.8086145874112844,
+  "analysis_CPU_seconds": 0.19839067900000001,
+  "analysis_peak_rss_MiB": 46.33984375
+}

@@ -1,0 +1,25 @@
+universe = vanilla
+executable = /mnt/ceph/home/park687/D01Ritz/scripts/chain_job.sh
+arguments = --m $(m) --seed $(seed) --samples $(samples) --burn 1000 --stride 20 --stage $(stage) --out /mnt/ceph/home/park687/D01Ritz/work/round1/M$(m)/$(stage)_$(seed)
+initialdir = /mnt/ceph/home/park687/D01Ritz
+should_transfer_files = YES
+transfer_output_files = ""
+getenv = False
+when_to_transfer_output = ON_EXIT
+requirements = (TARGET.IsOttenComputer =?= true) && (TARGET.Machine == "qis1.hep.wisc.edu")
++ProjectName = "UWMadison_Physics_Otten"
++ChtcProjects = "UWMadison_Physics_Otten"
++HEP_VO = "otten"
+request_cpus = 1
+request_memory = 2GB
+request_disk = 1GB
+output = work/scheduler/$(Cluster).$(Process).out
+error = work/scheduler/$(Cluster).$(Process).err
+log = work/scheduler/$(Cluster).log
++JobBatchName = "D01Ritz-100k-diagnostic-20261006"
+queue m,stage,seed,samples from (
+100000 train 106501 64
+100000 train 106502 64
+100000 holdout 206501 64
+100000 holdout 206502 64
+)

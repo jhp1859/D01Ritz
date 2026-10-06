@@ -45,6 +45,7 @@ def solve(F,G,cutoff):
 def holdout(F,G,c,block=32):
     # Independent non-overlapping blocks; jackknife accounts for ratio bias
     # to first order. Block-length sensitivity is reported separately.
+    requested_block=block;block=min(block,max(1,len(F)//4))
     n=(len(F)//block)*block;F=F[:n];G=G[:n]
     f=F@c;g=G@c
     nums=(f*g).reshape(-1,block).mean(1);dens=(f*f).reshape(-1,block).mean(1)
@@ -63,7 +64,7 @@ def holdout(F,G,c,block=32):
         boots.append(np.linalg.norm(ab-eb*sb)/(np.linalg.norm(ab)+abs(eb)*np.linalg.norm(sb)))
     return {'energy':E,'energy_SE':se,'relative_residual':residual,'residual_bootstrap_SD':float(np.std(boots,ddof=1)),
         'residual_bootstrap_95pct':list(map(float,np.percentile(boots,[2.5,97.5]))),
-        'block_size':block,'blocks':B,'norm_S_over_Z':float(dens.mean()),
+        'block_size':block,'requested_block_size':requested_block,'blocks':B,'norm_S_over_Z':float(dens.mean()),
         'tau_numerator':tau(f*g),'tau_denominator':tau(f*f)}
 
 
@@ -96,9 +97,12 @@ def main():
         R=np.random.default_rng(124).normal(size=(F.shape[1],8));AR=(F@R).T@(G@R)/len(F)
         herm=float(np.linalg.norm(AR-AR.T)/np.linalg.norm(AR));matrix_difference=None
     # Conservative outcome: report all diagnostics, never equate a fit with convergence.
+    block_study=[holdout(HF,HG,chosen,b) for b in [16,32,64,128]]
     failures=[];h=chosen_r['holdout']
-    if h['energy_SE']>0.1:failures.append('holdout_energy_precision')
-    if h['residual_bootstrap_95pct'][1]>0.05:failures.append('holdout_residual')
+    h['conservative_energy_SE']=max(v['energy_SE'] for v in block_study)
+    h['conservative_residual_95pct_upper']=max(v['residual_bootstrap_95pct'][1] for v in block_study)
+    if h['conservative_energy_SE']>0.1:failures.append('holdout_energy_precision')
+    if h['conservative_residual_95pct_upper']>0.05:failures.append('holdout_residual')
     if chosen_r['projected_residual']>1e-7:failures.append('training_projected_residual')
     if abs(chosen_r['energy']-h['energy'])>max(.2,3*h['energy_SE']):failures.append('train_holdout_disagreement')
     if np.ptp([r['holdout']['energy'] for r in results])>.2:failures.append('overlap_cutoff_sensitivity')
@@ -112,7 +116,8 @@ def main():
     rec={'status':'unresolved' if failures else 'candidate_pass_requires_longer_chain_confirmation',
         'M':int(F.shape[1]),'train_samples':len(F),'holdout_samples':len(HF),'failures':sorted(set(failures)),
         'chosen':chosen_r,'training_fixed_vector_block_diagnostics':holdout(F,G,chosen),'cutoff_study':results,'sample_count_study':stability,'seed_study':seed_results,
-        'block_length_study':[holdout(HF,HG,chosen,b) for b in [16,32,64,128]],
+        'block_length_study':block_study,
+        'hermiticity_estimator':'full Frobenius' if F.shape[1]<=1000 else '8 random probe projection',
         'raw_training_hermiticity_relative_error':herm,'independent_train_matrix_relative_difference':matrix_difference,
         'normalization':'training c^T(S/Z)c=1, unknown Z; physical c^TSc is not estimated',
         'coefficients':{'path':str((args.out/'coefficients.npz').resolve()),'sha256':sha(args.out/'coefficients.npz')},

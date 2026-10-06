@@ -1,0 +1,15 @@
+{
+  "seed": 306100,
+  "uniform_samples": 4096,
+  "sector_configuration_counts": [
+    35406640372950,
+    1812819987095040
+  ],
+  "norm_before_normalization": 0.0007172087915464566,
+  "norm_SE": 0.00015046267491125912,
+  "relative_norm_SE": 0.2097892227266612,
+  "normalized_norm_estimate": 1.0,
+  "normalized_norm_SE": 0.2097892227266612,
+  "warning": "Monte Carlo normalization, not exact; independent uniform sample precision is reported.",
+  "coefficients_sha256": "13fd9e8f9d83a01ab0e20d65ba8ab78aaade0a32511af88977f5e930f8bbd39b"
+}
