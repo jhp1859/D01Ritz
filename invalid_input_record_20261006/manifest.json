@@ -1,0 +1,1328 @@
+{
+  "status": "INVALID_INPUT_DO_NOT_REUSE",
+  "reason": "matched random bank, not bare Fermi origin",
+  "input_commit": "e961531e234df80b4495dc54035cf70dfe2416ba",
+  "stopped_clusters": [
+    939905,
+    939906,
+    939907
+  ],
+  "completed_clusters": [
+    939902,
+    939903,
+    939904
+  ],
+  "created_utc": "2026-10-06T19:51:39.688072+00:00",
+  "files": [
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/inputs/MANIFEST.json",
+      "bytes": 1408,
+      "sha256": "daa185df126f657489657bbade55d09d728cde13042166c8f1e1137b0bfe89e7"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/inputs/integrals_sw.npz",
+      "bytes": 13468762,
+      "sha256": "64a8be718e1811a0eb109d63c2b0316f9743324174d71e9f7b8a88816c6099fe"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/inputs/state_M10.npz",
+      "bytes": 2723,
+      "sha256": "ed6004c0ea0f7572556fd331e354325ad4f7faa7d640efc72d0de022e90a2822"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/inputs/state_M100.npz",
+      "bytes": 24426,
+      "sha256": "40afdbc8f16c87216d9acee7041029a548ef48eb0ebe4819428adabb9530e6ae"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/inputs/state_M1000.npz",
+      "bytes": 46026,
+      "sha256": "cd3797340781b63ffa05ad891d7d0f6f72f9d2b8ba8bff1c1c0a18bcbb7204d3"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/inputs/state_M10000.npz",
+      "bytes": 262026,
+      "sha256": "b432bc58860515a01dde23b6f7a50bc928b80d4d797cc8a356246d6a383b8d97"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/inputs/state_M100000.npz",
+      "bytes": 2422026,
+      "sha256": "78b146b04a81465cb9e830fbf35dd316f44cd099422c667cb68e272892641702"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/100k.sub",
+      "bytes": 970,
+      "sha256": "9b326a9a90237b1c549cce7f0869eb5ce8b4cbd5aab011d38601aa28950b587d"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/EXECUTION_NOTES.md",
+      "bytes": 1942,
+      "sha256": "c799b78a535edd8b96be5b7f05ade1baa73c124f37221d0c1a7058e2257b6e78"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/METHOD.md",
+      "bytes": 3566,
+      "sha256": "7665a97484f0dc1db6a5fdc3ec4f3e9a18a6cbf2c7f9003614ba4b87735b0c57"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/PRECISION_GATES.json",
+      "bytes": 712,
+      "sha256": "bca946ec4ef7eed84a1fe99594ff57ed0b9d9e8108dfdc5abfd6d1a54470cbb5"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/analysis.sub",
+      "bytes": 716,
+      "sha256": "8593a6ac92164e1ab3fcce5b8c6c0b8308649024076895d85a96b0adfec605e3"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/large.sub",
+      "bytes": 1052,
+      "sha256": "9c5a9aef8349bccfc961909c0f4ac4a804aa8686e780085ebb6a361e3e1fa63b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/large_pilot.sub",
+      "bytes": 826,
+      "sha256": "111059fd1251e65e2a4d6876fab2bf46d4a78d4624ff74af8bb7cd1fd2e10149"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/precision.sub",
+      "bytes": 1418,
+      "sha256": "59d1806c047101df25a83dd79657a8d6f7add6c7245fb79f34c12d497f3d69ce"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/round1/M10/coefficients.npz",
+      "bytes": 732,
+      "sha256": "b8259a14f1af8bf161e4ac737f20f192b46cf791da20a92ca1a4ea1fca9bcd29"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/round1/M10/coefficients_physical_norm_estimate.npz",
+      "bytes": 358,
+      "sha256": "13fd9e8f9d83a01ab0e20d65ba8ab78aaade0a32511af88977f5e930f8bbd39b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/round1/M10/normalization.json",
+      "bytes": 538,
+      "sha256": "57406c38654ff8e3140babec7256115114fc7799e3933ff5e923ef35932bbeef"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/round1/M10/result.json",
+      "bytes": 18697,
+      "sha256": "276cece3284d92a7ce4a8eb04f3d3f021616d9990d686fa638734c70d54fd3f1"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/round1/M100/coefficients.npz",
+      "bytes": 2172,
+      "sha256": "d369f0bdaa1cced4865486bd4488417df04bd91ab0733ea5f4f127302f8e5e01"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/round1/M100/coefficients_physical_norm_estimate.npz",
+      "bytes": 1078,
+      "sha256": "53fe08da26636c55bd8d19542e79eee9effbef11bdec698fd039e8b77aa4d321"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/round1/M100/normalization.json",
+      "bytes": 538,
+      "sha256": "0328c565d5cae8e67e4cd5dae74a16c252e33bfcb9b1e15abd410ca55ffd0a54"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/round1/M100/result.json",
+      "bytes": 18838,
+      "sha256": "ac37783374f135333d6f03140ff48b6c0ddd8d7ec36594231b5e63f3a15c45c5"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/small.sub",
+      "bytes": 946,
+      "sha256": "791692269bc427faef9929f084de35279165c54873738a31e3b14b1491141402"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/reports/validation.txt",
+      "bytes": 577,
+      "sha256": "271fbbd2e507d83e70a30cff8c37f681d347861905f7cdc601dbe07bbcf1928e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M10/F.npy",
+      "bytes": 1408,
+      "sha256": "b7bc4e1148c931e6d68e305599034336b4b9404da145691c81f1dba749b8342f"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M10/G.npy",
+      "bytes": 1408,
+      "sha256": "6c35af84d3d522422255a3c32e7ba41f42d0d4af731b47ed78b611307c89b24e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M10/checkpoint.json",
+      "bytes": 839,
+      "sha256": "9e60d15ad41fba6ee8acba8a223f65ca44e34ad840b67e1084ab89adff88e358"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M10/manifest.json",
+      "bytes": 1525,
+      "sha256": "7e88cb0b557e1f273f3765f270543b6f603088c4da6699ef5d79fa6ebe312133"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M10/states.npy",
+      "bytes": 384,
+      "sha256": "b633415fbad8e41aa0cc50ac9dbcf7f52a579e7070f341b3ac926039df91f210"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M100/F.npy",
+      "bytes": 12928,
+      "sha256": "e2d126a2d54b2339df32cf532969c819660d8ceba2ea88018c2821104e623588"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M100/G.npy",
+      "bytes": 12928,
+      "sha256": "ad7714d5c6ce0bd2ed39bec23652d10ac81da6edc2c47d5cd8d07f2ab78c7c0e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M100/checkpoint.json",
+      "bytes": 832,
+      "sha256": "ee63aada279318b57c178007a79dd19a1b065911dba11aee5f44b434234bebd0"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M100/manifest.json",
+      "bytes": 1493,
+      "sha256": "72b6a3bb3e8313f5ffced44ddd2e3cf3cbc11e161821b8933f44a1cdf2d08f81"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M100/states.npy",
+      "bytes": 384,
+      "sha256": "941113cc2b95fe6cc2fcf7407d762e7d9eb1b0a29f148635aa604d8ddfe12a34"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M1000/F.npy",
+      "bytes": 128128,
+      "sha256": "a6c5a257c36cb6c2d656106e7a709e91dc7d02ba760bef440e7a8ee066bec2a2"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M1000/G.npy",
+      "bytes": 128128,
+      "sha256": "b605a1510a3785c367a2c0439b7bbabebcf47a3326704aaafdd6ea50472310da"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M1000/checkpoint.json",
+      "bytes": 887,
+      "sha256": "68dada6c283ac88bbd4f0f993e9dbfca28c78b8f4c14d34f43b93cf5d005a81a"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M1000/manifest.json",
+      "bytes": 1551,
+      "sha256": "facbb7240db9cba552b1cf5f38f12bbe4cac45ee4f4ba875187686350cbcb452"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M1000/states.npy",
+      "bytes": 384,
+      "sha256": "ad6e1c1ef6dd7aeb4ae0ec5fc98c4c9066864eb35356eae11d95519c3e196e0a"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M10000/F.npy",
+      "bytes": 1280128,
+      "sha256": "780d1f46b49a023c0f1f7855d5723bc1f93bfe0b39d1f94ec60160038620bdec"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M10000/G.npy",
+      "bytes": 1280128,
+      "sha256": "724b7972534cd75ca8e91a1b97aca50b66abd26a6f595e274bafbc19f947eb05"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M10000/checkpoint.json",
+      "bytes": 885,
+      "sha256": "4c1618740d62010c921a6df0ddd9d39b6619845db92a9bdf64abf6f3b581dff4"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M10000/manifest.json",
+      "bytes": 1582,
+      "sha256": "b634e7c6f9d530f850b7f7191322fb6c090ad470c30aaab1add880af079fa4e8"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M10000/states.npy",
+      "bytes": 384,
+      "sha256": "30e082287cfe5526fa5eb87b6ac3f8d097f34c2088a367750c3993131183346e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M100000/F.npy",
+      "bytes": 12800128,
+      "sha256": "0a55a2cc876fca16d7b8adb2918446bc8e8ae0d1ea7e19a1854d61170dc84739"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M100000/G.npy",
+      "bytes": 12800128,
+      "sha256": "40af9f2c81bbef435d6ccdbe0381f99a41965f247bd8797aef8d4d5c9720dfd4"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M100000/checkpoint.json",
+      "bytes": 885,
+      "sha256": "7b57173d24ea9986875fe8bc6fa7044dd6386b1d062dc77c68a114423583f26c"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M100000/manifest.json",
+      "bytes": 1582,
+      "sha256": "95bbc47f8e8f095b9f7dc4690bcbc7795f2f6785047a9eb42a0271f021a6218e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/pilot/M100000/states.npy",
+      "bytes": 384,
+      "sha256": "407b2ce90b0916721be4ea4a59db8bcfd9370c8a423bf220be60d1f254492f73"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206101/F.npy",
+      "bytes": 41088,
+      "sha256": "7e06fb2bffdc5010d5d89f653d9a323ec1d96ee5fd1d88d0e7b227f0e0bb326c"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206101/G.npy",
+      "bytes": 41088,
+      "sha256": "a4ab455542e680d457a8e4fef1bde5a5c3feaf61cfaf573498e93f85f9d495ed"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206101/checkpoint.json",
+      "bytes": 888,
+      "sha256": "cd45ec04e94f494f71f26dae4a438084f3ff2afccef9ba233bf1fb2d31358d9e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206101/manifest.json",
+      "bytes": 1624,
+      "sha256": "1122e94a11a8a07d4041351b23e88f4a2cbd795a071ef7146ee4d661000cd8b4"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206101/states.npy",
+      "bytes": 8320,
+      "sha256": "fa2073e614c24819d25f4ee900e98120e71b51f059e2a91c8351823d29da8157"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206102/F.npy",
+      "bytes": 41088,
+      "sha256": "ac1820338860dd23965afb4bcc32a8e257f17b67e148d56368aca991a9c25687"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206102/G.npy",
+      "bytes": 41088,
+      "sha256": "20bb7e52d6d139f8e5455eb3f039cb447ad2399b78fffbd5a25d888cdffc1d9b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206102/checkpoint.json",
+      "bytes": 886,
+      "sha256": "8a5520fb49a3cee941d68d792d5e4dd7e9f1443ecb7bc63808c2eec6be46cc59"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206102/manifest.json",
+      "bytes": 1638,
+      "sha256": "8bc4ddcd4a48af367337af44985361187eaea6ee098d98b2979b085f071d5374"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/holdout_206102/states.npy",
+      "bytes": 8320,
+      "sha256": "e943240bb90a8c9b99907b9de3761e7f59b732603ce7cb4ed52721c2fe5fc064"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106101/F.npy",
+      "bytes": 41088,
+      "sha256": "4d7edd9642e0f6a3ab0e2f4845fcf62045254e5682a2ebf07f8864b061fe0e4e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106101/G.npy",
+      "bytes": 41088,
+      "sha256": "166322b58b36f005ff054e0d4be7230a07cef30debfffd49ff4658ab31dca7e5"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106101/checkpoint.json",
+      "bytes": 886,
+      "sha256": "0bef69d599228aa0eb3e322202ba92c32664a99008222a38d0292deecd493819"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106101/manifest.json",
+      "bytes": 1635,
+      "sha256": "87861f5bb8e5cfd216a29c6204fd195e521a0a72be2c4b5e18436eb7eef17265"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106101/states.npy",
+      "bytes": 8320,
+      "sha256": "1f06aa36ce9b825caf91da6818fafb928a5149fe916c3fe6c3f35ae64121196e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106102/F.npy",
+      "bytes": 41088,
+      "sha256": "7e3c3645d862f4a1a751fd2914e10f4dbbac203c6a272a76803b7cc213f776a0"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106102/G.npy",
+      "bytes": 41088,
+      "sha256": "bf0d5572e444d24ac702534adb9d767584c7ce854fe94bbfa9785daad48a4f39"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106102/checkpoint.json",
+      "bytes": 883,
+      "sha256": "6d099e2fd2751d7dcc31bcb95e58d49b2557cb75cc74b213affb2ca1c565174b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106102/manifest.json",
+      "bytes": 1632,
+      "sha256": "dc66d0e7f28f92da53076104376a441c74bc17c87ecdd8cb052397381eb6a4fc"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10/train_106102/states.npy",
+      "bytes": 8320,
+      "sha256": "42c3fccc918832dd8b8f482abba0b55f1c454fe9221e5006654d1ae811f35d9e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/holdout_206201/F.npy",
+      "bytes": 409728,
+      "sha256": "f84865380303fc6ffc1e581fbaf53446090f527aa1eb5cac4f2fe342e241b2b6"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/holdout_206201/G.npy",
+      "bytes": 409728,
+      "sha256": "1ad3b8bbdba44e83052adc56b09a2998308c144a299aa87077b8b0963674f587"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/holdout_206201/checkpoint.json",
+      "bytes": 896,
+      "sha256": "b61f4e706aafc9520be90b07bbc498ffcaa86bf9123b61de93ef31ca8d7d07e2"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/holdout_206201/manifest.json",
+      "bytes": 1655,
+      "sha256": "922bab5adb2535e66deb5beb44afe076abaa4ad9bc59395b0751e66b6f85d9ab"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/holdout_206201/states.npy",
+      "bytes": 8320,
+      "sha256": "fd2398b65476589d279ca03563950d39cba35712daf6db7ab5fb8937434010b1"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/holdout_206202/F.npy",
+      "bytes": 409728,
+      "sha256": "15e761b259c319e826e2d7e0deb1024c62746c986998a2e9972382d23f064376"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/holdout_206202/G.npy",
+      "bytes": 409728,
+      "sha256": "1120010a9a41b51e4265c9558659df35a17d468466d9c4d673e13bc96813137d"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/holdout_206202/checkpoint.json",
+      "bytes": 890,
+      "sha256": "a163c75d48a25d5a147ab4334364564d8431eebf45a406b216fe2052bbf9a401"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/holdout_206202/manifest.json",
+      "bytes": 1648,
+      "sha256": "e4d50cb293cdbf3bdc1bcd902656924fd93cfa4226f26cdbe005e4b6e0c7a1af"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/holdout_206202/states.npy",
+      "bytes": 8320,
+      "sha256": "1053f3a8231315a52314e40c90720d67745495c002ae4d8bed80ec908364eb71"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/train_106201/F.npy",
+      "bytes": 409728,
+      "sha256": "f819bf590f4e8c3a7af23108d31a7c8bd9dfc29accee6a809287cc99c883d0a0"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/train_106201/G.npy",
+      "bytes": 409728,
+      "sha256": "75ae5ba21252b49aa1e02f55315fb4cc30c7a351286df61f039af24016cdb149"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/train_106201/checkpoint.json",
+      "bytes": 888,
+      "sha256": "41942a85ae2954deae7da4455982f9bfe1cfe9c7445d726f4e2cdcb90befd5be"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/train_106201/manifest.json",
+      "bytes": 1639,
+      "sha256": "1fd26582c55b04bf5fb78ed94a7c48d8e44fd8f80b1d94d243f20f550094e604"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/train_106201/states.npy",
+      "bytes": 8320,
+      "sha256": "6fc66bb55760e941570485fca2434b89811f6116c69c689541b03c69a5e112c3"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/train_106202/F.npy",
+      "bytes": 409728,
+      "sha256": "211bb6e634f48da33a8642181e3348a27b47a730419e9853f7f1bca2727d632c"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/train_106202/G.npy",
+      "bytes": 409728,
+      "sha256": "ea2bff31f4c05f023a6e959a9c3606f0e3f8b3218c6c5e9bd335c1dc1c25b6bf"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/train_106202/checkpoint.json",
+      "bytes": 888,
+      "sha256": "db067b14be47353f94e2e500fe8edeb45e823a7ab9e07976b35ca7db68703863"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/train_106202/manifest.json",
+      "bytes": 1640,
+      "sha256": "1eaa80923272b8c18f684e93730d2a36fc4aef42e52072ab439849f2fa56369b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100/train_106202/states.npy",
+      "bytes": 8320,
+      "sha256": "96d7379e730dc3249e0aaf60e964e19b1579e136a32f3c3a70d11e589c74f988"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/holdout_206301/F.npy",
+      "bytes": 4096128,
+      "sha256": "2fd297b94b6d4e5581efdd58f12a0d135c640294c741eeef9a85df77ada37a23"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/holdout_206301/G.npy",
+      "bytes": 4096128,
+      "sha256": "79e973da3a543bfded0f0cc56375bc656ab641f48000d5d3350885f290142e6e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/holdout_206301/checkpoint.json",
+      "bytes": 894,
+      "sha256": "d973901f62e7bda6fd839e934466610128420a67d9682cfa03ed4b5e7ca48dbf"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/holdout_206301/manifest.json",
+      "bytes": 1641,
+      "sha256": "a3980f485a5752b5a3004960335ab2bc2294bba1e3ba123060a84fd263ddb225"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/holdout_206301/states.npy",
+      "bytes": 8320,
+      "sha256": "1c575699ee23dfbbce3cf2d27b943325d8c44419660265ebaecf89265778ed36"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/holdout_206302/F.npy",
+      "bytes": 4096128,
+      "sha256": "16ee89ae0d6ac253499b2cdd03db9f06fbb1976a5111ac3d12e4d5262615ebdc"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/holdout_206302/G.npy",
+      "bytes": 4096128,
+      "sha256": "7f9dbe3777038cbebe3a613f7027412640fcff5df6f850e7739692365b21f828"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/holdout_206302/checkpoint.json",
+      "bytes": 890,
+      "sha256": "66ceda3dc73bf37f0089833e15bae7361846837ad623e1c6f3e26528073ac07f"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/holdout_206302/manifest.json",
+      "bytes": 1652,
+      "sha256": "8ec504e3545337da5e3de4ad49de7314b7d1b17a3dfa42a5d654300a7bc89d88"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/holdout_206302/states.npy",
+      "bytes": 8320,
+      "sha256": "1d50e3136c709ae6d7902983b8c5c76a8985eaaebb2a4ab682761d467ea7ec4d"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/train_106301/F.npy",
+      "bytes": 4096128,
+      "sha256": "048580375102faa5533f8220e591f282f426e467559102c2da55fb155484a3eb"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/train_106301/G.npy",
+      "bytes": 4096128,
+      "sha256": "2931e80a4c2d5328b406e2e18c4f07d438bf41db119a0c2152d5bdeb46235365"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/train_106301/checkpoint.json",
+      "bytes": 889,
+      "sha256": "e26b9c0016893ea0b09bee4847b78e3950626335def7af5c1d86987db883801b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/train_106301/manifest.json",
+      "bytes": 1640,
+      "sha256": "afedb6ca21a3c8221d240d62876251e35447f887ebeb0e11d8c12ad26c434bcc"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/train_106301/states.npy",
+      "bytes": 8320,
+      "sha256": "4d0b4670ec31676c0c90ff37a7de1ae548d8a10903e8cf794573777708566efa"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/train_106302/F.npy",
+      "bytes": 4096128,
+      "sha256": "3296f1f839627358d1a289634d4c1f72496300661a60b63d80b6428859d15581"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/train_106302/G.npy",
+      "bytes": 4096128,
+      "sha256": "260c22259dffc7a40beb0acaafbca154076c79784a9cedd108ea7a6af517f38f"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/train_106302/checkpoint.json",
+      "bytes": 891,
+      "sha256": "12b6082746c05612e6d1f825a285737f083d1735d5b0b60a7a82ac74ebdfa6ae"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/train_106302/manifest.json",
+      "bytes": 1647,
+      "sha256": "32ae698759383502aa2177e2185b8625bcc073e826be74b52b8806feb7d5876e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M1000/train_106302/states.npy",
+      "bytes": 8320,
+      "sha256": "86fdd724e79c966dd603befb0ed3c36b23a42056696748ca1b23997bb1dcd11e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/holdout_206401/F.npy",
+      "bytes": 20480128,
+      "sha256": "756d03566a0fb642df81c1b5da76957d24b154d71d0db103d8dc616eade25371"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/holdout_206401/G.npy",
+      "bytes": 20480128,
+      "sha256": "ddea63877d37aa6545d3cedcbe5cb4b11c08c2a17e53af1481ecd77e74f07ba6"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/holdout_206401/checkpoint.json",
+      "bytes": 896,
+      "sha256": "118a813daa12dd5f456757cef649e7fa5b2e27c0f1ad27127f014abbc6feb4f4"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/holdout_206401/manifest.json",
+      "bytes": 1645,
+      "sha256": "cf650fb2031346b1fe59cace8c0cfaed5a487190678894b68c07f70ad35b1d36"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/holdout_206401/states.npy",
+      "bytes": 4224,
+      "sha256": "4032b2fba39a9ba6f14086a2acc1e4bc826dcd4a49cebc8339b6016d1ae8e06d"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/holdout_206402/F.npy",
+      "bytes": 20480128,
+      "sha256": "c238a1935cc2b55cead08a6d8ddc64f8a4e38140aa15fb1c9a68e1752035c1cc"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/holdout_206402/G.npy",
+      "bytes": 20480128,
+      "sha256": "49d223b4a9bdd519d66b67946d3f8f2c1eb08ff89c786710c1294072633c5a9f"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/holdout_206402/checkpoint.json",
+      "bytes": 893,
+      "sha256": "45b915da013325a82a896382149273bd57d378e7ef89411b8843fcf7d0bd9b1c"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/holdout_206402/manifest.json",
+      "bytes": 1657,
+      "sha256": "cfae679bd080c4c8d4e3ff33dd0deee9c15a6940178619526fc4cc05fdddfede"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/holdout_206402/states.npy",
+      "bytes": 4224,
+      "sha256": "dff8d7b06dec75ac655d28642c21dba8b917542f0c1117518cc4a4bb93312be7"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/train_106401/F.npy",
+      "bytes": 20480128,
+      "sha256": "204ff61f0cc089f465114f6c98f91a858cf6a2f87a2f0313ee3d7aa4d995e095"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/train_106401/G.npy",
+      "bytes": 20480128,
+      "sha256": "95ac960b24d9320cd88b071dbba04cb4b0085766cca0535af4aaba586d300d06"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/train_106401/checkpoint.json",
+      "bytes": 888,
+      "sha256": "0f8fbab9087602a2232ba53d85871546a65ab2d46be2151e5180cc2694d6134a"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/train_106401/manifest.json",
+      "bytes": 1645,
+      "sha256": "74f869f8f43bbd5eff61cd09c1b369ef9fbca278966d2e690759eb3d15d57789"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/train_106401/states.npy",
+      "bytes": 4224,
+      "sha256": "518435ea7f5fbfd2631e5a4abab87546e58961d84f2e357ac9b9cc537564570f"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/train_106402/F.npy",
+      "bytes": 20480128,
+      "sha256": "e4e1abf8b71bff6f447c0ed6f2a3678e8bb2943b312a259ffa1072dda51c4d04"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/train_106402/G.npy",
+      "bytes": 20480128,
+      "sha256": "0bf3f5db2ab1749131aa124138a75603c74e6a0b7996d9d0f6e4d97c85896309"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/train_106402/checkpoint.json",
+      "bytes": 894,
+      "sha256": "005b85048406c3a4159c7bdcdc019ad9e45ad0db38a90ad7f5e9684e080cc0ed"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/train_106402/manifest.json",
+      "bytes": 1637,
+      "sha256": "8aeb6a444cba4989f38ec2ed7cf3bf0ee3cb0e4b5a93259615bcd4e927058296"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M10000/train_106402/states.npy",
+      "bytes": 4224,
+      "sha256": "e1049c08c2a897818e82fd281d908d4744a9b16e0320851f0b73c4aae5c4ae16"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/holdout_206501/F.npy",
+      "bytes": 51200128,
+      "sha256": "0ed7f546da5ad6dc3f4d9a08314a5677d5c2b1f132905a33485e5d317530789b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/holdout_206501/G.npy",
+      "bytes": 51200128,
+      "sha256": "62d7b285d70683cdacf69b42ef9a7301fff5a698e94d0fd25b3442237b324e18"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/holdout_206501/checkpoint.json",
+      "bytes": 890,
+      "sha256": "24f23f71d0ff276ba423e0e1f00ce663ebd518a1e69a443fca35f24d94a16f8b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/holdout_206501/states.npy",
+      "bytes": 1152,
+      "sha256": "2cc9ece756ddd852cc42bef4cb17d6534085ed7bb2ec1b238a159aea76247875"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/holdout_206502/F.npy",
+      "bytes": 51200128,
+      "sha256": "7bd25c921c60cd62b6a800f7d5042fc1a550053f5bab2958c8ccccbcf80a4dd2"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/holdout_206502/G.npy",
+      "bytes": 51200128,
+      "sha256": "908883480d9ae8f87c8b6b32dd40b48a45ad6dcd0df754ac7378d07b5d75033b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/holdout_206502/checkpoint.json",
+      "bytes": 889,
+      "sha256": "7cea64ea74d9a99a972f98234fa21baf89f7e453f86b041f8946f695dbbf3b6b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/holdout_206502/states.npy",
+      "bytes": 1152,
+      "sha256": "d39a9ddf36f401819e7d5764904944ada42fad1143150453e421bcc2cb71ff3b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/train_106501/F.npy",
+      "bytes": 51200128,
+      "sha256": "27ff095be3c2d41c5e85131a780bacfce4c27bbe6ceebfc7e473bba522d1b101"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/train_106501/G.npy",
+      "bytes": 51200128,
+      "sha256": "8bb2a3adbfbca2f1707d00ebb7e7dddcbc977f6f0e0722a827c3b1a52bfca151"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/train_106501/checkpoint.json",
+      "bytes": 888,
+      "sha256": "fcc053034d312e0b516431471d8279a0fe452aa5f5a0ef5bf12247fba30962a0"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/train_106501/states.npy",
+      "bytes": 1152,
+      "sha256": "98e2227daa3f6ff0c8b6233b1f23956f51642e360bcd101d16f8657794356a75"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/train_106502/F.npy",
+      "bytes": 51200128,
+      "sha256": "4fed8752264479686b223325008722f69ffa57c646bf68392a770c2463bbb93a"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/train_106502/G.npy",
+      "bytes": 51200128,
+      "sha256": "1892e39f942497361a05881be4faf9815a5f13b1ca98175fdb24bff01c907cdd"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/train_106502/checkpoint.json",
+      "bytes": 886,
+      "sha256": "bdbe7ebc6c1d9db2b4f74457316a1260235ce0f06019522f53dc2ea2fb84dbb5"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round1/M100000/train_106502/states.npy",
+      "bytes": 1152,
+      "sha256": "59b3fbe7761b1e39752ad0cac6bd394b207943d50298320cac006f3fae1c0896"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216101/F.npy",
+      "bytes": 491648,
+      "sha256": "c40b1ea30fb0352e33932b00e150e98e13e9e8fb69ba470b3ffb6bb0f0012c23"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216101/G.npy",
+      "bytes": 491648,
+      "sha256": "d84f65544b6cdaf5b79f20578d4ef6a2569d7e1a2ce4bf1aca0c3dd322989939"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216101/checkpoint.json",
+      "bytes": 896,
+      "sha256": "9aaee4995bdf9f82d5a974ecde6b4100ecd392e6c3b63e8ec60f79e578f5fde3"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216101/states.npy",
+      "bytes": 98432,
+      "sha256": "ac261e6cb80b592d136e72ddde2d7f4f69494396079f5e86706c735dff088111"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216102/F.npy",
+      "bytes": 491648,
+      "sha256": "2566d459deb21b2ad11092022446ba87eca9d1c49207187c540c108dcf8cc4b4"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216102/G.npy",
+      "bytes": 491648,
+      "sha256": "7051f579e379875213eeca716de6ce13d0dcc69404710e25b82f325e7d4db58c"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216102/checkpoint.json",
+      "bytes": 898,
+      "sha256": "355ff020ca92eb2360dacf861068177d898701810428b97503664b37efb245dd"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216102/states.npy",
+      "bytes": 98432,
+      "sha256": "5efec8e82feaf71b699e43ef1969bb79c3ad21413fdd267dde1c070b1735abc8"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216103/F.npy",
+      "bytes": 491648,
+      "sha256": "cd31f2c56352317e3a134888403ed5388128a95ef73fc20895dd897a4e0e720e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216103/G.npy",
+      "bytes": 491648,
+      "sha256": "ab4a07d10d7b51083aa299aade0fcd6bfdc60fabe6d088cb0f6e29f938435437"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216103/checkpoint.json",
+      "bytes": 892,
+      "sha256": "e0bff2fb52c1116dd27e1195dd57b1de9db32098b3c45e7b941be117755f697e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216103/states.npy",
+      "bytes": 98432,
+      "sha256": "3f0b099bc96340147e98cea3ec76b887b16d0fa9f3bdac859ddf071cfb533ee8"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216104/F.npy",
+      "bytes": 491648,
+      "sha256": "4b0e86874d2aefb5cc6c92854b2fb59ce065e6947556076a6b91bfd041b3abae"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216104/G.npy",
+      "bytes": 491648,
+      "sha256": "89e56535b5779f8116e2eb502e48ea82707ff547d804b81a5d23de95bea05b0c"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216104/checkpoint.json",
+      "bytes": 892,
+      "sha256": "18e54bc25f3f2475b229e65517a329611332c36399b9bc0d71b2f84a6763b16a"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/holdout_216104/states.npy",
+      "bytes": 98432,
+      "sha256": "3cf7e905d7f482d0b6cd515d5994d87c94c9c67c756dc26d6b25fa8d83cf6cca"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116101/F.npy",
+      "bytes": 327808,
+      "sha256": "16dc60d50cacf9631a3db681b50599921594214d37c389fd7105c3b37f5f01ef"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116101/G.npy",
+      "bytes": 327808,
+      "sha256": "bb1559cf6eb07090747fd4656fdc6ed245208fcf520127030dcb7e221158e3bd"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116101/checkpoint.json",
+      "bytes": 894,
+      "sha256": "377f525f96a10500092b7ad81737d10ce6b331ef360cad1e8830350c15c00736"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116101/states.npy",
+      "bytes": 65664,
+      "sha256": "1cdd82d9b9202c8e6a0ed0d8bfb5c5195e86783098c85484881ffc44dc7928cf"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116102/F.npy",
+      "bytes": 327808,
+      "sha256": "1c0b5cc28c8942739672d07429857647e0b1eedc9bccd2743b3531adf2cd693e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116102/G.npy",
+      "bytes": 327808,
+      "sha256": "2b69bc50e9814d4365cb76a116a2542c72a5d7109d44631304e2833e37910295"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116102/checkpoint.json",
+      "bytes": 895,
+      "sha256": "eb5aac5199383e324ba125f0988b5e53a678b2b5585e6645331937014e6573e0"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116102/states.npy",
+      "bytes": 65664,
+      "sha256": "ab40968318cbfdd5d904f0518577ac2e7c9965ce9feda55fff339121eb3bcb7b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116103/F.npy",
+      "bytes": 327808,
+      "sha256": "f175b1388907545b28e7ac70879fedde8f3179fd641442f05f71fe4ff3d5273b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116103/G.npy",
+      "bytes": 327808,
+      "sha256": "ce67ca41bd71d48367ba5bc73d5ab5cae3b2ea848609113235e314afd309254c"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116103/checkpoint.json",
+      "bytes": 895,
+      "sha256": "9df2f351eeb80c9bb6480d20303df262154970f530c49935a41b94fccb45095f"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116103/states.npy",
+      "bytes": 65664,
+      "sha256": "181aa8c67587fc5fc7ceb57e8a71163141faf18b747a582b6ac338a6f90582b8"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116104/F.npy",
+      "bytes": 327808,
+      "sha256": "0e66e6081dc6c1c3d56a8ceded02f8d2787992a61fd50db780a825dd2fd0f219"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116104/G.npy",
+      "bytes": 327808,
+      "sha256": "9d6c22e1620e827660c65675204080f2a1707f45dfbe9e00dd8a533e0e8fdd28"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116104/checkpoint.json",
+      "bytes": 894,
+      "sha256": "5afbb0a2e59dca96b53692126c86c9c9eaee052be6234165b985f2c82782ec15"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M10/train_116104/states.npy",
+      "bytes": 65664,
+      "sha256": "8e0be7b010cb6fa92a80f4155e93d97999818e73f8dd10f71d1e3a71b9faa860"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116201/F.npy",
+      "bytes": 3276928,
+      "sha256": "5bca5f24f377b3c32282afbfedb4d1d4281f149827d5771a230a38c8b2603cb9"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116201/G.npy",
+      "bytes": 3276928,
+      "sha256": "debb3a0d66cedefdc9432c9608dd5f0d9e05cc79530c8129d1005c2c7f06ed2e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116201/checkpoint.json",
+      "bytes": 889,
+      "sha256": "c80dba1b82f8b8e048aab4791ae15da1be716e3888b112cfcb87c0fc2a707e7b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116201/states.npy",
+      "bytes": 65664,
+      "sha256": "b792d2e2266ca15e1a3f15998f941219c035086d1f7c8813693127486f3c9b90"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116202/F.npy",
+      "bytes": 3276928,
+      "sha256": "bf58432bdf648e6ede8c1f7c1878eb77bde05dc75cf7d2ba7601bc950f3d48bf"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116202/G.npy",
+      "bytes": 3276928,
+      "sha256": "0825c0696eabff03a04503c7527475910faa7fb0671647e17156405afe295bf0"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116202/checkpoint.json",
+      "bytes": 887,
+      "sha256": "386741a7d3314675ebe4606ef88cf91ecb0f7fb85f28f060fa4ed31fa1a686f8"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116202/states.npy",
+      "bytes": 65664,
+      "sha256": "075fee6a0f409c51d134a9abcffb5d11de5c250d282383ba707037f3ffb0137d"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116203/F.npy",
+      "bytes": 3276928,
+      "sha256": "444b4ea213cc5d911aed4f853522f78aa2ac6a54751b25bb44d9c323df35229d"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116203/G.npy",
+      "bytes": 3276928,
+      "sha256": "1407ca7910cfa71477f56032402e7526da1f8417e875c1ffe705f9870185ad4e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116203/checkpoint.json",
+      "bytes": 891,
+      "sha256": "d9ba94f281eacc7331e213d195250942791ef3b8cb5e9811cc1b6af2c4aa11b7"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116203/states.npy",
+      "bytes": 65664,
+      "sha256": "88c9a81fdc0bf1bf151292a0baafc97e70711038b17cf2322ae18a9d6dbb9058"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116204/F.npy",
+      "bytes": 3276928,
+      "sha256": "8d0979192b40d5ea613b0c1119873e24ab4e24486c731fd1b9ff0bfbda809ae9"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116204/G.npy",
+      "bytes": 3276928,
+      "sha256": "359f3aeee31f9e70a4f6b2f105b9772f3f6e9cba9400e33da7be346647bf9da6"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116204/checkpoint.json",
+      "bytes": 893,
+      "sha256": "8da7cde5f8546f4df9ee9da5e1fddea2bc2db47becb509be9e6251b7259fd98c"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116204/states.npy",
+      "bytes": 65664,
+      "sha256": "b7044d273758b6b80594d9a8510e8a10fb7f267eabbdbf3cc4a47523ddffbf74"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116205/F.npy",
+      "bytes": 3276928,
+      "sha256": "bb04ba47ddbb97c7a960bba16cc3cb4d769c87fbf128c3cfdd621890b8494e26"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116205/G.npy",
+      "bytes": 3276928,
+      "sha256": "7f3421b816e4e491c550f7e91abbf1393e02ccd0dfdee9fe6c50d2d3d9d922a8"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116205/checkpoint.json",
+      "bytes": 890,
+      "sha256": "56259bf1e1424c661c4049e0f189c84424f88b400f840e0fd503cac341634f6e"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/round2/M100/train_116205/states.npy",
+      "bytes": 65664,
+      "sha256": "db54d9b7036d331328d2595169edc297c548dd7753ad1c8d1e9db01d84703267"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/100k.sub",
+      "bytes": 970,
+      "sha256": "9b326a9a90237b1c549cce7f0869eb5ce8b4cbd5aab011d38601aa28950b587d"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939900.log",
+      "bytes": 79732,
+      "sha256": "8d6dc348abb14619ec032790c64c1c34e1169abdc2eb33e79cef901cfe6a8dbc"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939901.log",
+      "bytes": 20868,
+      "sha256": "211b9f25c05ff88272daa0dc6fa3183860ddfb0da7650470799321e2220e074b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.0.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.0.out",
+      "bytes": 1526,
+      "sha256": "e0cc9c56c4f66c26dd6918006ca609bd43232557b55ff91c72982121dfc2e876"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.1.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.1.out",
+      "bytes": 1528,
+      "sha256": "0ff9ca9adcbfeee06d669e4846b2271fa031cb7db8d400a3f2373f0d1b2dfb8d"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.2.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.2.out",
+      "bytes": 1590,
+      "sha256": "d96cf195923307e59eee4e0767cf6dd70344cea945be268fad1d3c069a343a15"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.3.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.3.out",
+      "bytes": 1591,
+      "sha256": "6f0ccb68057d65b626a7a85b876620707ee54b4b5a99a5a152d9b1391f710979"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.4.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.4.out",
+      "bytes": 1563,
+      "sha256": "cb9abcd2a6ab052dfbc64c9ea19fe47078f7fa924f549822430a538fe6464d03"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.5.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.5.out",
+      "bytes": 1563,
+      "sha256": "647d7682ed6efcd98828834e68e40cbe6f8f1b417c501b549c47eeb66a29c006"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.6.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.6.out",
+      "bytes": 1629,
+      "sha256": "0d0664205979566e7ad76e0738cf16b6dca0922d0528bcce1506f8f1e4367ab7"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.7.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.7.out",
+      "bytes": 1626,
+      "sha256": "dc23b572fed4bd4ac90f7965ad577b9f6ffae83e5ae7c46bd63969270fcb2c32"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939902.log",
+      "bytes": 18963,
+      "sha256": "fa052a28367b5955925b790da95f9b0fc885b7b15ea390e41967b4b91045b7e5"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939903.0.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939903.0.out",
+      "bytes": 52,
+      "sha256": "7d8929df541b5b54f4575fa70ac71cdb0d606cdc4328946c3e0bb3edbcdf6be3"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939903.1.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939903.1.out",
+      "bytes": 53,
+      "sha256": "72d4ba7e265450a734bee5548111191a27333543195379c074312d61a79097f7"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939903.2.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939903.2.out",
+      "bytes": 55,
+      "sha256": "eb693e81a4ed9a300c816723650da4f999e2d8962a9d6678e7f57a67177d6e20"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939903.log",
+      "bytes": 6403,
+      "sha256": "a285087f635c6bc6d790bd76fe1307a3a3cb7e04d298a82601a0cafe24aafc2f"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.0.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.0.out",
+      "bytes": 1611,
+      "sha256": "60f4defb1ea48c884cafa5d38d43013d4ecdb7de537f02184931dab270126b74"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.1.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.1.out",
+      "bytes": 1609,
+      "sha256": "291750791250b6b1a135a1b41234774c122b1a0773038e3c41686567cd0576a2"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.2.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.2.out",
+      "bytes": 1675,
+      "sha256": "daa43523ededb6bf9da611b9f6f023e6ec6bb5d4c8e2257ca6835c0870612c63"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.3.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.3.out",
+      "bytes": 1674,
+      "sha256": "371ecc6df705430bb02ba183ba4d29e59bc7dc12d34697e78ec36bed869a6227"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.4.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.4.out",
+      "bytes": 812,
+      "sha256": "514ea1ae485b05062dbb430958b0211d279fb1f6d23af8de6d27a58dd4b514ec"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.5.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.5.out",
+      "bytes": 813,
+      "sha256": "d542ce84239ad422a6f5452c55dfd730d68a5d08740a9a35ecacf291d617d7ed"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.6.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.6.out",
+      "bytes": 847,
+      "sha256": "0c99eeaceeee49af6b6d048f281597d20ec4804e4afc8e2316113b39070281c9"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.7.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.7.out",
+      "bytes": 845,
+      "sha256": "a1e25c217467830aeb08f125831d214041e87cb43ee8804450e4e539ac654ff7"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939904.log",
+      "bytes": 17485,
+      "sha256": "72ba773af57b2ad9b056df1fa1151e83ee8a792bfb278470f443d655298f2aba"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939905.log",
+      "bytes": 8332,
+      "sha256": "0a7a8ed13c946242ddb0fa15afcb27d927537d77e5e27544d9aa31f21fad68da"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939906.log",
+      "bytes": 31504,
+      "sha256": "e96023cf42cf5f693561a9adfcb55d60074adb56ddb958fdfdf258561a66ae0c"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/939907.log",
+      "bytes": 818,
+      "sha256": "e55261867d38ab423d12771be0548b8c60ff00c6fb40fed2f8dd6cc8fd3d7f9a"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/analysis.sub",
+      "bytes": 716,
+      "sha256": "8593a6ac92164e1ab3fcce5b8c6c0b8308649024076895d85a96b0adfec605e3"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/large.sub",
+      "bytes": 1052,
+      "sha256": "9c5a9aef8349bccfc961909c0f4ac4a804aa8686e780085ebb6a361e3e1fa63b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/large_pilot.sub",
+      "bytes": 826,
+      "sha256": "111059fd1251e65e2a4d6876fab2bf46d4a78d4624ff74af8bb7cd1fd2e10149"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/precision.sub",
+      "bytes": 1418,
+      "sha256": "59d1806c047101df25a83dd79657a8d6f7add6c7245fb79f34c12d497f3d69ce"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/work/scheduler/small.sub",
+      "bytes": 946,
+      "sha256": "791692269bc427faef9929f084de35279165c54873738a31e3b14b1491141402"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/scripts/analysis_job.sh",
+      "bytes": 333,
+      "sha256": "e63d38c145fcb72c28402843918d06b1b315a925ee2b4f7bfe12a8793665d5d8"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/scripts/analyze_ritz.py",
+      "bytes": 7850,
+      "sha256": "ff7505855ec524dfad4a3085187079ddbf0699501aa8b4e7847e25c0b0474797"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/scripts/chain_job.sh",
+      "bytes": 178,
+      "sha256": "2474cb7c9fe193f247d56df8b292e23e75779cb89eea33a7f3e2423360b1edc1"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/scripts/d01_operator.py",
+      "bytes": 2409,
+      "sha256": "4c1d0fdb663657c6e8e9b4bb851f062bbfb309a992556fdf70450c188ab6dbb6"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/scripts/d01_sampling.py",
+      "bytes": 4516,
+      "sha256": "e0be708148eac9eabe6cb06a4e85d14d4d4818a1e234339c7e2b7c676f84232f"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/scripts/estimate_norm.py",
+      "bytes": 2080,
+      "sha256": "0c9c64afb3e77c8347e982c452fd097c2f454f8423a906f29e1dda813aef0388"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/scripts/run_chain.py",
+      "bytes": 4068,
+      "sha256": "cefc355c762fb995f41480a2286e77c38e77601add11887e759f3e4020d00a3c"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/scripts/verify_inputs.py",
+      "bytes": 3993,
+      "sha256": "2c68a1a96fbed0c0f57b4dc81d328c9fa2785057d6d64e25ab470fcb6a28829b"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/tests/test_checkpoint.py",
+      "bytes": 1214,
+      "sha256": "eb0bfaefa41e3256779e7fe7102dbba5925a1cb87919bbb3f35d9081e2ca8052"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/tests/test_d01_operator.py",
+      "bytes": 1905,
+      "sha256": "911e5cf0524cc03824a112a814091c381f40abf80388fe330039a1f2bafa3300"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/tests/test_ritz_solver.py",
+      "bytes": 907,
+      "sha256": "f95bcf1e04a1326de59b57acbd7553cd1fe11e9dd189a12451a2548f9e1f5212"
+    },
+    {
+      "path": "/mnt/ceph/home/park687/D01Ritz/tests/test_sampling.py",
+      "bytes": 2894,
+      "sha256": "46a407736808b7aa8ee4e4835673c96ad760efa8d0f09af24013261d05e99828"
+    }
+  ]
+}
