@@ -21,11 +21,13 @@ def actions(F,G,c):
 
 def solve(F,G,cutoff):
     n,m=F.shape
-    if m<=n:
+    if m<=n and m<=1000:
         S=F.T@F/n;values,V=eigh(S)
         keep=values>max(cutoff*values[-1],np.finfo(float).eps*m*values[-1])
         X=V[:,keep]/np.sqrt(values[keep])
     else:
+        if n>=m or n>4096:
+            raise ValueError('Large-M dual compression budget exceeded; preserve bank and use an iterative action solver. Dense MxM allocation is forbidden.')
         values,V=eigh(F@F.T/n)
         keep=values>max(cutoff*values[-1],np.finfo(float).eps*n*values[-1])
         X=F.T@V[:,keep]/(np.sqrt(n)*values[keep])
@@ -42,7 +44,7 @@ def solve(F,G,cutoff):
         'solver':'primal canonical' if m<=n else 'dual canonical, exact on empirical overlap range'}
 
 
-def holdout(F,G,c,block=32):
+def holdout(F,G,c,block=32,training_energy=None):
     # Independent non-overlapping blocks; jackknife accounts for ratio bias
     # to first order. Block-length sensitivity is reported separately.
     requested_block=block;block=min(block,max(1,len(F)//4))
@@ -57,13 +59,21 @@ def holdout(F,G,c,block=32):
     s=np.array([F[i:i+block].T@f[i:i+block]/block for i in range(0,n,block)])
     am=a.mean(0);sm=s.mean(0);scale=np.linalg.norm(am)+abs(E)*np.linalg.norm(sm)
     residual=float(np.linalg.norm(am-E*sm)/scale)
-    rng=np.random.default_rng(83141);boots=[]
+    rng=np.random.default_rng(83141);boots=[];fixed_boots=[]
+    fixed_residual=None
+    if training_energy is not None:
+        fixed_residual=float(np.linalg.norm(am-training_energy*sm)/(np.linalg.norm(am)+abs(training_energy)*np.linalg.norm(sm)))
     for _ in range(128):
         weights=rng.multinomial(B,np.ones(B)/B)/B
         eb=float(weights@nums/(weights@dens));ab=weights@a;sb=weights@s
         boots.append(np.linalg.norm(ab-eb*sb)/(np.linalg.norm(ab)+abs(eb)*np.linalg.norm(sb)))
+        if training_energy is not None:
+            fixed_boots.append(np.linalg.norm(ab-training_energy*sb)/(np.linalg.norm(ab)+abs(training_energy)*np.linalg.norm(sb)))
     return {'energy':E,'energy_SE':se,'relative_residual':residual,'residual_bootstrap_SD':float(np.std(boots,ddof=1)),
         'residual_bootstrap_95pct':list(map(float,np.percentile(boots,[2.5,97.5]))),
+        'residual_energy_reference':'holdout Rayleigh quotient',
+        'residual_at_training_energy':fixed_residual,
+        'residual_at_training_energy_95pct':list(map(float,np.percentile(fixed_boots,[2.5,97.5]))) if fixed_boots else None,
         'block_size':block,'requested_block_size':requested_block,'blocks':B,'norm_S_over_Z':float(dens.mean()),
         'tau_numerator':tau(f*g),'tau_denominator':tau(f*f)}
 
@@ -80,15 +90,15 @@ def main():
         banks[stage]=tuple(np.concatenate([np.load(d/(name+'.npy'),mmap_mode='r') for d in dirs]) for name in ['F','G'])
     F,G=banks['train'];HF,HG=banks['holdout'];results=[]
     for cutoff in [1e-8,1e-6,1e-4]:
-        c,r=solve(F,G,cutoff);r['holdout']=holdout(HF,HG,c);results.append(r)
+        c,r=solve(F,G,cutoff);r['holdout']=holdout(HF,HG,c,training_energy=r['energy']);results.append(r)
         if cutoff==1e-6:chosen=c;chosen_r=r
     np.savez(args.out/'coefficients.npz',coefficients_S_over_Z=chosen,coefficients_euclidean=chosen/np.linalg.norm(chosen))
     stability=[]
     for n in [len(F)//2,len(F)]:
-        c,r=solve(F[:n],G[:n],1e-6);r['samples']=n;r['holdout']=holdout(HF,HG,c);stability.append(r)
+        c,r=solve(F[:n],G[:n],1e-6);r['samples']=n;r['holdout']=holdout(HF,HG,c,training_energy=r['energy']);stability.append(r)
     seed_results=[]
     for sl in [slice(0,len(F)//2),slice(len(F)//2,None)]:
-        c,r=solve(F[sl],G[sl],1e-6);r['holdout']=holdout(HF,HG,c);seed_results.append(r)
+        c,r=solve(F[sl],G[sl],1e-6);r['holdout']=holdout(HF,HG,c,training_energy=r['energy']);seed_results.append(r)
     if F.shape[1]<=1000:
         A=F.T@G/len(F);herm=float(np.linalg.norm(A-A.T)/np.linalg.norm(A))
         a1=F[:len(F)//2].T@G[:len(F)//2]*2/len(F);a2=F[len(F)//2:].T@G[len(F)//2:]*2/len(F)
@@ -97,7 +107,7 @@ def main():
         R=np.random.default_rng(124).normal(size=(F.shape[1],8));AR=(F@R).T@(G@R)/len(F)
         herm=float(np.linalg.norm(AR-AR.T)/np.linalg.norm(AR));matrix_difference=None
     # Conservative outcome: report all diagnostics, never equate a fit with convergence.
-    block_study=[holdout(HF,HG,chosen,b) for b in [16,32,64,128]]
+    block_study=[holdout(HF,HG,chosen,b,training_energy=chosen_r['energy']) for b in [16,32,64,128]]
     failures=[];h=chosen_r['holdout']
     h['conservative_energy_SE']=max(v['energy_SE'] for v in block_study)
     h['conservative_residual_95pct_upper']=max(v['residual_bootstrap_95pct'][1] for v in block_study)

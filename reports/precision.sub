@@ -1,0 +1,69 @@
+universe = vanilla
+executable = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/scripts/chain_job.sh
+arguments = --m $(m) --seed $(seed) --samples $(samples) --burn 4000 --stride 20 --stage $(stage) --out /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M$(m)/$(stage)_$(seed)
+initialdir = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_output_files = ""
+getenv = False
+requirements = (TARGET.IsOttenComputer =?= true) && ((TARGET.Machine == "qis1.hep.wisc.edu") || (TARGET.Machine == "qis3.hep.wisc.edu"))
++ProjectName = "UWMadison_Physics_Otten"
++ChtcProjects = "UWMadison_Physics_Otten"
++HEP_VO = "otten"
+request_cpus = 1
+request_memory = 4GB
+request_disk = 64MB
+output = work/scheduler/$(Cluster).$(Process).out
+error = work/scheduler/$(Cluster).$(Process).err
+log = work/scheduler/$(Cluster).log
++JobBatchName = "D01Ritz-FERMI-small-precision"
+queue m,stage,seed,samples from (
+10 train 420101 4096
+10 train 420102 4096
+10 train 420103 4096
+10 train 420104 4096
+10 train 420105 4096
+10 train 420106 4096
+10 train 420107 4096
+10 train 420108 4096
+10 holdout 520101 8192
+10 holdout 520102 8192
+10 holdout 520103 8192
+10 holdout 520104 8192
+10 holdout 520105 8192
+10 holdout 520106 8192
+10 holdout 520107 8192
+10 holdout 520108 8192
+10 holdout 520109 8192
+10 holdout 520110 8192
+10 holdout 520111 8192
+10 holdout 520112 8192
+10 holdout 520113 8192
+10 holdout 520114 8192
+10 holdout 520115 8192
+10 holdout 520116 8192
+100 train 420201 4096
+100 train 420202 4096
+100 train 420203 4096
+100 train 420204 4096
+100 train 420205 4096
+100 train 420206 4096
+100 train 420207 4096
+100 train 420208 4096
+100 holdout 520201 8192
+100 holdout 520202 8192
+100 holdout 520203 8192
+100 holdout 520204 8192
+100 holdout 520205 8192
+100 holdout 520206 8192
+100 holdout 520207 8192
+100 holdout 520208 8192
+100 holdout 520209 8192
+100 holdout 520210 8192
+100 holdout 520211 8192
+100 holdout 520212 8192
+100 holdout 520213 8192
+100 holdout 520214 8192
+100 holdout 520215 8192
+100 holdout 520216 8192
+)

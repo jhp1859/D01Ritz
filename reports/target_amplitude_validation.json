@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "seed": 604151,
+  "records": [
+    {
+      "M": 10,
+      "D": 0,
+      "neighbors": 67,
+      "max_absolute_error": 2.44276774644566e-24,
+      "max_scaled_error": 3.6677329229058136e-14
+    },
+    {
+      "M": 10,
+      "D": 1,
+      "neighbors": 265,
+      "max_absolute_error": 5.52143058879146e-23,
+      "max_scaled_error": 5.243276828897719e-13
+    },
+    {
+      "M": 100,
+      "D": 0,
+      "neighbors": 59,
+      "max_absolute_error": 3.803738348036813e-23,
+      "max_scaled_error": 1.1751495884790794e-13
+    },
+    {
+      "M": 100,
+      "D": 1,
+      "neighbors": 164,
+      "max_absolute_error": 1.5923226791645783e-23,
+      "max_scaled_error": 1.7022343697390285e-14
+    }
+  ]
+}
