@@ -1,0 +1,23 @@
+universe = vanilla
+executable = /mnt/ceph/home/park687/D01Ritz/scripts/chain_job.sh
+arguments = --m $(m) --seed $(seed) --samples 512 --burn 4000 --stride 20 --stage $(stage) --out /mnt/ceph/home/park687/D01Ritz/work/round1/M$(m)/$(stage)_$(seed)
+initialdir = /mnt/ceph/home/park687/D01Ritz
+should_transfer_files = NO
+getenv = True
+request_cpus = 1
+request_memory = 2GB
+request_disk = 1GB
+output = work/scheduler/$(Cluster).$(Process).out
+error = work/scheduler/$(Cluster).$(Process).err
+log = work/scheduler/$(Cluster).log
++JobBatchName = "D01Ritz-small-20261006"
+queue m,stage,seed from (
+10 train 106101
+10 train 106102
+10 holdout 206101
+10 holdout 206102
+100 train 106201
+100 train 106202
+100 holdout 206201
+100 holdout 206202
+)
