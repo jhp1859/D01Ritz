@@ -19,3 +19,16 @@ up to 739 s, and M1000 chains up to 622 s elapsed. Final completion depends
 on the scheduler and Ceph load. The existing cutoffs and all declared gates
 remain unchanged. Analysis starts only after every bank for a given M is
 finished and hashed. The held-out sample is never reused for fitting.
+
+The Ceph home quota is 100,000,000,000 bytes, with zero file-count quota.
+At 100,158,238,989 bytes, the remaining 139 jobs went on hold while
+transferring scheduler output. No unrelated job was changed. All round4
+banks/checkpoints were copied to
+`/nfs_scratch/park687/D01Ritz_fermi_41bd5b5/round4/`; a complete
+`rsync -ani --checksum` comparison of old and new copies produced no
+differences. Only then was the redundant Ceph round4 copy removed and
+`work/round4` replaced with a symlink to that scratch directory. Ceph home
+usage fell to 98,599,307,918 bytes. Job 939928.1 resumed from 4080/4096
+samples to completion with exit code 0; the remaining 939928 jobs were
+released afterward. The source code and old corrected analysis outputs
+remain in the Git checkout and previous result directories.
