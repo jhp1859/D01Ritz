@@ -1,6 +1,6 @@
 universe = vanilla
 executable = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/scripts/analysis_job.sh
-arguments = $(m) round4
+arguments = 100 round6
 initialdir = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
@@ -12,12 +12,10 @@ requirements = (TARGET.IsOttenComputer =?= true) && ((TARGET.Machine == "qis1.he
 +ChtcProjects = "UWMadison_Physics_Otten"
 HEP_VO = "otten"
 request_cpus = 1
-request_memory = $(memory)
+request_memory = 1GB
 request_disk = 16MB
-output = work/scheduler/$(Cluster).$(Process).out
-error = work/scheduler/$(Cluster).$(Process).err
-log = work/scheduler/$(Cluster).log
-+JobBatchName = "D01Ritz-FERMI-round4-analysis"
-queue m,memory from (
-100 1GB
-)
+output = /nfs_scratch/park687/D01Ritz_fermi_41bd5b5/round6/scheduler/$(Cluster).$(Process).out
+error = /nfs_scratch/park687/D01Ritz_fermi_41bd5b5/round6/scheduler/$(Cluster).$(Process).err
+log = /nfs_scratch/park687/D01Ritz_fermi_41bd5b5/round6/scheduler/$(Cluster).log
++JobBatchName = "D01Ritz-FERMI-round6-M100-analysis"
+queue 1

@@ -19,5 +19,5 @@ error = work/scheduler/$(Cluster).$(Process).err
 log = work/scheduler/$(Cluster).log
 +JobBatchName = "D01Ritz-FERMI-round4-analysis"
 queue m,memory from (
-100 1GB
+1000 16GB
 )
