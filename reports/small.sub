@@ -1,0 +1,29 @@
+universe = vanilla
+executable = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/scripts/chain_job.sh
+arguments = --m $(m) --seed $(seed) --samples 512 --burn 4000 --stride 20 --stage $(stage) --out /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round1/M$(m)/$(stage)_$(seed)
+initialdir = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_output_files = ""
+getenv = False
+requirements = (TARGET.IsOttenComputer =?= true) && (TARGET.Machine == "qis1.hep.wisc.edu")
++ProjectName = "UWMadison_Physics_Otten"
++ChtcProjects = "UWMadison_Physics_Otten"
++HEP_VO = "otten"
+request_cpus = 1
+request_memory = 4GB
+request_disk = 1GB
+output = work/scheduler/$(Cluster).$(Process).out
+error = work/scheduler/$(Cluster).$(Process).err
+log = work/scheduler/$(Cluster).log
++JobBatchName = "D01Ritz-FERMI-small-validation"
+queue m,stage,seed from (
+10 train 410101
+10 train 410102
+10 holdout 510101
+10 holdout 510102
+100 train 410201
+100 train 410202
+100 holdout 510201
+100 holdout 510202
+)

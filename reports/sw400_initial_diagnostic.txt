@@ -1,0 +1,20 @@
+test_no_q (test_d01_operator.TestD01Operator) ... ok
+test_with_d2 (test_d01_operator.TestD01Operator) ... ok
+test_archived_sw400_energy_and_residual (test_full_h_oracle.FullHOracleTests) ... FAIL
+test_dual_matches_dense_canonical (test_ritz_solver.RitzSolverTests) ... ok
+test_independent_signed_6x6 (test_sampling.SamplingTests) ... ok
+test_small_amplitudes_and_proposals (test_sampling.SamplingTests) ... ok
+test_updates_all_6x6_neighbors (test_sampling.SamplingTests) ... ok
+
+======================================================================
+FAIL: test_archived_sw400_energy_and_residual (test_full_h_oracle.FullHOracleTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/tests/test_full_h_oracle.py", line 17, in test_archived_sw400_energy_and_residual
+    self.assertLess(np.linalg.norm(H@c-E*c),1e-7)
+AssertionError: np.float64(1.2813226418224535e-06) not less than 1e-07
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.282s
+
+FAILED (failures=1)

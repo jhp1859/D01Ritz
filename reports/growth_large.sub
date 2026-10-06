@@ -1,0 +1,21 @@
+universe = vanilla
+executable = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/scripts/growth_job.sh
+arguments = --targets 1000 10000 100000
+initialdir = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_output_files = ""
+getenv = False
+environment = "GROW_THREADS=4"
+requirements = (TARGET.IsOttenComputer =?= true) && (TARGET.Machine == "qis1.hep.wisc.edu")
++ProjectName = "UWMadison_Physics_Otten"
++ChtcProjects = "UWMadison_Physics_Otten"
++HEP_VO = "otten"
+request_cpus = 4
+request_memory = 32GB
+request_disk = 1GB
+output = work/scheduler/$(Cluster).$(Process).out
+error = work/scheduler/$(Cluster).$(Process).err
+log = work/scheduler/$(Cluster).log
++JobBatchName = "D01Ritz-FERMI-ladder-1k-10k-100k"
+queue 1

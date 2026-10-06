@@ -1,0 +1,22 @@
+{
+  "origin": "single_bare_Fermi",
+  "seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b",
+  "input_commit": "41bd5b5",
+  "integrals_sha256": "64a8be718e1811a0eb109d63c2b0316f9743324174d71e9f7b8a88816c6099fe",
+  "native_core_path": "/mnt/ceph/home/park687/.local/lib/python3.9/site-packages/trimci/trimci_core.cpython-39-x86_64-linux-gnu.so",
+  "native_core_sha256": "061be8bc40455a0e46c01f00b347b588950834ecea89b4f4d9d8236de16fe545",
+  "run_expansion_sha256": "b3a63a899c5eb3651a9c34883db5e5882529a77b57c7995a1700df5d89f8b926",
+  "full_H_growth": true,
+  "random_multistart": false,
+  "site_MC_selection": false,
+  "orbital_optimization": false,
+  "spin_projection": false,
+  "status": "PASS",
+  "available_supports": [
+    "100",
+    "10"
+  ],
+  "wall_seconds": 10.082612327067181,
+  "CPU_hours": 0.0005436426297222223,
+  "peak_rss_MiB": 183.95703125
+}

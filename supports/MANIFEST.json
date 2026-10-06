@@ -1,0 +1,72 @@
+{
+  "origin": "single_bare_Fermi",
+  "seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b",
+  "input_commit": "41bd5b5",
+  "integrals_sha256": "64a8be718e1811a0eb109d63c2b0316f9743324174d71e9f7b8a88816c6099fe",
+  "native_core_path": "/mnt/ceph/home/park687/.local/lib/python3.9/site-packages/trimci/trimci_core.cpython-39-x86_64-linux-gnu.so",
+  "native_core_sha256": "061be8bc40455a0e46c01f00b347b588950834ecea89b4f4d9d8236de16fe545",
+  "run_expansion_sha256": "b3a63a899c5eb3651a9c34883db5e5882529a77b57c7995a1700df5d89f8b926",
+  "full_H_growth": true,
+  "random_multistart": false,
+  "site_MC_selection": false,
+  "orbital_optimization": false,
+  "spin_projection": false,
+  "states": {
+    "100": {
+      "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/supports/state_M100.npz",
+      "sha256": "8c54e985bfb54809dcc9d0c5dd0f17cb013e2bc8ec1a89621a72eb3b324d2d8b",
+      "determinant_list_sha256": "4710bd423cf45797697dfe2942bb4c51bb6d8034ee982b78d53495a844b4daf7",
+      "parent_path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/inputs/state_M1_fermi.npz",
+      "parent_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b",
+      "initial_determinants": 1,
+      "full_H_energy": 2.7999360920934695,
+      "phase": {
+        "max_n_dets": 100,
+        "growth_factor": 2.0,
+        "max_expansion_rounds": 100,
+        "screening_mode": "hb",
+        "threshold": 0.01,
+        "threshold_decay": 0.5,
+        "strict_target_size": true,
+        "orbital_optimization": false,
+        "pt2_correction": false,
+        "dressed_energy": false,
+        "expansion_energy_tol": -1,
+        "dets_conv_ratio": -1,
+        "use_connection_cache": true,
+        "use_sparse_update": false,
+        "symmetric_sigma": true,
+        "davidson_block_size": 1,
+        "backend": "cpu",
+        "verbose": 2,
+        "davidson": {
+          "max_iter": 500,
+          "max_subspace": 60,
+          "n_states": 1,
+          "residual_tol": 1e-09,
+          "energy_tol": -1.0,
+          "verbose": 0
+        }
+      },
+      "stage_wall_seconds": 3.905130225000903
+    },
+    "10": {
+      "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/supports/state_M10.npz",
+      "sha256": "d09fbb7de2e1fce370f8f9c00d544cf269da790c53bece2b65841aa4be61f54c",
+      "parent_sha256": "8c54e985bfb54809dcc9d0c5dd0f17cb013e2bc8ec1a89621a72eb3b324d2d8b",
+      "definition": "top-ten magnitude subset of Fermi-grown M100; not independent growth",
+      "source_indices": [
+        10,
+        75,
+        0,
+        80,
+        15,
+        26,
+        60,
+        4,
+        39,
+        63
+      ]
+    }
+  }
+}
