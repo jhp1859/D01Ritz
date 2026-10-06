@@ -62,18 +62,22 @@ def holdout(F,G,c,block=32,training_energy=None):
     s=np.array([F[i:i+block].T@f[i:i+block]/block for i in range(0,n,block)])
     am=a.mean(0);sm=s.mean(0);scale=np.linalg.norm(am)+abs(E)*np.linalg.norm(sm)
     residual=float(np.linalg.norm(am-E*sm)/scale)
-    rng=np.random.default_rng(83141);boots=[];fixed_boots=[]
+    rng=np.random.default_rng(83141);boots=[];fixed_boots=[];vector_noises=[]
     fixed_residual=None
     if training_energy is not None:
         fixed_residual=float(np.linalg.norm(am-training_energy*sm)/(np.linalg.norm(am)+abs(training_energy)*np.linalg.norm(sm)))
     for _ in range(128):
         weights=rng.multinomial(B,np.ones(B)/B)/B
         eb=float(weights@nums/(weights@dens));ab=weights@a;sb=weights@s
-        boots.append(np.linalg.norm(ab-eb*sb)/(np.linalg.norm(ab)+abs(eb)*np.linalg.norm(sb)))
+        bootstrap_vector=(ab-eb*sb)/(np.linalg.norm(ab)+abs(eb)*np.linalg.norm(sb))
+        boots.append(np.linalg.norm(bootstrap_vector))
+        vector_noises.append(np.linalg.norm(bootstrap_vector-(am-E*sm)/scale))
         if training_energy is not None:
             fixed_boots.append(np.linalg.norm(ab-training_energy*sb)/(np.linalg.norm(ab)+abs(training_energy)*np.linalg.norm(sb)))
     return {'energy':E,'energy_SE':se,'relative_residual':residual,'residual_bootstrap_SD':float(np.std(boots,ddof=1)),
         'residual_bootstrap_95pct':list(map(float,np.percentile(boots,[2.5,97.5]))),
+        'residual_vector_noise_95pct':float(np.percentile(vector_noises,95)),
+        'residual_norm_confidence_ball_95pct':[max(0.,residual-float(np.percentile(vector_noises,95))),residual+float(np.percentile(vector_noises,95))],
         'residual_energy_reference':'holdout Rayleigh quotient',
         'residual_at_training_energy':fixed_residual,
         'residual_at_training_energy_95pct':list(map(float,np.percentile(fixed_boots,[2.5,97.5]))) if fixed_boots else None,
@@ -82,8 +86,9 @@ def holdout(F,G,c,block=32,training_energy=None):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--out',type=Path,required=True)
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--frozen-fit',type=Path)
     args=p.parse_args();args.out.mkdir(parents=True,exist_ok=True);t=time.monotonic();cpu=time.process_time()
+    analysis_source_sha256=sha(Path(__file__))
     banks={};manifests=[]
     for stage in ['train','holdout']:
         dirs=sorted(args.root.glob(stage+'_*'))
@@ -100,11 +105,29 @@ def main():
         banks[stage]=tuple(np.concatenate([np.load(d/(name+'.npy'),mmap_mode='r') for d in dirs]) for name in ['F','G'])
     assert len({r['options']['seed'] for r in manifests})==len(manifests), 'Chain seeds must be distinct'
     assert len({r['options']['m'] for r in manifests})==1
-    F,G=banks['train'];HF,HG=banks['holdout'];results=[]
+    F,G=banks['train'];HF,HG=banks['holdout'];results=[];frozen=None;frozen_coeff_path=None
+    if args.frozen_fit:
+        frozen=json.loads(args.frozen_fit.read_text())
+        assert frozen['M']==F.shape[1]
+        def training_keys(chains):
+            return {(r['options']['seed'],r['files']['F.npy']['sha256'],r['files']['G.npy']['sha256'],r['options']['input_sha256']) for r in chains if r['options']['stage']=='train'}
+        assert training_keys(frozen['chains'])==training_keys(manifests), 'Frozen fit requires identical corrected training banks'
+        frozen_coeff_path=Path(frozen['coefficients']['path'])
+        assert sha(frozen_coeff_path)==frozen['coefficients']['sha256']
     for cutoff in [1e-8,1e-6,1e-4]:
-        c,r=solve(F,G,cutoff);r['holdout']=holdout(HF,HG,c,training_energy=r['energy']);results.append(r)
+        c,r=solve(F,G,cutoff)
+        if frozen is not None and cutoff==1e-6:
+            c=np.load(frozen_coeff_path)['coefficients_S_over_Z']
+            r={k:v for k,v in frozen['chosen'].items() if k!='holdout'}
+            r['frozen_fit_source']=str(args.frozen_fit)
+        r['holdout']=holdout(HF,HG,c,training_energy=r['energy']);results.append(r)
         if cutoff==1e-6:chosen=c;chosen_r=r
-    np.savez(args.out/'coefficients.npz',coefficients_S_over_Z=chosen,coefficients_euclidean=chosen/np.linalg.norm(chosen))
+    if frozen is None:
+        np.savez(args.out/'coefficients.npz',coefficients_S_over_Z=chosen,coefficients_euclidean=chosen/np.linalg.norm(chosen))
+    else:
+        dest=args.out/'coefficients.npz'
+        if dest.exists():assert sha(dest)==sha(frozen_coeff_path)
+        else:dest.write_bytes(frozen_coeff_path.read_bytes())
     stability=[]
     for n in [len(F)//2,len(F)]:
         c,r=solve(F[:n],G[:n],1e-6);r['samples']=n;r['holdout']=holdout(HF,HG,c,training_energy=r['energy']);stability.append(r)
@@ -122,7 +145,7 @@ def main():
     block_study=[holdout(HF,HG,chosen,b,training_energy=chosen_r['energy']) for b in [16,32,64,128]]
     failures=[];h=chosen_r['holdout']
     h['conservative_energy_SE']=max(v['energy_SE'] for v in block_study)
-    h['conservative_residual_95pct_upper']=max(v['residual_bootstrap_95pct'][1] for v in block_study)
+    h['conservative_residual_95pct_upper']=max(max(v['residual_bootstrap_95pct'][1],v['residual_norm_confidence_ball_95pct'][1]) for v in block_study)
     # A separate chain-cluster jackknife catches variation hidden by short blocks.
     chain_num=[];chain_den=[];selected_chain_diagnostics=[];early_n=[];early_d=[];late_n=[];late_d=[]
     for d in sorted(args.root.glob('holdout_*')):
@@ -131,7 +154,11 @@ def main():
         half=len(cf)//2
         early_n.append(float(np.sum(cf[:half]*cg[:half])));early_d.append(float(np.sum(cf[:half]**2)))
         late_n.append(float(np.sum(cf[half:]*cg[half:])));late_d.append(float(np.sum(cf[half:]**2)))
-        selected_chain_diagnostics.append({'path':str(d),'tau_numerator':tau(cf*cg),'tau_denominator':tau(cf*cf),'energy':chain_num[-1]/chain_den[-1]})
+        tn,td=tau(cf*cg),tau(cf*cf)
+        observed=[v for v in [tn,td] if v is not None]
+        ess=len(cf)/(2*max(observed)) if observed else None
+        selected_chain_diagnostics.append({'path':str(d),'samples':len(cf),'tau_numerator':tn,'tau_denominator':td,'effective_samples':ess,'energy':chain_num[-1]/chain_den[-1]})
+        if ess is None or ess<100:failures.append('selected_coefficient_effective_samples')
     cn=np.asarray(chain_num);cd=np.asarray(chain_den);cj=(cn.sum()-cn)/(cd.sum()-cd)
     h['between_chain_energy_SE']=float(np.sqrt((len(cj)-1)/len(cj)*np.sum((cj-cj.mean())**2)))
     h['conservative_energy_SE']=max(h['conservative_energy_SE'],h['between_chain_energy_SE'])
@@ -153,7 +180,7 @@ def main():
         if not taus or rec['done']/(2*max(taus))<100:failures.append('insufficient_effective_samples')
         if rec['cross']<20:failures.append('insufficient_sector_crossings')
     if chosen_r['empirical_nullity']>0:failures.append('rank_deficient_empirical_metric')
-    rec={'status':'unresolved' if failures else 'converged_at_declared_sampling_precision',
+    rec={'analysis_source_sha256':analysis_source_sha256,'status':'unresolved' if failures else 'converged_at_declared_sampling_precision',
         'M':int(F.shape[1]),'train_samples':len(F),'holdout_samples':len(HF),'failures':sorted(set(failures)),
         'chosen':chosen_r,'training_fixed_vector_block_diagnostics':holdout(F,G,chosen),'cutoff_study':results,'sample_count_study':stability,'seed_study':seed_results,
         'block_length_study':block_study,

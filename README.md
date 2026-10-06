@@ -1,3 +1,22 @@
+# Corrected computation branch
+
+This branch implements the bare-Fermi-origin task from commit `41bd5b5`.
+The generated, frozen ladder is in [supports/MANIFEST.json](supports/MANIFEST.json).
+Measured Ritz outcomes, precision failures and resource records are collected in
+[reports/RESULTS.md](reports/RESULTS.md), [reports/SUMMARY.csv](reports/SUMMARY.csv),
+and [reports/RESULT_MANIFEST.json](reports/RESULT_MANIFEST.json).
+See [the method](reports/METHOD.md), [SW400 build/stopping validation](reports/SW400_VALIDATION_POLICY.md),
+and [the execution record](reports/EXECUTION.md).
+
+The e961531 matched-random experiment was cancelled and archived separately.
+No matrices, coefficients or checkpoints from it are reused. Original inputs
+and main are preserved; large banks and restart files remain on Ceph. No AFQMC was run.
+
+The original handoff below is retained from `41bd5b5`; its missing-support
+statements describe that base commit, not the generated `supports/` directory.
+
+---
+
 # 6×6 bare-Fermi-origin D≤1 standing-wave Ritz handoff
 
 **Correction (2026-10-06):** commit `e961531` bundled the wrong 6×6 support: it came from a matched random initial determinant bank, not a bare Fermi state. The incorrect M10–100k files have been removed from current `main`. Do not use that commit or its support files for this experiment.

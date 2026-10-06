@@ -9,17 +9,22 @@ ROOT=Path(__file__).resolve().parents[1]
 manifest=json.loads((ROOT/'supports/MANIFEST.json').read_text())
 rows=[];artifacts=[]
 for m in [10,100,1000,10000,100000]:
-    candidates=[ROOT/f'reports/round2/M{m}',ROOT/f'reports/round1/M{m}']
+    candidates=[ROOT/f'reports/round3/M{m}',ROOT/f'reports/round2/M{m}',ROOT/f'reports/round1/M{m}']
     folder=next((p for p in candidates if (p/'result.json').exists()),None)
     state=manifest['states'][str(m)]
     row={'M':m,'support_sha256':state['sha256'],'support_full_H_energy':state.get('full_H_energy'),'status':'pending'}
     if folder:
         r=json.loads((folder/'result.json').read_text());q=r['chosen'];h=q['holdout']
         norm=json.loads((folder/'normalization.json').read_text()) if (folder/'normalization.json').exists() else {}
-        row.update(round=folder.parent.name,status=r['status'],training_energy=q['energy'],holdout_energy=h['energy'],
+        audit=json.loads((folder/'residual_uncertainty_audit.json').read_text()) if (folder/'residual_uncertainty_audit.json').exists() else {}
+        final_status=r['status'];final_failures=list(r['failures'])
+        if audit and not audit['passes_residual_gate']:
+            final_status='unresolved';final_failures.append('residual_vector_uncertainty_gate')
+        row.update(round=folder.parent.name,status=final_status,training_energy=q['energy'],holdout_energy=h['energy'],
             holdout_energy_SE=h.get('conservative_energy_SE',h['energy_SE']),
             holdout_relative_residual=h['relative_residual'],holdout_residual_SD=h['residual_bootstrap_SD'],
-            holdout_residual_95pct_upper=h.get('conservative_residual_95pct_upper',h['residual_bootstrap_95pct'][1]),
+            holdout_residual_95pct_upper=max(h.get('conservative_residual_95pct_upper',h['residual_bootstrap_95pct'][1]),audit.get('conservative_residual_upper_95pct',0)),
+            residual_norm_interval_lower=min(v['residual_norm_confidence_ball_95pct'][0] for v in audit['blocks']) if audit else None,
             residual_at_training_energy=h.get('residual_at_training_energy'),
             overlap_rank=q['retained_rank'],overlap_retained_condition=q['overlap_retained_condition'],
             overlap_full_condition=q['overlap_full_condition'],regularization=q.get('overlap_regularization','canonical hard cutoff'),
@@ -27,20 +32,25 @@ for m in [10,100,1000,10000,100000]:
             train_samples=r['train_samples'],holdout_samples=r['holdout_samples'],
             sampling_CPU_hours=r['sampling_CPU_hours'],sampling_wall_seconds_sum=r['sampling_wall_seconds_sum'],
             sampling_max_chain_wall_seconds=max(c['wall_seconds'] for c in r['chains']),
-            peak_rss_MiB=max(r['sampling_peak_rss_MiB'],r['analysis_peak_rss_MiB'],norm.get('peak_rss_MiB',0)),
+            peak_rss_MiB=max(r['sampling_peak_rss_MiB'],r['analysis_peak_rss_MiB'],norm.get('peak_rss_MiB',0),audit.get('peak_rss_MiB',0)),
             analysis_CPU_hours=r['analysis_CPU_seconds']/3600,analysis_wall_seconds=r['analysis_seconds'],
             norm_CPU_hours=norm.get('CPU_seconds',0)/3600,norm_wall_seconds=norm.get('wall_seconds'),
+            residual_audit_CPU_hours=audit.get('CPU_seconds',0)/3600,
             coefficient_sha256=r['coefficients']['sha256'],physical_coefficient_sha256=norm.get('coefficients_sha256'),
-            failures='; '.join(r['failures']),result_path=str(folder/'result.json'))
+            failures='; '.join(sorted(set(final_failures))),result_path=str(folder/'result.json'))
         for p in folder.iterdir():
             if p.is_file():artifacts.append({'path':str(p),'bytes':p.stat().st_size,'sha256':sha(p)})
+    chain_cost={}
+    for manifest_file in (ROOT/'work').glob(f'round*/M{m}/*/manifest.json'):
+        cm=json.loads(manifest_file.read_text());chain_cost[str(manifest_file.resolve())]=cm['cpu_seconds']
+    row['all_corrected_sampling_CPU_hours']=sum(chain_cost.values())/3600
     rows.append(row)
 allkeys=list(dict.fromkeys(k for r in rows for k in r))
 with (ROOT/'reports/SUMMARY.csv').open('w',newline='') as f:
     w=csv.DictWriter(f,allkeys);w.writeheader();w.writerows(rows)
 # Bank files, checkpoints and scheduler logs stay on Ceph. Hash every artifact.
 cluster_files=[]
-for name in ['round1','round2','growth','sw400_reproduction','scheduler','runtime']:
+for name in ['round1','round2','growth','sw400_reproduction','sw400_attempt_939909','node_smoke','scheduler','runtime']:
     base=ROOT/'work'/name
     for p in sorted(base.rglob('*')):
         if p.is_file() and '__pycache__' not in p.parts:

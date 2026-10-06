@@ -81,3 +81,10 @@ holdout chain at the fitted coefficients, with a leave-one-chain-out error
 for their energy difference. A drift larger than max(0.2,3 SE) fails. Only
 when this and every predeclared gate pass is a final result labeled
 converged_at_declared_sampling_precision; this is not an exact-matrix claim.
+
+Residual norm uncertainty is additionally audited by bootstrapping the
+centered residual VECTOR. A 95% norm ball for its variation gives a
+triangle-inequality interval [max(0,r-radius),r+radius]. This avoids interpreting
+upward-biased raw norm-bootstrap percentiles as an unbiased confidence
+interval near zero. The more conservative upper bound enters the gate.
+Audits do not refit or replace any coefficient file.

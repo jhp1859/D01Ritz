@@ -1,0 +1,1968 @@
+{
+  "analysis_source_sha256": "17a721c9115484a6dca551636fe1d1f5a840be93055750fd232e2ed0bc8e3659",
+  "status": "unresolved",
+  "M": 10000,
+  "train_samples": 16384,
+  "holdout_samples": 8192,
+  "failures": [
+    "holdout_energy_precision",
+    "holdout_residual",
+    "sample_count_stability",
+    "seed_stability",
+    "train_holdout_disagreement",
+    "training_projected_residual"
+  ],
+  "chosen": {
+    "energy": -43.892033073319894,
+    "retained_rank": null,
+    "empirical_nullity": 0,
+    "rank_note": "rank not inferred from iterations; nullity is only the sample-count lower bound",
+    "overlap_retained_condition": null,
+    "overlap_full_condition": null,
+    "regularized_condition_upper_bound": 399330660.119545,
+    "overlap_max_eigenvalue_power_estimate": 0.0025041903925053666,
+    "cutoff": 1e-06,
+    "ridge": 2.5041903925053664e-09,
+    "overlap_regularization": "ridge, not hard spectral truncation",
+    "norm_S_over_Z": 1.0000000000000029,
+    "relative_generalized_residual": 0.0022690804995617866,
+    "projected_residual": 0.0024352124888550853,
+    "solver": "matrix-free block LOBPCG with diagonal preconditioning; unregularized residual reported",
+    "iteration_limit": 80,
+    "iterations_recorded": 82,
+    "last_regularized_residuals": [
+      0.00243491853524919,
+      0.003275589204365028,
+      0.0038185960481077236
+    ],
+    "warnings": [
+      "Exited at iteration 80 with accuracies \n[0.00247368 0.00385678 0.00474287]\nnot reaching the requested tolerance 1e-08.\nUse iteration 80 instead with accuracy \n0.0031763679293821227.\n",
+      "Exited postprocessing with accuracies \n[0.00243492 0.00327559 0.0038186 ]\nnot reaching the requested tolerance 1e-08."
+    ],
+    "holdout": {
+      "energy": -20.685284097153563,
+      "energy_SE": 0.16746904649379235,
+      "relative_residual": 0.1273298922342373,
+      "residual_bootstrap_SD": 0.004532868581421494,
+      "residual_bootstrap_95pct": [
+        0.13206607281442856,
+        0.14974238614377042
+      ],
+      "residual_energy_reference": "holdout Rayleigh quotient",
+      "residual_at_training_energy": 0.36006506942006783,
+      "residual_at_training_energy_95pct": [
+        0.3529791730277722,
+        0.37503409730537973
+      ],
+      "block_size": 32,
+      "requested_block_size": 32,
+      "blocks": 256,
+      "norm_S_over_Z": 3.4607036007502243,
+      "tau_numerator": 0.7392111809421527,
+      "tau_denominator": 0.7109446421294093,
+      "conservative_energy_SE": 0.1713103030058523,
+      "conservative_residual_95pct_upper": 0.14974238614377042,
+      "between_chain_energy_SE": 0.15847409501783796,
+      "chain_length_energy_drift": -0.151598992604292,
+      "chain_length_drift_SE": 0.1957548151384499
+    }
+  },
+  "training_fixed_vector_block_diagnostics": {
+    "energy": -43.892033073319794,
+    "energy_SE": 2.3035561016691943,
+    "relative_residual": 0.04039260630069112,
+    "residual_bootstrap_SD": 0.025796552697307358,
+    "residual_bootstrap_95pct": [
+      0.04381119457813343,
+      0.13831208672948264
+    ],
+    "residual_energy_reference": "holdout Rayleigh quotient",
+    "residual_at_training_energy": null,
+    "residual_at_training_energy_95pct": null,
+    "block_size": 32,
+    "requested_block_size": 32,
+    "blocks": 512,
+    "norm_S_over_Z": 1.0000000000000013,
+    "tau_numerator": 1.034850188370055,
+    "tau_denominator": 1.038715118839394
+  },
+  "cutoff_study": [
+    {
+      "energy": -43.891870225533,
+      "retained_rank": null,
+      "empirical_nullity": 0,
+      "rank_note": "rank not inferred from iterations; nullity is only the sample-count lower bound",
+      "overlap_retained_condition": null,
+      "overlap_full_condition": null,
+      "regularized_condition_upper_bound": 39933065912.95449,
+      "overlap_max_eigenvalue_power_estimate": 0.0025041903925053666,
+      "cutoff": 1e-08,
+      "ridge": 2.5041903925053668e-11,
+      "overlap_regularization": "ridge, not hard spectral truncation",
+      "norm_S_over_Z": 0.9999999999999978,
+      "relative_generalized_residual": 0.0022804204671930234,
+      "projected_residual": 0.0024467560385289756,
+      "solver": "matrix-free block LOBPCG with diagonal preconditioning; unregularized residual reported",
+      "iteration_limit": 80,
+      "iterations_recorded": 82,
+      "last_regularized_residuals": [
+        0.0024467589486317485,
+        0.0032828163000289887,
+        0.0038266206238774716
+      ],
+      "warnings": [
+        "Exited at iteration 80 with accuracies \n[0.00248693 0.00385939 0.00475881]\nnot reaching the requested tolerance 1e-08.\nUse iteration 80 instead with accuracy \n0.003185398623808318.\n",
+        "Exited postprocessing with accuracies \n[0.00244676 0.00328282 0.00382662]\nnot reaching the requested tolerance 1e-08."
+      ],
+      "holdout": {
+        "energy": -20.68449419964013,
+        "energy_SE": 0.167414121462836,
+        "relative_residual": 0.12734702719250368,
+        "residual_bootstrap_SD": 0.004533230839200088,
+        "residual_bootstrap_95pct": [
+          0.13207791375727532,
+          0.14977413803247633
+        ],
+        "residual_energy_reference": "holdout Rayleigh quotient",
+        "residual_at_training_energy": 0.36007794878956606,
+        "residual_at_training_energy_95pct": [
+          0.3529889092964841,
+          0.37504207935033995
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 256,
+        "norm_S_over_Z": 3.4672746147604734,
+        "tau_numerator": 0.7392049214158164,
+        "tau_denominator": 0.7108428847496503
+      }
+    },
+    {
+      "energy": -43.892033073319894,
+      "retained_rank": null,
+      "empirical_nullity": 0,
+      "rank_note": "rank not inferred from iterations; nullity is only the sample-count lower bound",
+      "overlap_retained_condition": null,
+      "overlap_full_condition": null,
+      "regularized_condition_upper_bound": 399330660.119545,
+      "overlap_max_eigenvalue_power_estimate": 0.0025041903925053666,
+      "cutoff": 1e-06,
+      "ridge": 2.5041903925053664e-09,
+      "overlap_regularization": "ridge, not hard spectral truncation",
+      "norm_S_over_Z": 1.0000000000000029,
+      "relative_generalized_residual": 0.0022690804995617866,
+      "projected_residual": 0.0024352124888550853,
+      "solver": "matrix-free block LOBPCG with diagonal preconditioning; unregularized residual reported",
+      "iteration_limit": 80,
+      "iterations_recorded": 82,
+      "last_regularized_residuals": [
+        0.00243491853524919,
+        0.003275589204365028,
+        0.0038185960481077236
+      ],
+      "warnings": [
+        "Exited at iteration 80 with accuracies \n[0.00247368 0.00385678 0.00474287]\nnot reaching the requested tolerance 1e-08.\nUse iteration 80 instead with accuracy \n0.0031763679293821227.\n",
+        "Exited postprocessing with accuracies \n[0.00243492 0.00327559 0.0038186 ]\nnot reaching the requested tolerance 1e-08."
+      ],
+      "holdout": {
+        "energy": -20.685284097153563,
+        "energy_SE": 0.16746904649379235,
+        "relative_residual": 0.1273298922342373,
+        "residual_bootstrap_SD": 0.004532868581421494,
+        "residual_bootstrap_95pct": [
+          0.13206607281442856,
+          0.14974238614377042
+        ],
+        "residual_energy_reference": "holdout Rayleigh quotient",
+        "residual_at_training_energy": 0.36006506942006783,
+        "residual_at_training_energy_95pct": [
+          0.3529791730277722,
+          0.37503409730537973
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 256,
+        "norm_S_over_Z": 3.4607036007502243,
+        "tau_numerator": 0.7392111809421527,
+        "tau_denominator": 0.7109446421294093,
+        "conservative_energy_SE": 0.1713103030058523,
+        "conservative_residual_95pct_upper": 0.14974238614377042,
+        "between_chain_energy_SE": 0.15847409501783796,
+        "chain_length_energy_drift": -0.151598992604292,
+        "chain_length_drift_SE": 0.1957548151384499
+      }
+    },
+    {
+      "energy": -43.863215507638174,
+      "retained_rank": null,
+      "empirical_nullity": 0,
+      "rank_note": "rank not inferred from iterations; nullity is only the sample-count lower bound",
+      "overlap_retained_condition": null,
+      "overlap_full_condition": null,
+      "regularized_condition_upper_bound": 3993307.5911954492,
+      "overlap_max_eigenvalue_power_estimate": 0.0025041903925053666,
+      "cutoff": 0.0001,
+      "ridge": 2.5041903925053667e-07,
+      "overlap_regularization": "ridge, not hard spectral truncation",
+      "norm_S_over_Z": 0.9999999999999984,
+      "relative_generalized_residual": 0.0042178779479571556,
+      "projected_residual": 0.004609919227456291,
+      "solver": "matrix-free block LOBPCG with diagonal preconditioning; unregularized residual reported",
+      "iteration_limit": 80,
+      "iterations_recorded": 82,
+      "last_regularized_residuals": [
+        0.0015402757737274769,
+        0.0023553291065105523,
+        0.002632322768895155
+      ],
+      "warnings": [
+        "Exited at iteration 80 with accuracies \n[0.00152875 0.00292387 0.0028195 ]\nnot reaching the requested tolerance 1e-08.\nUse iteration 80 instead with accuracy \n0.0021759758830148536.\n",
+        "Exited postprocessing with accuracies \n[0.00154028 0.00235533 0.00263232]\nnot reaching the requested tolerance 1e-08."
+      ],
+      "holdout": {
+        "energy": -20.75413720662733,
+        "energy_SE": 0.17122356440354836,
+        "relative_residual": 0.12595327448962276,
+        "residual_bootstrap_SD": 0.004485989449313537,
+        "residual_bootstrap_95pct": [
+          0.13096510417135634,
+          0.14767410312584794
+        ],
+        "residual_energy_reference": "holdout Rayleigh quotient",
+        "residual_at_training_energy": 0.35833144643637876,
+        "residual_at_training_energy_95pct": [
+          0.3509352357498937,
+          0.3735601063534917
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 256,
+        "norm_S_over_Z": 2.9405152877646574,
+        "tau_numerator": 0.7447531941969436,
+        "tau_denominator": 0.7183158568546828
+      }
+    }
+  ],
+  "sample_count_study": [
+    {
+      "energy": -48.574773653329856,
+      "retained_rank": null,
+      "empirical_nullity": 1808,
+      "rank_note": "rank not inferred from iterations; nullity is only the sample-count lower bound",
+      "overlap_retained_condition": null,
+      "overlap_full_condition": null,
+      "regularized_condition_upper_bound": 387888492.1267201,
+      "overlap_max_eigenvalue_power_estimate": 0.00257806050675865,
+      "cutoff": 1e-06,
+      "ridge": 2.57806050675865e-09,
+      "overlap_regularization": "ridge, not hard spectral truncation",
+      "norm_S_over_Z": 0.999999999999998,
+      "relative_generalized_residual": 0.03011475242143445,
+      "projected_residual": 0.045740496830795604,
+      "solver": "matrix-free block LOBPCG with diagonal preconditioning; unregularized residual reported",
+      "iteration_limit": 80,
+      "iterations_recorded": 17,
+      "last_regularized_residuals": [
+        0.04573345639921455,
+        0.039979045781221405,
+        0.04641967709432803
+      ],
+      "warnings": [
+        "Exited at iteration 80 with accuracies \n[1.79827502 1.2956677  1.53794155]\nnot reaching the requested tolerance 1e-08.\nUse iteration 15 instead with accuracy \n0.04404405975826529.\n",
+        "Exited postprocessing with accuracies \n[0.04573346 0.03997905 0.04641968]\nnot reaching the requested tolerance 1e-08."
+      ],
+      "samples": 8192,
+      "holdout": {
+        "energy": -21.331567579215147,
+        "energy_SE": 0.20220634730819617,
+        "relative_residual": 0.13021778020268926,
+        "residual_bootstrap_SD": 0.005787651601143217,
+        "residual_bootstrap_95pct": [
+          0.12901228544695884,
+          0.15336954671943057
+        ],
+        "residual_energy_reference": "holdout Rayleigh quotient",
+        "residual_at_training_energy": 0.38132342369205696,
+        "residual_at_training_energy_95pct": [
+          0.37528333133195785,
+          0.40272068396434163
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 256,
+        "norm_S_over_Z": 2.709701565017074,
+        "tau_numerator": 0.6605537954001981,
+        "tau_denominator": 0.6873395607360591
+      }
+    },
+    {
+      "energy": -43.892033073319894,
+      "retained_rank": null,
+      "empirical_nullity": 0,
+      "rank_note": "rank not inferred from iterations; nullity is only the sample-count lower bound",
+      "overlap_retained_condition": null,
+      "overlap_full_condition": null,
+      "regularized_condition_upper_bound": 399330660.119545,
+      "overlap_max_eigenvalue_power_estimate": 0.0025041903925053666,
+      "cutoff": 1e-06,
+      "ridge": 2.5041903925053664e-09,
+      "overlap_regularization": "ridge, not hard spectral truncation",
+      "norm_S_over_Z": 1.0000000000000029,
+      "relative_generalized_residual": 0.0022690804995617866,
+      "projected_residual": 0.0024352124888550853,
+      "solver": "matrix-free block LOBPCG with diagonal preconditioning; unregularized residual reported",
+      "iteration_limit": 80,
+      "iterations_recorded": 82,
+      "last_regularized_residuals": [
+        0.00243491853524919,
+        0.003275589204365028,
+        0.0038185960481077236
+      ],
+      "warnings": [
+        "Exited at iteration 80 with accuracies \n[0.00247368 0.00385678 0.00474287]\nnot reaching the requested tolerance 1e-08.\nUse iteration 80 instead with accuracy \n0.0031763679293821227.\n",
+        "Exited postprocessing with accuracies \n[0.00243492 0.00327559 0.0038186 ]\nnot reaching the requested tolerance 1e-08."
+      ],
+      "samples": 16384,
+      "holdout": {
+        "energy": -20.685284097153563,
+        "energy_SE": 0.16746904649379235,
+        "relative_residual": 0.1273298922342373,
+        "residual_bootstrap_SD": 0.004532868581421494,
+        "residual_bootstrap_95pct": [
+          0.13206607281442856,
+          0.14974238614377042
+        ],
+        "residual_energy_reference": "holdout Rayleigh quotient",
+        "residual_at_training_energy": 0.36006506942006783,
+        "residual_at_training_energy_95pct": [
+          0.3529791730277722,
+          0.37503409730537973
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 256,
+        "norm_S_over_Z": 3.4607036007502243,
+        "tau_numerator": 0.7392111809421527,
+        "tau_denominator": 0.7109446421294093
+      }
+    }
+  ],
+  "seed_study": [
+    {
+      "energy": -48.574773653329856,
+      "retained_rank": null,
+      "empirical_nullity": 1808,
+      "rank_note": "rank not inferred from iterations; nullity is only the sample-count lower bound",
+      "overlap_retained_condition": null,
+      "overlap_full_condition": null,
+      "regularized_condition_upper_bound": 387888492.1267201,
+      "overlap_max_eigenvalue_power_estimate": 0.00257806050675865,
+      "cutoff": 1e-06,
+      "ridge": 2.57806050675865e-09,
+      "overlap_regularization": "ridge, not hard spectral truncation",
+      "norm_S_over_Z": 0.999999999999998,
+      "relative_generalized_residual": 0.03011475242143445,
+      "projected_residual": 0.045740496830795604,
+      "solver": "matrix-free block LOBPCG with diagonal preconditioning; unregularized residual reported",
+      "iteration_limit": 80,
+      "iterations_recorded": 17,
+      "last_regularized_residuals": [
+        0.04573345639921455,
+        0.039979045781221405,
+        0.04641967709432803
+      ],
+      "warnings": [
+        "Exited at iteration 80 with accuracies \n[1.79827502 1.2956677  1.53794155]\nnot reaching the requested tolerance 1e-08.\nUse iteration 15 instead with accuracy \n0.04404405975826529.\n",
+        "Exited postprocessing with accuracies \n[0.04573346 0.03997905 0.04641968]\nnot reaching the requested tolerance 1e-08."
+      ],
+      "holdout": {
+        "energy": -21.331567579215147,
+        "energy_SE": 0.20220634730819617,
+        "relative_residual": 0.13021778020268926,
+        "residual_bootstrap_SD": 0.005787651601143217,
+        "residual_bootstrap_95pct": [
+          0.12901228544695884,
+          0.15336954671943057
+        ],
+        "residual_energy_reference": "holdout Rayleigh quotient",
+        "residual_at_training_energy": 0.38132342369205696,
+        "residual_at_training_energy_95pct": [
+          0.37528333133195785,
+          0.40272068396434163
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 256,
+        "norm_S_over_Z": 2.709701565017074,
+        "tau_numerator": 0.6605537954001981,
+        "tau_denominator": 0.6873395607360591
+      }
+    },
+    {
+      "energy": -48.317567064127374,
+      "retained_rank": null,
+      "empirical_nullity": 1808,
+      "rank_note": "rank not inferred from iterations; nullity is only the sample-count lower bound",
+      "overlap_retained_condition": null,
+      "overlap_full_condition": null,
+      "regularized_condition_upper_bound": 378258881.15530616,
+      "overlap_max_eigenvalue_power_estimate": 0.0026436920650466118,
+      "cutoff": 1e-06,
+      "ridge": 2.6436920650466116e-09,
+      "overlap_regularization": "ridge, not hard spectral truncation",
+      "norm_S_over_Z": 1.0000000000000002,
+      "relative_generalized_residual": 0.029132999867101612,
+      "projected_residual": 0.03975363652215092,
+      "solver": "matrix-free block LOBPCG with diagonal preconditioning; unregularized residual reported",
+      "iteration_limit": 80,
+      "iterations_recorded": 17,
+      "last_regularized_residuals": [
+        0.039749033287775695,
+        0.03855214392427839,
+        0.03942532433118718
+      ],
+      "warnings": [
+        "Exited at iteration 80 with accuracies \n[1.06306313 1.4131452  0.99887674]\nnot reaching the requested tolerance 1e-08.\nUse iteration 15 instead with accuracy \n0.039242167181072686.\n",
+        "Exited postprocessing with accuracies \n[0.03974903 0.03855214 0.03942532]\nnot reaching the requested tolerance 1e-08."
+      ],
+      "holdout": {
+        "energy": -21.105641947506825,
+        "energy_SE": 0.163593316183099,
+        "relative_residual": 0.12687527792211323,
+        "residual_bootstrap_SD": 0.004172494301233636,
+        "residual_bootstrap_95pct": [
+          0.13110496206315903,
+          0.14677314427039953
+        ],
+        "residual_energy_reference": "holdout Rayleigh quotient",
+        "residual_at_training_energy": 0.38745713098012036,
+        "residual_at_training_energy_95pct": [
+          0.38213318301697763,
+          0.40179891469357665
+        ],
+        "block_size": 32,
+        "requested_block_size": 32,
+        "blocks": 256,
+        "norm_S_over_Z": 2.6551207051114325,
+        "tau_numerator": 0.694717952151971,
+        "tau_denominator": 0.6801613957224729
+      }
+    }
+  ],
+  "block_length_study": [
+    {
+      "energy": -20.685284097153563,
+      "energy_SE": 0.1713103030058523,
+      "relative_residual": 0.1273298922342373,
+      "residual_bootstrap_SD": 0.004759123695281274,
+      "residual_bootstrap_95pct": [
+        0.13013180616170045,
+        0.14908558436257643
+      ],
+      "residual_energy_reference": "holdout Rayleigh quotient",
+      "residual_at_training_energy": 0.36006506942006783,
+      "residual_at_training_energy_95pct": [
+        0.35140181488032124,
+        0.37338671957995917
+      ],
+      "block_size": 16,
+      "requested_block_size": 16,
+      "blocks": 512,
+      "norm_S_over_Z": 3.4607036007502243,
+      "tau_numerator": 0.7392111809421527,
+      "tau_denominator": 0.7109446421294093
+    },
+    {
+      "energy": -20.685284097153563,
+      "energy_SE": 0.16746904649379235,
+      "relative_residual": 0.1273298922342373,
+      "residual_bootstrap_SD": 0.004532868581421494,
+      "residual_bootstrap_95pct": [
+        0.13206607281442856,
+        0.14974238614377042
+      ],
+      "residual_energy_reference": "holdout Rayleigh quotient",
+      "residual_at_training_energy": 0.36006506942006783,
+      "residual_at_training_energy_95pct": [
+        0.3529791730277722,
+        0.37503409730537973
+      ],
+      "block_size": 32,
+      "requested_block_size": 32,
+      "blocks": 256,
+      "norm_S_over_Z": 3.4607036007502243,
+      "tau_numerator": 0.7392111809421527,
+      "tau_denominator": 0.7109446421294093
+    },
+    {
+      "energy": -20.685284097153563,
+      "energy_SE": 0.17100730993595123,
+      "relative_residual": 0.1273298922342373,
+      "residual_bootstrap_SD": 0.004971272702635265,
+      "residual_bootstrap_95pct": [
+        0.1309942278592501,
+        0.14937541012086542
+      ],
+      "residual_energy_reference": "holdout Rayleigh quotient",
+      "residual_at_training_energy": 0.36006506942006783,
+      "residual_at_training_energy_95pct": [
+        0.3533823717351485,
+        0.3728243365502908
+      ],
+      "block_size": 64,
+      "requested_block_size": 64,
+      "blocks": 128,
+      "norm_S_over_Z": 3.4607036007502243,
+      "tau_numerator": 0.7392111809421527,
+      "tau_denominator": 0.7109446421294093
+    },
+    {
+      "energy": -20.685284097153563,
+      "energy_SE": 0.16197018312603237,
+      "relative_residual": 0.1273298922342373,
+      "residual_bootstrap_SD": 0.003974372900600376,
+      "residual_bootstrap_95pct": [
+        0.1325867044474199,
+        0.14716542960674686
+      ],
+      "residual_energy_reference": "holdout Rayleigh quotient",
+      "residual_at_training_energy": 0.36006506942006783,
+      "residual_at_training_energy_95pct": [
+        0.35308469282645033,
+        0.37354239198905714
+      ],
+      "block_size": 128,
+      "requested_block_size": 128,
+      "blocks": 64,
+      "norm_S_over_Z": 3.4607036007502243,
+      "tau_numerator": 0.7392111809421527,
+      "tau_denominator": 0.7109446421294093
+    }
+  ],
+  "hermiticity_estimator": "8 random probe projection",
+  "raw_training_hermiticity_relative_error": 0.005868941208268853,
+  "independent_train_matrix_relative_difference": null,
+  "normalization": "training c^T(S/Z)c=1, unknown Z; physical c^TSc is not estimated",
+  "coefficients": {
+    "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/reports/round2/M10000/coefficients.npz",
+    "sha256": "d7ace5ccde2f71b001c60a3af0fd313584c7c7c4ba521e36eecb660a464eff5e"
+  },
+  "selected_coefficient_holdout_chains": [
+    {
+      "path": "work/round2/M10000/holdout_520401",
+      "samples": 1024,
+      "tau_numerator": 0.6210538713725385,
+      "tau_denominator": 0.5819451474117847,
+      "effective_samples": 824.4051339193364,
+      "energy": -20.982968592062875
+    },
+    {
+      "path": "work/round2/M10000/holdout_520402",
+      "samples": 1024,
+      "tau_numerator": 0.7736367903242289,
+      "tau_denominator": 0.8057765474196035,
+      "effective_samples": 635.4118913483082,
+      "energy": -20.134676721385365
+    },
+    {
+      "path": "work/round2/M10000/holdout_520403",
+      "samples": 1024,
+      "tau_numerator": 0.9729652567180842,
+      "tau_denominator": 0.9382991810200964,
+      "effective_samples": 526.2263955108024,
+      "energy": -20.94797009719347
+    },
+    {
+      "path": "work/round2/M10000/holdout_520404",
+      "samples": 1024,
+      "tau_numerator": 0.6619241209752944,
+      "tau_denominator": 0.6313587203705944,
+      "effective_samples": 773.5025568272196,
+      "energy": -19.978417451617904
+    },
+    {
+      "path": "work/round2/M10000/holdout_520405",
+      "samples": 1024,
+      "tau_numerator": 0.827940314686558,
+      "tau_denominator": 0.7884887781860782,
+      "effective_samples": 618.4020646389628,
+      "energy": -21.06937677288975
+    },
+    {
+      "path": "work/round2/M10000/holdout_520406",
+      "samples": 1024,
+      "tau_numerator": 0.7966090312051054,
+      "tau_denominator": 0.7772209353617895,
+      "effective_samples": 642.7243226522921,
+      "energy": -21.129857529558475
+    },
+    {
+      "path": "work/round2/M10000/holdout_520407",
+      "samples": 1024,
+      "tau_numerator": 0.7453961876282266,
+      "tau_denominator": 0.7053894329905739,
+      "effective_samples": 686.8830408552678,
+      "energy": -20.39613666052547
+    },
+    {
+      "path": "work/round2/M10000/holdout_520408",
+      "samples": 1024,
+      "tau_numerator": 0.6965665951352145,
+      "tau_denominator": 0.828140267927761,
+      "effective_samples": 618.2527523763184,
+      "energy": -20.796028736943377
+    }
+  ],
+  "chains": [
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420401,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        58234837656,
+        18537694501
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 222251492040720233039380898886992020790,
+          "inc": 47012177624774386199627859546397007655
+        },
+        "has_uint32": 0,
+        "uinteger": 1262689006
+      },
+      "done": 1024,
+      "accepted": 2893,
+      "cross": 133,
+      "proposed": 24480,
+      "wall_seconds": 395.9767377299722,
+      "cpu_seconds": 235.468228268,
+      "peak_rss_MiB": 201.9609375,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_536857/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420401/F.npy",
+          "sha256": "5ae48dc47efb9e9b88532727f761a9d5f4471d76fdb909049cdd8fac0fab7264"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420401/G.npy",
+          "sha256": "5e34f30a7c377cbdacbd615040511300172fa42a179e71786525fee257a39fe9"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420401/states.npy",
+          "sha256": "cf08939224a5d1441837e25fefb2d024dc1b53e0a7307f0e8bb07e7e83269f1a"
+        }
+      },
+      "D1_fraction": 0.9794921875,
+      "tau_D": 0.5276584216843517,
+      "tau_starting_numerator": 0.982908203983151,
+      "tau_starting_denominator": 1.1249508779352295
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420402,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        45391336874,
+        24267590228
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 224065567965920484548894869274724386022,
+          "inc": 163005863250217035833635513650424281869
+        },
+        "has_uint32": 0,
+        "uinteger": 3802669980
+      },
+      "done": 1024,
+      "accepted": 2863,
+      "cross": 97,
+      "proposed": 24480,
+      "wall_seconds": 398.5496689459542,
+      "cpu_seconds": 231.480665985,
+      "peak_rss_MiB": 203.78515625,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_536866/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420402/F.npy",
+          "sha256": "cb44b2b70bbdb160756e60934f2e98de04af7e97462b1d8c85a68d35262f1fd8"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420402/G.npy",
+          "sha256": "3f13621f8f6a47a0f04d8e73ef283bccd2e6e523f012a17c0a3b6da81efec03a"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420402/states.npy",
+          "sha256": "9d5cbfc9d2e5641a9eed200399254c70d52af5dd93db6cf81629ac4b21dcbfdd"
+        }
+      },
+      "D1_fraction": 0.9814453125,
+      "tau_D": 0.5,
+      "tau_starting_numerator": 1.2591621479111865,
+      "tau_starting_denominator": 1.2779536864749146
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420403,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        22119866730,
+        35586415253
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 4731842407436180342600542696641086050,
+          "inc": 50432206446101986303805531383954937801
+        },
+        "has_uint32": 0,
+        "uinteger": 3501677065
+      },
+      "done": 1024,
+      "accepted": 2869,
+      "cross": 117,
+      "proposed": 24480,
+      "wall_seconds": 410.14399920997676,
+      "cpu_seconds": 232.020059242,
+      "peak_rss_MiB": 204.234375,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_536861/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420403/F.npy",
+          "sha256": "3b197f8b5663329e4755d7fa00c4e3a92af033f2d4900bdd7707d3d59ce87e7e"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420403/G.npy",
+          "sha256": "f10a4879b07445ee0a33fd0f491b8e2b6cd1c0c53df87a0e6ad2b5b8e60fc4ea"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420403/states.npy",
+          "sha256": "5032149360de0526216c30d9031fbc3aa5bcfb004e80f24d67967322ce604bd9"
+        }
+      },
+      "D1_fraction": 0.978515625,
+      "tau_D": 0.5953811482149338,
+      "tau_starting_numerator": 1.4524324467331433,
+      "tau_starting_denominator": 1.4002016677250038
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420404,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        12653730132,
+        21568120481
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 308760515355285950649441350383240382803,
+          "inc": 74338446708880125334090170479257085841
+        },
+        "has_uint32": 0,
+        "uinteger": 1867521017
+      },
+      "done": 1024,
+      "accepted": 2953,
+      "cross": 107,
+      "proposed": 24480,
+      "wall_seconds": 388.64288721000776,
+      "cpu_seconds": 225.624257739,
+      "peak_rss_MiB": 201.94921875,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_536871/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420404/F.npy",
+          "sha256": "a52b203ad3ea82e6a5c52dbe2cfbc3960ddb11c2e0615b45c90be0079b7eff26"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420404/G.npy",
+          "sha256": "c96932a108f78f51d4f2896f739e91e5e3784d4bf53b424bc324ab87e8f2f424"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420404/states.npy",
+          "sha256": "8a1718b39cb8be7a999dc620033522233aab7e239f2b99d854074ee87746c846"
+        }
+      },
+      "D1_fraction": 0.9853515625,
+      "tau_D": 0.5,
+      "tau_starting_numerator": 0.9553146987668871,
+      "tau_starting_denominator": 1.0113630266604354
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420405,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        14471469841,
+        19871540270
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 272816754331622807704030218913907868646,
+          "inc": 317817920905124158074869197517640174279
+        },
+        "has_uint32": 1,
+        "uinteger": 1152256043
+      },
+      "done": 1024,
+      "accepted": 3038,
+      "cross": 127,
+      "proposed": 24480,
+      "wall_seconds": 220.6085776006803,
+      "cpu_seconds": 157.675711851,
+      "peak_rss_MiB": 202.3359375,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3537099/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420405/F.npy",
+          "sha256": "77c40777667695b5737264ae8b92eb12865fcc35f8be4ae28538b8a3e3e70f65"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420405/G.npy",
+          "sha256": "afd716d132f0bc17102dd0fd6210d40aa8925cb94e1c2e1b6cf1f06c651ae36c"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420405/states.npy",
+          "sha256": "a897a6439d31fe758a9b71361d925adfd2e657b6088cf2503499b4155444da9f"
+        }
+      },
+      "D1_fraction": 0.978515625,
+      "tau_D": 0.7811913460011795,
+      "tau_starting_numerator": 1.253302994379262,
+      "tau_starting_denominator": 1.335224603983205
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420406,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        20318520231,
+        44370189384
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 316667618196459075757908522099571659109,
+          "inc": 160071441111289399404662498545874378783
+        },
+        "has_uint32": 1,
+        "uinteger": 3731837936
+      },
+      "done": 1024,
+      "accepted": 2855,
+      "cross": 137,
+      "proposed": 24480,
+      "wall_seconds": 217.19553817622364,
+      "cpu_seconds": 150.997485579,
+      "peak_rss_MiB": 201.9609375,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3537102/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420406/F.npy",
+          "sha256": "0f87c03b99b2ec4daff928903ac283a6cb268b59c1ef8bb108944529c8d44ed2"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420406/G.npy",
+          "sha256": "88b17dbf0e74ff0307bc976e5ce432c48efbb92e9ff4e1b14165830d5c0f4b30"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420406/states.npy",
+          "sha256": "5c45095edae2338195c6b429b0f08568e538b91c2bccdc9f04607fd888003464"
+        }
+      },
+      "D1_fraction": 0.9765625,
+      "tau_D": 0.6652630208333333,
+      "tau_starting_numerator": 0.8056266951913351,
+      "tau_starting_denominator": 0.809805602059645
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420407,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        23168560226,
+        45617304472
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 218414492558640841077094823277337417757,
+          "inc": 229916431508265570771684779882102109279
+        },
+        "has_uint32": 1,
+        "uinteger": 960944251
+      },
+      "done": 1024,
+      "accepted": 2990,
+      "cross": 149,
+      "proposed": 24480,
+      "wall_seconds": 245.06918175611645,
+      "cpu_seconds": 165.326665683,
+      "peak_rss_MiB": 202.4140625,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3537105/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420407/F.npy",
+          "sha256": "16b9af58f9dc78324190e3cd5cd9aa352acc36d82d05adaf8da4a13c3d32daeb"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420407/G.npy",
+          "sha256": "ca2e5d9374dbb839d5b4e33e7b1cd77fb1b8ccd1c197686514b15a5052040fe0"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420407/states.npy",
+          "sha256": "a38c1f91cbdc5c027fd888af402aa7d1c0b410da6e57aeee63cf919d4e557f6f"
+        }
+      },
+      "D1_fraction": 0.9794921875,
+      "tau_D": 0.57627447827648,
+      "tau_starting_numerator": 1.0739195964614217,
+      "tau_starting_denominator": 1.239145939479613
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420408,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        55912846246,
+        20322495513
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 283577855798267748878547948658655524860,
+          "inc": 292653851296874338074181538481337750461
+        },
+        "has_uint32": 1,
+        "uinteger": 3712729319
+      },
+      "done": 1024,
+      "accepted": 3007,
+      "cross": 123,
+      "proposed": 24480,
+      "wall_seconds": 249.56208592560142,
+      "cpu_seconds": 165.410255811,
+      "peak_rss_MiB": 206.04296875,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3537108/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420408/F.npy",
+          "sha256": "97d76b5a59c993769bcced8989853946f3cff7ef30e1823c61c89f2e0ca09f39"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420408/G.npy",
+          "sha256": "06d5b0fe48a5fac4d663c509e39007b8ef9d37567538414485dc17e6855e1efb"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420408/states.npy",
+          "sha256": "030e43bd30f78263e94c7e00c0c574a16e82ee36241eb7d534f79e0a4e3d000b"
+        }
+      },
+      "D1_fraction": 0.978515625,
+      "tau_D": 0.8544234329636183,
+      "tau_starting_numerator": 1.7341721170236823,
+      "tau_starting_denominator": 1.3128663011637145
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420409,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        5026014314,
+        46510447109
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 76751749262581881638202235005020693589,
+          "inc": 241345094133744804036420818705682526275
+        },
+        "has_uint32": 0,
+        "uinteger": 1938884165
+      },
+      "done": 1024,
+      "accepted": 2908,
+      "cross": 127,
+      "proposed": 24480,
+      "wall_seconds": 397.5429011710221,
+      "cpu_seconds": 230.89911119200002,
+      "peak_rss_MiB": 203.95703125,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_537130/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420409/F.npy",
+          "sha256": "561995ee0e0aae4c3fbf377bd9f323ad27689abff996b77806790607080c5741"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420409/G.npy",
+          "sha256": "dd95ca15e4f95fbf7a5a8af3320e342b304ea1eefe756fe5aa2c5da9f737da44"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420409/states.npy",
+          "sha256": "b4c066ba63bb26fef903eb9e588fd373e1e23a57efab3fc6b87555a26dacbf07"
+        }
+      },
+      "D1_fraction": 0.98046875,
+      "tau_D": 0.5820522597111554,
+      "tau_starting_numerator": 1.7157415519923076,
+      "tau_starting_denominator": 1.712452052696485
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420410,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        11371885846,
+        27280720609
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 285341457030927993095578804530530085478,
+          "inc": 7233713933032838709328213626237736721
+        },
+        "has_uint32": 1,
+        "uinteger": 3359785568
+      },
+      "done": 1024,
+      "accepted": 3045,
+      "cross": 151,
+      "proposed": 24480,
+      "wall_seconds": 352.12867477396503,
+      "cpu_seconds": 221.188996507,
+      "peak_rss_MiB": 205.2421875,
+      "commit": "25746d91d5bace181a89640c8ef75286f64d7901",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_538351/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420410/F.npy",
+          "sha256": "2a8f5dc7b11bbf04c51ed48fa7678a6220101ba0c1b2280c61e0298e76f415d4"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420410/G.npy",
+          "sha256": "7c8099880834c0e5b9bb3294830bbbf825e44d554ed6c4cc97b1c021142fed59"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420410/states.npy",
+          "sha256": "6db89086339dd196dbfd54862267dc9d820a5b0bed3e1b07e8062ec3146a1125"
+        }
+      },
+      "D1_fraction": 0.978515625,
+      "tau_D": 0.5953811482149338,
+      "tau_starting_numerator": 1.031758807742143,
+      "tau_starting_denominator": 1.2821551098796073
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420411,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        14540640982,
+        19684910120
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 184771857148871608731144632448289395704,
+          "inc": 65155567342288902355570602793584262439
+        },
+        "has_uint32": 0,
+        "uinteger": 390578020
+      },
+      "done": 1024,
+      "accepted": 2947,
+      "cross": 121,
+      "proposed": 24480,
+      "wall_seconds": 224.34874113090336,
+      "cpu_seconds": 163.125745958,
+      "peak_rss_MiB": 203.79296875,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3537972/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420411/F.npy",
+          "sha256": "8a9e239d7f5eb54b1a4110e51048bd2bcf7f2b7472fbe48ee765e640e4d741e0"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420411/G.npy",
+          "sha256": "7c1866e4a7e1a2aaf98090bcf3a8a69945de23ac193e6e0b896c231170db06cc"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420411/states.npy",
+          "sha256": "cdd2f500b926e152c1af6924122ecea09f550aaace47097fa4693fc59e367508"
+        }
+      },
+      "D1_fraction": 0.98046875,
+      "tau_D": 0.5,
+      "tau_starting_numerator": 1.2951616716390235,
+      "tau_starting_denominator": 1.342246654341596
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420412,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        47411472658,
+        3056342701
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 183884480565644666805837543794717765890,
+          "inc": 54894946126880332108224466042769027241
+        },
+        "has_uint32": 0,
+        "uinteger": 671458196
+      },
+      "done": 1024,
+      "accepted": 2965,
+      "cross": 149,
+      "proposed": 24480,
+      "wall_seconds": 210.36245345138013,
+      "cpu_seconds": 148.280243599,
+      "peak_rss_MiB": 203.68359375,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3537974/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420412/F.npy",
+          "sha256": "f38a08dd0c0a4b102d782718c7f1ed555555d65efd8d867f91f8123c54b62f32"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420412/G.npy",
+          "sha256": "89f3a85e294c615c7f2b7e3579d470cce7d554813d85107ee914b9e5c027df25"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420412/states.npy",
+          "sha256": "9d1349ffee73ac92adefeccf420d7ad282a0a1f11288b5f62465c8e364087a16"
+        }
+      },
+      "D1_fraction": 0.966796875,
+      "tau_D": 0.6177323557263814,
+      "tau_starting_numerator": 1.53853423000685,
+      "tau_starting_denominator": 1.406787058230719
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420413,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        22796611089,
+        45385734568
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 30432413760509695034085974602414243710,
+          "inc": 269079475738668829251885659926628266465
+        },
+        "has_uint32": 1,
+        "uinteger": 2407467784
+      },
+      "done": 1024,
+      "accepted": 3030,
+      "cross": 181,
+      "proposed": 24480,
+      "wall_seconds": 209.57837346941233,
+      "cpu_seconds": 156.619095351,
+      "peak_rss_MiB": 201.7890625,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3537976/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420413/F.npy",
+          "sha256": "fd82db78354532ca4548eb29c057590fbc8d54d55085bc8a94d876e94703c45e"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420413/G.npy",
+          "sha256": "8111f4be1c4cf86a3dda51b18759283747a1a56329a21a3a270c8f7753ec494e"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420413/states.npy",
+          "sha256": "14d504f6428b426ea002636f5cdcf6d88cc48cfe12804e28d00227eef39c686f"
+        }
+      },
+      "D1_fraction": 0.970703125,
+      "tau_D": 0.7223746122568746,
+      "tau_starting_numerator": 1.0370273523178692,
+      "tau_starting_denominator": 0.9443287760590793
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420414,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        19443566117,
+        14412851290
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 63075361587998273580738026219881836316,
+          "inc": 195630190799684483289190125603004899183
+        },
+        "has_uint32": 0,
+        "uinteger": 3822247839
+      },
+      "done": 1024,
+      "accepted": 2995,
+      "cross": 121,
+      "proposed": 24480,
+      "wall_seconds": 228.87089743092656,
+      "cpu_seconds": 155.013957918,
+      "peak_rss_MiB": 201.6640625,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3537979/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420414/F.npy",
+          "sha256": "b928a8e2c8320bc55d4fe2ce820b8b1d271a464673f5a01bcf52d7b33ec70469"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420414/G.npy",
+          "sha256": "f119ff0bda9a2d4854979edafbb9ce7aef57f813181c42d818e7b2c023acf993"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420414/states.npy",
+          "sha256": "6b3c90dff3796435d9093579d0598f22cdf6698727a41da2669adb23ea1f29d6"
+        }
+      },
+      "D1_fraction": 0.970703125,
+      "tau_D": 0.6071469179661302,
+      "tau_starting_numerator": 1.098263009591419,
+      "tau_starting_denominator": 1.165458092706236
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420415,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        18055353513,
+        44204925270
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 150616851746183993526747230306473511023,
+          "inc": 243652146006066261652107731765913189653
+        },
+        "has_uint32": 1,
+        "uinteger": 2234728851
+      },
+      "done": 1024,
+      "accepted": 2901,
+      "cross": 129,
+      "proposed": 24480,
+      "wall_seconds": 219.2341275215149,
+      "cpu_seconds": 156.059893679,
+      "peak_rss_MiB": 203.765625,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3537984/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420415/F.npy",
+          "sha256": "f83c651c9615d6b4c0fb6ccdd64de50ad5c66076e09012785b03900ad1523831"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420415/G.npy",
+          "sha256": "5018cfbe4d033affc4bcfdd24dd02299eb8286f68b4553b1c7d491628b7150c0"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420415/states.npy",
+          "sha256": "9a272d51740f12658aad2e1be942d6a47565a809bf5fcf2516d5270f5b88db61"
+        }
+      },
+      "D1_fraction": 0.9716796875,
+      "tau_D": 0.5835742898219547,
+      "tau_starting_numerator": 1.2460031733220522,
+      "tau_starting_denominator": 1.1789532290633042
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 420416,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "train",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        4996833582,
+        12149738705
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 252977841874650179011167138959407124998,
+          "inc": 99764740463930359500851629066890360293
+        },
+        "has_uint32": 0,
+        "uinteger": 3415732290
+      },
+      "done": 1024,
+      "accepted": 3116,
+      "cross": 117,
+      "proposed": 24480,
+      "wall_seconds": 207.9743995834142,
+      "cpu_seconds": 155.728421283,
+      "peak_rss_MiB": 201.79296875,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3537991/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420416/F.npy",
+          "sha256": "86de7e6968c974b3f905e56ac8cf5c124abeb2c367dc071e7214b1ca0be4d5f3"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420416/G.npy",
+          "sha256": "98d77be7a0da7e8d171f1faf5ca798fe4e32b219785a7d65894368fdcd1fe86d"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/train_420416/states.npy",
+          "sha256": "2b69cada40672044c259165ef917288d23a6675f1d4a7e05989ad77fdd10630f"
+        }
+      },
+      "D1_fraction": 0.98046875,
+      "tau_D": 0.6130890500498007,
+      "tau_starting_numerator": 0.9988829541047605,
+      "tau_starting_denominator": 1.0113823966676794
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 520401,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "holdout",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        21635921418,
+        10307898821
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 18255968907227908409386534237933955136,
+          "inc": 195185681853185941231445342281306264303
+        },
+        "has_uint32": 1,
+        "uinteger": 2372681240
+      },
+      "done": 1024,
+      "accepted": 2818,
+      "cross": 105,
+      "proposed": 24480,
+      "wall_seconds": 246.2502808989957,
+      "cpu_seconds": 157.045091261,
+      "peak_rss_MiB": 205.546875,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3537995/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520401/F.npy",
+          "sha256": "cc10c536f18826cc5190a2a36507663d4b0e53e4bc8f71ee0135f057183cd77c"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520401/G.npy",
+          "sha256": "985da101dff1c76440758be1127419c53e8a10e55db2ce3cec1471845e7af7d4"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520401/states.npy",
+          "sha256": "ccd19351cf4cdae8537cfc889703f2e3ba3b7f2d7fa373f08dc78474d9de8383"
+        }
+      },
+      "D1_fraction": 0.9775390625,
+      "tau_D": 0.5884094251536507,
+      "tau_starting_numerator": 1.1928641381102787,
+      "tau_starting_denominator": 1.314938099130519
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 520402,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "holdout",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        14643533075,
+        45469231776
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 103829628285344965631063866378387169023,
+          "inc": 10492476794472751137386229219154103349
+        },
+        "has_uint32": 0,
+        "uinteger": 1001080996
+      },
+      "done": 1024,
+      "accepted": 3013,
+      "cross": 109,
+      "proposed": 24480,
+      "wall_seconds": 227.07273425906897,
+      "cpu_seconds": 150.97565989,
+      "peak_rss_MiB": 203.4765625,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3537999/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520402/F.npy",
+          "sha256": "de2e7b30553b593e7cad331c727b3b7719243bb3809729da1b27378f064e9676"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520402/G.npy",
+          "sha256": "b086bb1d1afaf8924642f9eac597223db40fd9ea4af264fd9bcef8f1447fd855"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520402/states.npy",
+          "sha256": "89d055f5a9fb57b30d2ad051591321348a36965f080d09d90cb671be04f6de75"
+        }
+      },
+      "D1_fraction": 0.978515625,
+      "tau_D": 0.5244750201301942,
+      "tau_starting_numerator": 1.0946944860003291,
+      "tau_starting_denominator": 1.09236071095828
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 520403,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "holdout",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        27590772765,
+        41128178722
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 78512134909567383248279687364036392170,
+          "inc": 250437883547610317751508977101252663711
+        },
+        "has_uint32": 0,
+        "uinteger": 561888974
+      },
+      "done": 1024,
+      "accepted": 2981,
+      "cross": 105,
+      "proposed": 24480,
+      "wall_seconds": 339.43691982200835,
+      "cpu_seconds": 221.700130806,
+      "peak_rss_MiB": 201.74609375,
+      "commit": "25746d91d5bace181a89640c8ef75286f64d7901",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_539428/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520403/F.npy",
+          "sha256": "d428cd91472a43e900efe8b65e9d916bc497572488c76bb9dde1e050b50da8a6"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520403/G.npy",
+          "sha256": "be0d6b87d5b89f7ae6b1130904f5232e797c4c315967ad5877c5475e4d0f40bc"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520403/states.npy",
+          "sha256": "124204672b179866099d203addc6c299c8b238a1562b39be82c5b42e908007ce"
+        }
+      },
+      "D1_fraction": 0.97265625,
+      "tau_D": 0.5623711363310385,
+      "tau_starting_numerator": 1.3965593232346063,
+      "tau_starting_denominator": 1.3002451234572379
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 520404,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "holdout",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        25379848405,
+        43272508776
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 168278387582994224108174325218326905832,
+          "inc": 97111248572090803508665315660959293417
+        },
+        "has_uint32": 1,
+        "uinteger": 113829936
+      },
+      "done": 1024,
+      "accepted": 3034,
+      "cross": 129,
+      "proposed": 24480,
+      "wall_seconds": 212.84141456522048,
+      "cpu_seconds": 151.671858192,
+      "peak_rss_MiB": 201.78125,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3538467/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520404/F.npy",
+          "sha256": "4e04c2139c8a0ba777edc0af20373a2eace344a697898d4f2aca2898ffe42e62"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520404/G.npy",
+          "sha256": "6765d9ee19fe02a7a6e970f162b27d4be46e412478df8835fd028af063729c80"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520404/states.npy",
+          "sha256": "41119a056bd042e10d0d1129e7159db04d19180e013654bce1940b857441bda9"
+        }
+      },
+      "D1_fraction": 0.982421875,
+      "tau_D": 0.5,
+      "tau_starting_numerator": 1.2001921813289544,
+      "tau_starting_denominator": 1.18754899053743
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 520405,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "holdout",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        22725126808,
+        46261736804
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 92567453823509232242986968082896640528,
+          "inc": 332672069560717244674667465575910012683
+        },
+        "has_uint32": 1,
+        "uinteger": 1026846684
+      },
+      "done": 1024,
+      "accepted": 3015,
+      "cross": 125,
+      "proposed": 24480,
+      "wall_seconds": 210.04785016458482,
+      "cpu_seconds": 149.209937524,
+      "peak_rss_MiB": 201.77734375,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3538471/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520405/F.npy",
+          "sha256": "9c61137debbd5d61098534d8ee48431dc0a23956c6970c030d095fc0129c01f4"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520405/G.npy",
+          "sha256": "6ca9ab66c17b1f0fc210a3a33870b60f6ca02e8f668133d7d0bbcdada74ef21c"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520405/states.npy",
+          "sha256": "3ba33df105c33359ed867dbba6d4c8e6bf2ce4b53d3a04b08806e3208db3c1b7"
+        }
+      },
+      "D1_fraction": 0.98046875,
+      "tau_D": 0.6840442915836653,
+      "tau_starting_numerator": 1.1719327890330642,
+      "tau_starting_denominator": 1.1244266674983516
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 520406,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "holdout",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        45531873427,
+        23186542308
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 32510965869295343132317108676800925907,
+          "inc": 73347963090561062871903472653314015469
+        },
+        "has_uint32": 1,
+        "uinteger": 1151220646
+      },
+      "done": 1024,
+      "accepted": 2986,
+      "cross": 127,
+      "proposed": 24480,
+      "wall_seconds": 237.39266525954008,
+      "cpu_seconds": 154.859808993,
+      "peak_rss_MiB": 202.32421875,
+      "commit": "84ce9326e8164c3ff21aa58afc65cb684b19ac7f",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3538473/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520406/F.npy",
+          "sha256": "d3dc2de4231959cccbb754625fe08637f4cfde08659c2043d30bb57a86c4f6b4"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520406/G.npy",
+          "sha256": "4c348a0852614a47b1c0859ad0cdd4ec6d4409cf019ffbfa762729bd36722bf4"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520406/states.npy",
+          "sha256": "2f58095548178188cca6251a643c10513b98a5397d505226dbd5f00ff1e1250c"
+        }
+      },
+      "D1_fraction": 0.97265625,
+      "tau_D": 0.5085783984150889,
+      "tau_starting_numerator": 1.0319242490106566,
+      "tau_starting_denominator": 1.127716091427916
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 520407,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "holdout",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        20015382165,
+        9982247211
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 149120840916873127865500932817867121596,
+          "inc": 315721424699021040761820079972824951177
+        },
+        "has_uint32": 0,
+        "uinteger": 1348400053
+      },
+      "done": 1024,
+      "accepted": 2898,
+      "cross": 129,
+      "proposed": 24480,
+      "wall_seconds": 320.07906220899895,
+      "cpu_seconds": 211.541050209,
+      "peak_rss_MiB": 203.3828125,
+      "commit": "25746d91d5bace181a89640c8ef75286f64d7901",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis1.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_539905/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520407/F.npy",
+          "sha256": "04cd8792e5fe20e70649bdecd6c8a12f6ff4d721b5fbbf1c4237b86dcb7d1044"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520407/G.npy",
+          "sha256": "caedd41a1f5adf7e7c52698662aca49848eb6344cf9ac1fed3bf5a820db9da94"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520407/states.npy",
+          "sha256": "269c3111c37c3d62fd828b27897098f92ff8ab83d3d2f74a882e11f41fa1e76a"
+        }
+      },
+      "D1_fraction": 0.9775390625,
+      "tau_D": 0.5214778003925422,
+      "tau_starting_numerator": 1.0585089325005754,
+      "tau_starting_denominator": 1.0851895755228889
+    },
+    {
+      "options": {
+        "m": 10000,
+        "seed": 520408,
+        "samples": 1024,
+        "burn": 4000,
+        "stride": 20,
+        "stage": "holdout",
+        "input_sha256": "0bab25d182771a7aad88b52c3423ef04836f769829693c8fc3d10cf4c5dd8c99",
+        "origin_seed_sha256": "e9b19b8051dd8ebecfdd249c316b030705bbb646000938fcbe512bf9a3760b5b"
+      },
+      "state": [
+        39484326633,
+        27255176466
+      ],
+      "rng": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 318958575299557207887334538141230691353,
+          "inc": 66322134835922878995910986572927196025
+        },
+        "has_uint32": 0,
+        "uinteger": 1926324718
+      },
+      "done": 1024,
+      "accepted": 3119,
+      "cross": 169,
+      "proposed": 24480,
+      "wall_seconds": 206.87971858028322,
+      "cpu_seconds": 142.49002013100002,
+      "peak_rss_MiB": 201.953125,
+      "commit": "25746d91d5bace181a89640c8ef75286f64d7901",
+      "python": "3.9.25",
+      "numpy": "2.0.2",
+      "host": "qis3.hep.wisc.edu",
+      "condor_ad": "/var/condor/.execute-links/slot01/dir_3594335/.job.ad",
+      "finished": true,
+      "files": {
+        "F.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520408/F.npy",
+          "sha256": "a7be9138827306e03b7e9fe9a89caac7eae7d1214bfb8118c2d648642779fe84"
+        },
+        "G.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520408/G.npy",
+          "sha256": "587d75c375249c9c1a04720b4a36df736f95777dc33059d4266b8f501915f41a"
+        },
+        "states.npy": {
+          "path": "/mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round2/M10000/holdout_520408/states.npy",
+          "sha256": "befad4938f3c701be0e260d05651c2d532563eda13015f0e03970bbd5d5dfa8c"
+        }
+      },
+      "D1_fraction": 0.9638671875,
+      "tau_D": 0.7073438280843534,
+      "tau_starting_numerator": 0.9202626685153668,
+      "tau_starting_denominator": 1.2180120876260236
+    }
+  ],
+  "sampling_CPU_hours": 1.1917812090697222,
+  "sampling_wall_seconds_sum": 6575.789890845772,
+  "sampling_peak_rss_MiB": 206.04296875,
+  "analysis_seconds": 215.38082127925009,
+  "analysis_CPU_seconds": 674.34132142,
+  "analysis_peak_rss_MiB": 4429.40234375
+}

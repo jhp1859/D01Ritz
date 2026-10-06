@@ -1,0 +1,53 @@
+universe = vanilla
+executable = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/scripts/chain_job.sh
+arguments = --m $(m) --seed $(seed) --samples $(samples) --burn 4000 --stride 20 --stage $(stage) --out /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5/work/round3/M$(m)/$(stage)_$(seed)
+initialdir = /mnt/ceph/home/park687/D01Ritz_fermi_41bd5b5
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_output_files = ""
+getenv = False
+requirements = (TARGET.IsOttenComputer =?= true) && ((TARGET.Machine == "qis1.hep.wisc.edu") || (TARGET.Machine == "qis3.hep.wisc.edu"))
++ProjectName = "UWMadison_Physics_Otten"
++ChtcProjects = "UWMadison_Physics_Otten"
++HEP_VO = "otten"
+request_cpus = 1
+request_memory = 4GB
+request_disk = 16MB
+output = work/scheduler/$(Cluster).$(Process).out
+error = work/scheduler/$(Cluster).$(Process).err
+log = work/scheduler/$(Cluster).log
++JobBatchName = "D01Ritz-FERMI-M100-fresh-holdout"
+queue m,stage,seed,samples from (
+100 holdout 530201 4096
+100 holdout 530202 4096
+100 holdout 530203 4096
+100 holdout 530204 4096
+100 holdout 530205 4096
+100 holdout 530206 4096
+100 holdout 530207 4096
+100 holdout 530208 4096
+100 holdout 530209 4096
+100 holdout 530210 4096
+100 holdout 530211 4096
+100 holdout 530212 4096
+100 holdout 530213 4096
+100 holdout 530214 4096
+100 holdout 530215 4096
+100 holdout 530216 4096
+100 holdout 530217 4096
+100 holdout 530218 4096
+100 holdout 530219 4096
+100 holdout 530220 4096
+100 holdout 530221 4096
+100 holdout 530222 4096
+100 holdout 530223 4096
+100 holdout 530224 4096
+100 holdout 530225 4096
+100 holdout 530226 4096
+100 holdout 530227 4096
+100 holdout 530228 4096
+100 holdout 530229 4096
+100 holdout 530230 4096
+100 holdout 530231 4096
+100 holdout 530232 4096
+)

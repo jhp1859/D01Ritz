@@ -1,0 +1,119 @@
+{
+  "interpretation": "Centered residual-vector bootstrap ball; triangle-inequality norm interval. Raw norm-percentiles are not treated as an unbiased confidence interval near zero.",
+  "coefficient_sha256": "1481a7bb2c9991e683196444892e54c9fb4fad8814009e674c9a23ee4226c513",
+  "blocks": [
+    {
+      "energy": -27.912992498789873,
+      "energy_SE": 0.06628716702839085,
+      "relative_residual": 0.0058214021053661314,
+      "residual_bootstrap_SD": 0.00030894433541076276,
+      "residual_bootstrap_95pct": [
+        0.005926696499463484,
+        0.00699963861123874
+      ],
+      "residual_vector_noise_95pct": 0.0032232557728276425,
+      "residual_norm_confidence_ball_95pct": [
+        0.002598146332538489,
+        0.009044657878193774
+      ],
+      "residual_energy_reference": "holdout Rayleigh quotient",
+      "residual_at_training_energy": 0.0066308652107561275,
+      "residual_at_training_energy_95pct": [
+        0.006320226167607859,
+        0.008555801113897097
+      ],
+      "block_size": 16,
+      "requested_block_size": 16,
+      "blocks": 8192,
+      "norm_S_over_Z": 0.9771133856259164,
+      "tau_numerator": 1.6488145238940157,
+      "tau_denominator": 1.6188196898563165
+    },
+    {
+      "energy": -27.912992498789873,
+      "energy_SE": 0.06889636193204086,
+      "relative_residual": 0.005821402105366147,
+      "residual_bootstrap_SD": 0.00026344560989491887,
+      "residual_bootstrap_95pct": [
+        0.005897289746128549,
+        0.006935468654499534
+      ],
+      "residual_vector_noise_95pct": 0.00334519517282803,
+      "residual_norm_confidence_ball_95pct": [
+        0.002476206932538117,
+        0.009166597278194178
+      ],
+      "residual_energy_reference": "holdout Rayleigh quotient",
+      "residual_at_training_energy": 0.0066308652107557224,
+      "residual_at_training_energy_95pct": [
+        0.006368149036068584,
+        0.008541040897636791
+      ],
+      "block_size": 32,
+      "requested_block_size": 32,
+      "blocks": 4096,
+      "norm_S_over_Z": 0.9771133856259164,
+      "tau_numerator": 1.6488145238940157,
+      "tau_denominator": 1.6188196898563165
+    },
+    {
+      "energy": -27.912992498789876,
+      "energy_SE": 0.0711995703406316,
+      "relative_residual": 0.005821402105366093,
+      "residual_bootstrap_SD": 0.00033964241027256665,
+      "residual_bootstrap_95pct": [
+        0.005729866136387872,
+        0.007064745324333406
+      ],
+      "residual_vector_noise_95pct": 0.0032980846016099,
+      "residual_norm_confidence_ball_95pct": [
+        0.002523317503756193,
+        0.009119486706975993
+      ],
+      "residual_energy_reference": "holdout Rayleigh quotient",
+      "residual_at_training_energy": 0.006630865210755832,
+      "residual_at_training_energy_95pct": [
+        0.006150843055497423,
+        0.00849259688878121
+      ],
+      "block_size": 64,
+      "requested_block_size": 64,
+      "blocks": 2048,
+      "norm_S_over_Z": 0.9771133856259164,
+      "tau_numerator": 1.6488145238940157,
+      "tau_denominator": 1.6188196898563165
+    },
+    {
+      "energy": -27.912992498789873,
+      "energy_SE": 0.07406847118154175,
+      "relative_residual": 0.005821402105366025,
+      "residual_bootstrap_SD": 0.00034532488202679306,
+      "residual_bootstrap_95pct": [
+        0.005792738967226966,
+        0.00706855470000208
+      ],
+      "residual_vector_noise_95pct": 0.0032700294051151643,
+      "residual_norm_confidence_ball_95pct": [
+        0.0025513727002508604,
+        0.009091431510481189
+      ],
+      "residual_energy_reference": "holdout Rayleigh quotient",
+      "residual_at_training_energy": 0.0066308652107560945,
+      "residual_at_training_energy_95pct": [
+        0.006242266009283648,
+        0.008684558082759954
+      ],
+      "block_size": 128,
+      "requested_block_size": 128,
+      "blocks": 1024,
+      "norm_S_over_Z": 0.9771133856259164,
+      "tau_numerator": 1.6488145238940157,
+      "tau_denominator": 1.6188196898563165
+    }
+  ],
+  "conservative_residual_upper_95pct": 0.009166597278194178,
+  "passes_residual_gate": true,
+  "wall_seconds": 0.7408677451312542,
+  "CPU_seconds": 0.695544079,
+  "peak_rss_MiB": 352.77734375
+}

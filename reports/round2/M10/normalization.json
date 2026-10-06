@@ -1,0 +1,19 @@
+{
+  "seed": 6306100,
+  "uniform_samples": 65536,
+  "sector_configuration_counts": [
+    35406640372950,
+    1812819987095040
+  ],
+  "norm_before_normalization": 0.0008745978533201701,
+  "norm_SE": 7.817711699990879e-05,
+  "relative_norm_SE": 0.08938635820237939,
+  "normalized_norm_estimate": 1.0,
+  "normalized_norm_SE": 0.08938635820237939,
+  "warning": "Monte Carlo normalization, not exact; independent uniform sample precision is reported.",
+  "wall_seconds": 7.2579126339405775,
+  "CPU_seconds": 7.2533315069999995,
+  "peak_rss_MiB": 33.55078125,
+  "support_sha256": "d09fbb7de2e1fce370f8f9c00d544cf269da790c53bece2b65841aa4be61f54c",
+  "coefficients_sha256": "71f46906b17e42ba7291d5f1e5063004821152d6dfc7eed915dc2c1d02610158"
+}
